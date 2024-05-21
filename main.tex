@@ -97,6 +97,23 @@ Ising model, GPU and CPU high performance calculations, spin ice, spin glass, st
 
 \section{Решение исчерпывающим перебором}
 
+Модель спинового стекла Эдвардса-Андерсена представляет собой плоскую решетку Изинга:
+
+\begin{equation}
+	E = -\sum J_{ij} S_i S_j
+	\label{eq:ising_energy}
+\end{equation}
+
+, где обменные интегралы $J$ могут принимать значения +1 или -1 создавая таким образом приближение аморфных материалов
+
+Для решения такой цепочки из трёх спинов статистическая сумма
+принимает вид:
+
+\begin{equation}
+	Z = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}
+	\label{eq:stat_3}
+\end{equation}
+
 \section{Благодарности}
 
  
