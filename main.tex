@@ -1,0 +1,100 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\modulolinenumbers[5]
+
+\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{xcolor}
+\newcommand{\todo}[1] {\textcolor{red}{#1}} %%for TODO comments
+\def\l{\left\langle}
+\def\r{\right\rangle}
+
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}%
+
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+\title{Ground state search 2D Ising model}
+
+\author[mainaddress, secondaryaddress]{Viacheslav Trukhin\corref{mycorrespondingauthor}}
+\ead{trukhin.vo@dvfu.ru}
+
+\author[mainaddress, secondaryaddress]{Konstantin Nefedev\corref{mycorrespondingauthor}}
+\ead{nefedev.kv@dvfu.ru}
+
+\address[mainaddress]{Far Eastern Federal University, Vladivostok, Russky Island, 10 Ajax Bay, 690922, the Russian Federation}
+\address[secondaryaddress]{Institute of Applied Mathematics, Far Eastern Branch, Russian Academy of Science, Vladivostok, Radio 7, 690041, the Russian Federation}
+
+\begin{abstract}
+
+
+\end{abstract}
+
+
+\begin{keyword}
+Ising model, GPU and CPU high performance calculations, spin ice, spin glass, statistical thermodynamics.
+
+\end{keyword}
+
+
+\end{frontmatter}
+
+\linenumbers
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction}
+
+
+
+\section{Acknowledgements}
+
+ 
+
+\bibliography{mybibfile}
+
+
+\end{document}
