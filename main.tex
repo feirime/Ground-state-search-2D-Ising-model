@@ -199,7 +199,7 @@ Ising model, GPU and CPU high performance calculations, spin ice, spin glass, st
 
 \begin{figure}[h]
 	\centering
-	\resizebox{200px}{150px}{\includegraphics{5x4.eps}}
+	\resizebox{150px}{150px}{\includegraphics{5x4.eps}}
 	\caption{Решётка из двацати спинов, обладающая двумя фрустрированными подсистемами}
 	\label{fig:label3}
 \end{figure}
@@ -291,6 +291,37 @@ Ising model, GPU and CPU high performance calculations, spin ice, spin glass, st
 	\caption{Решётка 4x4}
 	\label{fig:4x4}
 \end{figure}
+\begin{figure}[h]
+	\centering
+	\resizebox{150px}{150px}{\includegraphics{3x3.eps}}
+	\caption{Решётка 3x3}
+	\label{fig:3x3}
+\end{figure}
+
+В кластере состоящем из четырёх фрустрированных подрешёток 2x2 \ref{fig:3x3} все фрустрированные пары расположены на пересечениях.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		E   &   Фрустрированная пара \\
+		\hline
+		-8   &  $S_3=1$, $S_4=-1$\\
+		&    $S_4=-1$, $S_5=-1$ \\
+		\hline
+		-8   &  $S_1=1$, $S_4=1$\\
+		&    $S_4=1$, $S_7=-1$ \\
+		\hline
+		-8   &  $S_3=-1$, $S_4=1$\\
+			&    $S_4=1$, $S_5=1$ \\
+		\hline
+		-8   &  $S_1=-1$, $S_4=-1$\\
+			&    $S_4=-1$, $S_7=1$ \\
+		\hline
+	\end{tabular}
+	\caption{Основные состояния решётки 3x3}
+	\label{tab:gs_3x3}
+\end{table} 
 
 Если фрустрированная решётка 2x2 не образует кластер и не имеет пересечений с решётками подобного типа, но при этом вс же имеет пересечения с другими подрешётками как на  рисунке \ref{fig:4x4}, то какую бы пару в выделенной подрешётке мы не посчитали фрустрированной она будет возбуждать соседнюю подрешётку и в ней будет появляться вторая фрустрация причём таким, образом чтобы не возбуждать другие подрешётки 2x2. 
 
