@@ -149,10 +149,35 @@ $E_{gs}=0$ \cite{thouless1977solution};
 \end{equation}
 
 \begin{equation}
-e^{-h \beta -\beta } \left(e^{-3 h \beta +3 \beta +\beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta +3 \beta -\beta }+e^{h \beta -3 \beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta +\beta -\beta }+e^{3 h \beta +3 \beta -\beta }\right)+
-e^{-h \beta -\beta } \left(e^{-3 h \beta +3 \beta +\beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta +3 \beta -\beta }+e^{-h \beta -\beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta -3 \beta -\beta }+e^{h \beta +\beta -\beta }+e^{3 h \beta +3 \beta -\beta }\right)+e^{-h \beta -\beta } \left(e^{-3 h \beta +3 \beta +\beta }+e^{-h \beta +3 \beta -\beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta -\beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta -3 \beta -\beta }+e^{3 h \beta +3 \beta -\beta }\right)+e^{h \beta -\beta } \left(e^{-3 h \beta +3 \beta -\beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta -3 \beta -\beta }+e^{h \beta +3 \beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta -\beta -\beta }+e^{3 h \beta +3 \beta +\beta }\right)+e^{h \beta -\beta } \left(e^{-3 h \beta +3 \beta -\beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta -3 \beta -\beta }+e^{-h \beta +\beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta +3 \beta -\beta }+e^{h \beta -\beta -\beta }+e^{3 h \beta +3 \beta +\beta }\right)+e^{h \beta -\beta } \left(e^{-3 h \beta +3 \beta -\beta }+e^{-h \beta -3 \beta -\beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta +\beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta +3 \beta -\beta }+e^{3 h \beta +3 \beta +\beta }\right)+e^{3 h \beta +3 \beta } \left(e^{-3 h \beta +3 \beta -3 \beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta -\beta -\beta }+e^{-h \beta -\beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta +\beta -\beta }+e^{h \beta +\beta -\beta }+e^{3 h \beta +3 \beta +3 \beta }\right)+e^{3 \beta -3 h \beta } \left(e^{-3 h \beta +3 \beta +3 \beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta +\beta -\beta }+e^{-h \beta +\beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta -\beta -\beta }+e^{h \beta -\beta -\beta }+e^{3 h \beta +3 \beta -3 \beta }\right)
-\label{eq:stat_3_un}
+	\label{eq:stat_3_un}
+	\begin{alignedat}{2}
+	Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{3 \beta +3 \beta  h}+Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{3 \beta -3 \beta  h}
+	\end{alignedat}
 \end{equation}
+
+Численно данное метод выражается в алгоритме \ref{alg:addititional_algorithm}:
+
+\begin{algorithm}[H]
+	\textbf{ВХОД:} Размер решетки, распределение обменных констант.\\
+	\textbf{ВЫХОД:} Полная плотность состояний.
+	\begin{algorithmic}
+		\STATE {Рассчитать плотность состояний для первой 1D цепочки}
+		\FOR {Количество слоев в решетке\\}
+		{
+			\STATE {Рассчитать плотность состояний для присоединяемой 1D цепочки}
+			\FOR {длина 1D цепи\\}
+			{
+				\STATE {Рассчитать плотность состояний для получившейся решетки}
+			}
+			\ENDFOR\\
+		}
+		\ENDFOR
+	\end{algorithmic}
+	\caption{Вычисление плотности состояний методом присоединения 1D цепочек.}
+	\label{alg:addititional_algorithm}
+\end{algorithm}
+				
+В результате для квадратной решетки $N \times N$ сложность алгоритма полного перебора падает с $2^{N \cdot N}$ до 
 
 \section{Решение методом декомпозиции}
 
