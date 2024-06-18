@@ -9,3 +9,6 @@ main.toc
 main.out
 mainNotes.bib
 images/scripts_and_programs/dos
+images/scripts_and_programs/States calc/data/*
+images/scripts_and_programs/States calc/.venv/*
+images/scripts_and_programs/States calc/.idea/*
