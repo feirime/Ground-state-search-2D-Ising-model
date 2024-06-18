@@ -150,28 +150,40 @@ TO DO: \\
 Модель спинового стекла Эдвардса-Андерсона представляет собой плоскую решетку Изинга:
 
 \begin{equation}
-	E = -\sum J_{ij} S_i S_j + \sum,
+	E = -\sum J_{ij} S_i S_j + \sum h S_i,
 	\label{eq:ising_energy}
 \end{equation}
 
  где обменные интегралы $J$ могут принимать значения +1 или -1 создавая таким образом приближение аморфных материалов
 
-Для решения такой цепочки из трёх спинов статистическая сумма
-принимает вид:
+Для решения такой цепочки из трёх спинов статистическая сумма принимает вид:
 
 \begin{equation}
 	Z = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}
 	\label{eq:stat_3}
 \end{equation}
 
+Присоединим ещё одну цепочку параллельно первой:
+
 \begin{equation}
 	\label{eq:stat_3_un}
 	\begin{alignedat}{2}
-	Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{3 \beta +3 \beta  h}+Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{3 \beta -3 \beta  h}
+	Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{\beta  h-\beta }+Z e^{3 \beta +3 \beta  h}+ \\
+	Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{\beta  (-h)-\beta }+Z e^{3 \beta -3 \beta  h}
 	\end{alignedat}
 \end{equation}
 
-Численно данное метод выражается в алгоритме \ref{alg:addititional_algorithm}:
+В результате получаем статистическую сумму для решетки $3 \times 2$:
+
+\begin{equation}
+	\label{eq:stat_3_res}
+	\begin{alignedat}{2}
+		Z = 6 e^{-5 \beta }+12 e^{-\beta }+2 e^{3 \beta }+e^{9 \beta -6 \beta  h}+6 e^{3 \beta -4 \beta  h}+6 e^{-3 \beta -2 \beta  h}+\\
+		9 e^{\beta -2 \beta  h}+6 e^{2 \beta  h-3 \beta }+9 e^{\beta +2 \beta  h}+6 e^{3 \beta +4 \beta  h}+e^{9 \beta +6 \beta  h}
+	\end{alignedat}
+\end{equation}
+
+Численное решение таким методом выражается в алгоритме \ref{alg:addititional_algorithm}:
 
 \begin{algorithm}[H]
 	\textbf{ВХОД:} Размер решетки, распределение обменных констант.\\
