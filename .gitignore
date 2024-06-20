@@ -12,3 +12,6 @@ images/scripts_and_programs/dos
 images/scripts_and_programs/States calc/data/*
 images/scripts_and_programs/States calc/.venv/*
 images/scripts_and_programs/States calc/.idea/*
+images/scripts_and_programs/Size scale/.venv/*
+images/scripts_and_programs/Size scale/.idea/*
+*.pdf
