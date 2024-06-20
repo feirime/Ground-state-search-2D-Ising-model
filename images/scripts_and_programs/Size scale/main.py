@@ -13,12 +13,9 @@ def colorFader(mix=0):
 
 conf = configparser.ConfigParser()
 conf.read("conf.ini")
-dos_dir = "../../dos" + conf["Sample"]["spins"] + "glass/"
+dos_dir = "../../../../../DOS/dos" + conf["Sample"]["spins"] + "/"
 stat_dir = "data/statsum" + conf["Sample"]["spins"] + "/"
-fig_dir = "data/figures" + conf["Sample"]["spins"] + "/"
-H = numpy.linspace(float(conf["Field"]["start"]),
-                   float(conf["Field"]["stop"]),
-                   int(conf["Field"]["steps"]))
+fig_dir = "../../figures" + conf["Sample"]["spins"] + "/"
 P_plus = numpy.array([])
 J_sum = numpy.array([])
 file_count = 0
@@ -36,3 +33,10 @@ J_sum = J_sum[idx]
 P_plus = P_plus[idx]
 arr_of_files = arr_of_files[idx]
 plt.figure(dpi=300)
+if conf["Plot"]["plot"] == "Energy_size":
+    sample = int(file_count * float(conf["Plot"]["P"]))
+    file = arr_of_files[sample]
+    gem = numpy.loadtxt(open(file), skiprows=4).T
+    G = gem[0]
+    E = gem[1]
+    M = gem[2]
