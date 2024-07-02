@@ -43,7 +43,7 @@ if conf["Plot"]["plot"] == "Egs_size":
             file = arr_of_files[sample]
             gem = numpy.loadtxt(open(file), skiprows=4).T
             E = gem[1]
-            plt.scatter(size, numpy.min(E)/(N * (N - 1)), color=colors[size-5])
+            plt.scatter(1/size**2, numpy.min(E)/(N * (N - 1)), color=colors[size-5])
 if conf["Plot"]["plot"] == "Egs_P":
     directory = dos_dir + conf["Sample"]["spins"] + "/"
     file_count = 0
@@ -93,7 +93,7 @@ if conf["Plot"]["plot"] == "Ggs_size":
             E = gem[1]
             Egs = np.min(E)
             Ggs = numpy.sum(G[np.isin(E, Egs)])
-            plt.scatter(size, Ggs, color=colors[size-5])
+            plt.scatter(1/size**2, Ggs, color=colors[size-5])
 if conf["Plot"]["plot"] == "Ggs_P":
     directory = dos_dir + conf["Sample"]["spins"] + "/"
     file_count = 0
