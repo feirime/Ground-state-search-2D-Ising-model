@@ -14,4 +14,10 @@ images/scripts_and_programs/States calc/.venv/*
 images/scripts_and_programs/States calc/.idea/*
 images/scripts_and_programs/Size scale/.venv/*
 images/scripts_and_programs/Size scale/.idea/*
+images/scripts_and_programs/configuration converter/data/*
+images/scripts_and_programs/configuration converter/.venv/*
+images/scripts_and_programs/configuration converter/.idea/*
+images/scripts_and_programs/msf drawer/data/*
+images/scripts_and_programs/msf drawer/.venv/*
+images/scripts_and_programs/msf drawer/.idea/*
 *.pdf
