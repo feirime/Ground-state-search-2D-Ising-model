@@ -38,6 +38,8 @@ if conf["Plot"]["plot"] == "Egs_size":
         J_sum = J_sum[idx]
         P_plus = P_plus[idx]
         arr_of_files = arr_of_files[idx]
+        plt.xlabel("$1 / N$")
+        plt.ylabel("$Egs / N_j$")
         for i in range(int(conf["Sample"]["sample_in_group"])):
             sample = int(file_count * float(conf["Plot"]["P"]))
             file = arr_of_files[sample]
@@ -50,6 +52,8 @@ if conf["Plot"]["plot"] == "Egs_P":
     arr_of_files = numpy.array([])
     J_sum = numpy.array([])
     P_plus = numpy.array([])
+    plt.xlabel("$P_+$")
+    plt.ylabel("$Egs / N_j$")
     for file in os.listdir(directory):
         file = directory + file
         arr_of_files = numpy.append(arr_of_files, file)
@@ -85,6 +89,9 @@ if conf["Plot"]["plot"] == "Ggs_size":
         J_sum = J_sum[idx]
         P_plus = P_plus[idx]
         arr_of_files = arr_of_files[idx]
+        plt.yscale("log")
+        plt.xlabel("$P_+$")
+        plt.ylabel("$Ggs / G$")
         for i in range(int(conf["Sample"]["sample_in_group"])):
             sample = int(file_count * float(conf["Plot"]["P"]))
             file = arr_of_files[sample]
@@ -93,7 +100,7 @@ if conf["Plot"]["plot"] == "Ggs_size":
             E = gem[1]
             Egs = np.min(E)
             Ggs = numpy.sum(G[np.isin(E, Egs)])
-            plt.scatter(1/size**2, Ggs, color=colors[size-5])
+            plt.scatter(1 / size**2, Ggs / 2**(size**2), color=colors[size-5])
 if conf["Plot"]["plot"] == "Ggs_P":
     directory = dos_dir + conf["Sample"]["spins"] + "/"
     file_count = 0
