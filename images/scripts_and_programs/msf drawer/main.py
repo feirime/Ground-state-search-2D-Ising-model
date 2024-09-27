@@ -6,7 +6,7 @@ def sq(arr):
     return arr.reshape((-1, int(np.sqrt(arr.shape[0]))))
 
 
-array = np.loadtxt("data/GSes81_J144_9.txt.dat")
+array = np.loadtxt("../../../../../spellbook/msf/build/data/1381.dat.dat")
 qx = sq(array[:, 1])
 qy = sq(array[:, 2])
 re = sq(array[:, 3])

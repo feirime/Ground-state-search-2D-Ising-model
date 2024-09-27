@@ -9,7 +9,7 @@ def create_files(file_path, output_dir):
                 output_folder = os.path.join(output_dir, folder_name)
                 os.makedirs(output_folder, exist_ok=True)
             elif set(line.strip()) <= set('1-') and len(line) > 5:
-                file_name = os.path.join(output_folder, f'{line_number}.txt')
+                file_name = os.path.join(output_folder, f'{line_number}.dat')
                 n = int(math.sqrt(int(folder_name[4:6])))
                 with open(file_name, 'a') as out_file:
                     gs = []
@@ -21,7 +21,6 @@ def create_files(file_path, output_dir):
                         if char == '-':
                             swich = False
                             gs.append(-1)
-                    print(gs)
                     for i in range(n):
                         for j in range(n):
                             out_file.write(str(i) + '\t')
