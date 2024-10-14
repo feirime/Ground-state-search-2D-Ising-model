@@ -185,25 +185,20 @@ TO DO: \\
 
  где обменные интегралы $J$ могут принимать значения +1 или -1 создавая таким образом приближение аморфных материалов
 
-Для решения такой цепочки из трёх спинов статистическая сумма принимает вид:
+Рассмотрим одномерную цепочку такой модели из трёх спинов. Обозначим $\beta = \frac{1}{kT}$. Примем обменные интегралы $J$ везде равными единице. Статистическая сумма принимает вид:
 
 \begin{equation}
 	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}
 	\label{eq:stat_3}
 \end{equation}
 
-
-Численно данное метод выражается в алгоритме \ref{alg:addititional_algorithm}:
-
 Присоединим ещё одну цепочку параллельно первой:
-
-!!!!!!!!Расставить обменные интегралы!!!!!!!!!!!!
 
 \begin{equation}
 	\label{eq:stat_3_un}
 	\begin{alignedat}{2}
-	Z_6 = Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{3 \beta +3 \beta  h}+ \\
-	Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{3 \beta -3 \beta  h}
+		Z_6 = Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{3 \beta +3 \beta  h}+ \\
+		Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{3 \beta -3 \beta  h}
 	\end{alignedat}
 \end{equation}
 
