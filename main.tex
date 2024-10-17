@@ -238,70 +238,6 @@ TO DO: \\
 				
 В результате для квадратной решетки $N \times N$ сложность алгоритма полного перебора падает с $2^{N \cdot N}$ до $N \cdot 2^N + (N - 1) \cdot 2^N$. Таким образом прирост производительности для решетки из 9-ти спинов составляет примерно 92\% и на 27 порядков для системы из 100 спинов.
 
-
-\section{Решение исчерпывающим перечислением}
-
-Модель спинового стекла Эдвардса-Андерсона представляет собой плоскую решетку Изинга:
-
-\begin{equation}
-	E = -\sum J_{ij} S_i S_j + h \sum S_i,
-	\label{eq:ising_energy}
-\end{equation}
-где обменные интегралы $J_{ij}$ могут принимать значения +1 или -1. Это приводит к конкурирующим антиферромагнитным/ферромагнитным взаимодействиям, которые имеют место в реальных спиновых стеклах. В нашей модели энергия обменного взаимодействия не зависит от расстояния между взаимодействующими спинами. Однако знакопеременный характер $J_{ij}$ может быть связан с искажениями в размещении взаимодействующих атомов на решетке.
-
-Рассмотрим одномерную цепочку такой модели из трёх спинов. Обозначим $\beta = (kT)^{-1}$. Примем обменные интегралы $J_{ij}$ везде равными единице. Статистическая сумма принимает вид:
-
-\begin{equation}
-	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
-	\label{eq:stat_3}
-\end{equation}
-
-Присоединим ещё одну цепочку параллельно первой:
-
-\begin{equation}
-	\label{eq:stat_3_un}
-	\begin{alignedat}{2}
-		Z_6 = Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{3 \beta +3 \beta  h}+ \\
-		Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{3 \beta -3 \beta  h}.
-	\end{alignedat}
-\end{equation}
-
-В результате получаем статистическую сумму для решетки $3 \times 2$:
-
-\begin{equation}
-	\label{eq:stat_3_res}
-	\begin{alignedat}{2}
-		Z_6 = 6 e^{-5 \beta }+12 e^{-\beta }+2 e^{3 \beta }+e^{9 \beta -6 \beta  h}+6 e^{3 \beta -4 \beta  h}+6 e^{-3 \beta -2 \beta  h}+\\
-		9 e^{\beta -2 \beta  h}+6 e^{2 \beta  h-3 \beta }+9 e^{\beta +2 \beta  h}+6 e^{3 \beta +4 \beta  h}+e^{9 \beta +6 \beta  h}.
-	\end{alignedat}
-\end{equation}
-
-Численное решение таким методом выражается в алгоритме \ref{alg:addititional_algorithm}:
-
-
-\begin{algorithm}[H]
-	\textbf{ВХОД:} Размер решетки, распределение обменных констант.\\
-	\textbf{ВЫХОД:} Полная плотность состояний.
-	\begin{algorithmic}
-		\STATE {Рассчитать плотность состояний для первой 1D цепочки}
-		\FOR {Количество слоев в решетке\\}
-		{
-			\STATE {Рассчитать плотность состояний для присоединяемой 1D цепочки}
-			\FOR {длина 1D цепи\\}
-			{
-				\STATE {Рассчитать плотность состояний для получившейся решетки}
-			}
-			\ENDFOR\\
-		}
-		\ENDFOR
-	\end{algorithmic}
-	\caption{Вычисление плотности состояний методом присоединения 1D цепочек.}
-	\label{alg:addititional_algorithm}
-\end{algorithm}
-
-В результате для квадратной решетки $N \times N$ сложность алгоритма полного перебора падает с $2^{N \cdot N}$ до $N \cdot 2^N + (N - 1) \cdot 2^N$. Таким образом прирост производительности для решетки из 9-ти спинов составляет примерно 92\% и на 27 порядков для системы из 100 спинов.
-
-
 \section{Формализм Плакетов}
 
 Для удобства введём несколько терминов.
@@ -459,10 +395,10 @@ TO DO: \\
 \begin{figure}[htbp]
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs1.eps} & \hspace{0.03\textwidth}
-		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs2.eps} \\
-		\vspace{0.5cm} \\
-		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs3.eps} & \hspace{0.03\textwidth}
+		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs1.eps}  \hspace{0.03\textwidth}
+		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs2.eps} 
+		\hspace{0.03\textwidth}
+		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs3.eps}  \hspace{0.03\textwidth}
 		\includegraphics[width=0.2\textwidth]{1_Cl1_Type_gs4.eps} \\ 
 	\end{tabular}
 	\caption{Система из 16 спинов. Фрустрированные в основном состоянии пары обведены.}
