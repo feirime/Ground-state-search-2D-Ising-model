@@ -20,4 +20,7 @@ images/scripts_and_programs/configuration converter/.idea/*
 images/scripts_and_programs/msf drawer/data/*
 images/scripts_and_programs/msf drawer/.venv/*
 images/scripts_and_programs/msf drawer/.idea/*
+images/scripts_and_programs/GS multiplicity/data/*
+images/scripts_and_programs/GS multiplicity/.venv/*
+images/scripts_and_programs/GS multiplicity/.idea/*
 *.pdf
