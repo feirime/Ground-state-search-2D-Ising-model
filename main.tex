@@ -241,7 +241,7 @@ TO DO: \\
 		\caption{Плакеты 1-го типа}
 		\label{fig:Type1} 
 	\end{minipage}
-	\hspace{0.07\textwidth} % 
+	\hspace{0.07\textwidth} 
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\begin{minipage}{0.3\textwidth}
@@ -286,13 +286,13 @@ TO DO: \\
 	\centering
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\resizebox{100px}{70px}{\includegraphics{pictures/1_Type2_3x2.eps}}
+		\resizebox{110px}{70px}{\includegraphics{pictures/1_Type2_3x2.eps}}
 		\label{fig:Type2_3x2}
 	\end{minipage}
 	\hspace{20pt} 
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\resizebox{100px}{70px}{\includegraphics{pictures/1_Type2_3x2_2.eps}}
+		\resizebox{110px}{70px}{\includegraphics{pictures/1_Type2_3x2_2.eps}}
 		\label{fig:Type2_3x2_2}
 	\end{minipage}
 	\caption{Системы состоящие из двух плакетов 2-го типа}
@@ -312,59 +312,6 @@ TO DO: \\
 \end{figure}
 
 На рисунке \eqref{fig:Type2_5x4} представлена система из двадцати спинов, в центре которой находятся два плакета 2-го типа, имеющие общую пару спинов. Исходя из предыдущего примера, данная система должна обладать одной фрустрированной парой отмеченной на рисунке. Полный перебор состояний подтверждает, что в данной системе есть два основных состояния ($E_{gs}=-29$, $M_{gs}=\pm 8$), а фрустрация действительно расположена так как на рисунке.
-
-\section{Кластеры}
-
-Если рассматриваемые плакеты 2-го типа пересекаются с несколькими плакетами одновременно, то они формируют кластер.
-
-В кластере необходимо выбрать фрустрированными пары, находящиеся на пересечении так чтобы такая пара была в плакете только одна. Если в каком-то состоянии плакет остался без фрустрированной пары в силу невозможности её расположения на пересечении плакетов, выбирается одна из трёх оставшихся в плакете пар. Это можно сделать с помощью полного перебора состояний пар, где состояние пары может принимать только два значения: пара фрустрирована или нет.
-
-\begin{figure}[H]
-	\centering
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\resizebox{100px}{50px}{\includegraphics{pictures/1_Cl_Type2_gs1.eps}}
-		\label{fig:cluster_gs1}
-	\end{minipage}
-	\hspace{20pt} 
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\resizebox{100px}{50px}{\includegraphics{pictures/1_Cl_Type2_gs2.eps}}
-		\label{fig:cluster_gs2}
-	\end{minipage}
-	\caption{Кластер, состоящий из трёх плакетов 2-го типа}
-	\label{fig:cluster}
-\end{figure}
-
-В кластере \eqref{fig:cluster} можно выбрать фрустрированной одну пару спинов находящуюся на пересечении двух плакетов. Тогда для оставшегося плакета фрустрированной будет одна из трёх пар спинов не находящихся на пересечении плакетов. На рисунке они обозначены пунктирной линией. Таким образом в данной системе существуют $12$ основных состояний ($E_{gs}=-6$, $M_{gs}=-2, 0, 2$).
-
-\begin{figure}[H]
-	\centering
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\resizebox{70px}{70px}{\includegraphics{pictures/1_Cl2x2_Type2_gs1.eps}}
-		\label{fig:3x3_gs1}
-	\end{minipage}
-	\hspace{1pt} 
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\resizebox{70px}{70px}{\includegraphics{pictures/1_Cl2x2_Type2_gs2.eps}}
-		\label{fig:3x3_gs2}
-	\end{minipage}
-	\caption{Кластер, состоящий из трёх плакетов 2-го типа}
-	\label{fig:3x3}
-\end{figure}
-
-В кластере, состоящем из четырёх плакетов 2-го типа \ref{fig:3x3} все фрустрированные пары расположены на пересечениях. Таких расположений в системе два. Таким образом основных состояний 4 ($E_{gs}=-8$, $M_{gs}=\pm 1$).
-
-В системах с произвольным числом спинов кластеры могут иметь не такую простую форму, например, как на рисунке \ref{fig:cl}. Фрустрированные пары в данном кластере также располагаются по такому же принципу ($E_{gs}=-9$, $M_{gs}=\pm 4$).
-
-\begin{figure}[H]
-	\centering
-	\resizebox{100px}{70px}{\includegraphics{pictures/1_Cl4_Type2.eps}}
-	\caption{Кластер, состоящий из четырёх плакетов 2-го типа}
-	\label{fig:cl}
-\end{figure}
 
 \section{Плакеты в больших системах}
 
@@ -393,7 +340,7 @@ TO DO: \\
 \end{figure}
 
 
-Если в системе два не пересекающиеся плакета 2-го типа \ref{fig:4x7} , то возможна такая ситуация, что им энергетически выгоднее возбуждать плакеты по направлению друг к другу, а не к краю решётки.
+Если в системе два не пересекающиеся плакета 2-го типа \ref{fig:4x7} ($E_{gs}=-33$, $M_{gs}=0$), то возможна такая ситуация, что им энергетически выгоднее возбуждать плакеты по направлению друг к другу, а не к краю решётки.
 
 \begin{figure}[H]
 	\centering
@@ -449,17 +396,7 @@ TO DO: \\
 	\label{fig:12F_cell64_J72_5}
 \end{figure}
 
-Точно зная где в основных состояний расположены фрустрации можно расставлять значения спинов по порядку так чтобы они удовлетворяли все связи и давали положительную энергию во фрустрированных парах и отрицательную в не фрустрированных \ref{fig:12Conf_cell64_J72_5}. 
-
-\begin{figure}[H]
-	\centering
-	\begin{tabular}{cc}
-		\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/1Conf_cell64_J72_5.eps}} & \hspace{0.05\textwidth}
-		\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/2Conf_cell64_J72_5.eps}} 
-	\end{tabular}
-	\caption{Основные состояния}
-	\label{fig:12Conf_cell64_J72_5}
-\end{figure}
+Точно зная где в основных состояний расположены фрустрации можно расставлять значения спинов по порядку так чтобы они удовлетворяли все связи и давали положительную энергию во фрустрированных парах и отрицательную в не фрустрированных. 
 
 Всего для данной решётки были получены 124 основных состояния с энергией $E_{gs}=-86$ и спиновым избытком от $\pm 18$ до $\pm 42$. Данное решение полностью совпадает с алгоритмом вычисления плотности состояний \ref{alg:addititional_algorithm} .
 
