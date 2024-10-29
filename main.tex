@@ -439,15 +439,15 @@ TO DO: \\
 \section{Основное состояние во внешнем магнитном поле}
 
 
-Во введении приведена таблица \ref{tab:Egs} со значениями энергии основного состояния спинового стекла. Мы создали несколько образцов спинового льда, один из них на рисунке (\ref{fig:cell_SI_SG_64}) слева. Вычисления показывают, что энергия основного состояния на один спин при $P_+ = 0.5$ и отсутствии воздействия внешнего магнитного поля составила -1.75, при этом удельная энергия основного состояния спинового стекла в модели Эдвардса-Андерсона составила -1.28.
+Во введении приведена таблица \ref{tab:Egs} со значениями энергии основного состояния спинового стекла. Мы создали несколько образцов спинового льда, один из них на рисунке (\ref{fig:cell_SI_SG_64}) слева. Вычисления показывают, что энергия основного состояния на один спин при $P_+ = 0.5$ и отсутствии воздействия внешнего магнитного поля составила -0.97, при этом удельная энергия основного состояния спинового стекла в модели Эдвардса-Андерсона составила -1.28.
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
-		\includegraphics[width=1\linewidth]{pictures/cell_SI_64_J0_1.png}
+		\includegraphics[width=1\linewidth]{pictures/SI_64_J0}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.45\linewidth}
-		\includegraphics[width=1\linewidth]{pictures/cell_SG_64_J0_6.png}
+		\includegraphics[width=1\linewidth]{pictures/SG_64_J0}
 	\end{minipage}
 
 	\caption{Спиновый лед (слева) и спиновое стекло (справа), 64 спина, $P_+ = 0.5$}
@@ -460,11 +460,11 @@ TO DO: \\
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
-		\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0_1.dat.png}
+		\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0.png}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.45\linewidth}
-		\includegraphics[width=1\linewidth]{pictures/_multiplot_SG64_J0_6.dat.png}
+		\includegraphics[width=1\linewidth]{pictures/_multiplot_SG64_J0.png}
 	\end{minipage}
 	\caption{Спиновый лед (слева) и спиновое стекло (справа), 64 спина, $P_+ = 0.5$}
 	\label{fig:_multiplot_SI_SG_64}
@@ -479,32 +479,27 @@ TO DO: \\
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
 		\centering H=0
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H0.png}
+		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_H0.png}
 	\end{minipage}
 	\hfill
+	\begin{minipage}[h]{0.45\linewidth}
+		\centering H=0.5
+		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_H0.5.png}
+	\end{minipage}
+	\vfill
 	\begin{minipage}[h]{0.45\linewidth}
 		\centering H=1
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H1.png}
+		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_H1.png}
 	\end{minipage}
-	\vfill
+	\hfill
 	\begin{minipage}[h]{0.45\linewidth}
 		\centering H=2
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H2.png}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.45\linewidth}
-		\centering H=3
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H3.png}
+		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_H2.png}
 	\end{minipage}
 	\vfill
 	\begin{minipage}[h]{0.45\linewidth}
-		\centering H=4
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H4.png}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.45\linewidth}
-		\centering H=5
-		\includegraphics[width=1\linewidth]{pictures/HDOS_dos64_J0_1.dat_H5.png}
+		\centering H=3
+		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_H3.png}
 	\end{minipage}
 	\caption{DOS, H=0-5, Спиновый лед, 64 спина, P+=0.5}
 	\label{fig:HDOS_ice}
