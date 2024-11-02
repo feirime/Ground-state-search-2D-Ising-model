@@ -284,32 +284,42 @@ TO DO: \\
 
 Рассмотрим работу алгоритма на примере решётки состоящей из 64 спинов \ref{fig:cell64_J72_5}.
 
+
 \begin{figure}[H]
 	\centering
-	\resizebox{150px}{150px}{\includegraphics{pictures/cell64_J72_5.eps}}
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{pictures/cell64_J72_5.eps}
 	\caption{Пример решётки из 64 спинов}
-	\label{fig:cell64_J72_5}
+		\label{fig:cell64_J72_5}
+	\end{minipage}
+	\hspace{60pt} 
+	\begin{minipage}{0.3\linewidth}
+		\centering
+		\begin{minipage}{1.0\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{pictures/1PS_cell64_J72_5.eps}
+		\end{minipage} 
+		\hspace{-220pt} 
+		\begin{minipage}{1.0\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{pictures/2PS_cell64_J72_5.eps}
+		\end{minipage}
+			\vspace{-5pt} 
+\caption{Комбинации плакетов 2-го типа обладающих минимальным числом фрустраций}
+			\label{fig:12PS_cell64_J72_5}
+	\end{minipage}
 \end{figure}
 
 Сначала каждому плакету присваиваются координаты $x$ и $y$. Далее происходит комбинирование разбиений плакетов второго типа по парам. Рассматриваются случаи когда фрустрации возникают между каждой парой плакетов и когда размещение возбуждений происходит между плакетом и краем решётки. Число фрустраций между $i,j$-той парой плакетов определяется как $\left|x_i-x_j\right|+\left|y_i-y_j\right|$,  число фрустраций, возникающее от плакета 2-го типа до ближайшего края решетки определяется как $R_{ij}+1$, где i - номер плакета 2-го типа, j - номер ближайшего плакета находящегося на краю решётки, $R_{ij}$ - расстояние между ними. После перебора рассматриваются комбинации, которые по подсчётам обладают минимальным числом фрустраций. Несколько из них представлены на рисунке \ref{fig:12PS_cell64_J72_5}.
-
-\begin{figure}[H]
-	\centering
-	\begin{tabular}{cc}
-		\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/1PS_cell64_J72_5.eps}} & \hspace{0.05\textwidth}
-			\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/2PS_cell64_J72_5.eps}} 
-	\end{tabular}
-	\caption{Комбинации плакетов 2-го типа обладающих минимальным числом фрустраций}
-	\label{fig:12PS_cell64_J72_5}
-\end{figure}
 
 Далее на основании полученных комбинаций отмечаются как фрустрации пары спинов находящиеся между плакетами \ref{fig:12F_cell64_J72_5}.
 
 \begin{figure}[H]
 	\centering
 	\begin{tabular}{cc}
-		\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/1Conf_cell64_J72_5.eps}} & \hspace{0.05\textwidth}
-		\resizebox{150px}{150px}{\includegraphics[width=0.25\textwidth]{pictures/2Conf_cell64_J72_5.eps}} 
+		\includegraphics[width=0.3\textwidth]{pictures/1Conf_cell64_J72_5.eps} & \hspace{0.05\textwidth}
+		\includegraphics[width=0.3\textwidth]{pictures/2Conf_cell64_J72_5.eps} 
 	\end{tabular}
 	\caption{Фрустрации в основных состояниях решётки}
 	\label{fig:12F_cell64_J72_5}
