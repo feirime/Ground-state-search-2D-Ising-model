@@ -88,7 +88,7 @@
 
 \begin{abstract}
 
-By the method of exhaustive enumeration, all possible states of the Edwards-Anderson model on a simple square lattice of 8×8 spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
+By the complete enumeration method, all possible states of the Edwards-Anderson model on a simple square lattice of 8×8 spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
 
 \end{abstract}
 
@@ -138,7 +138,7 @@ Estimating the ground-state energy and understanding the nature of its macroscop
 
 It will be shown below that this variability may be related to the distribution of frozen disorder in the bonds, i.e., competing ferromagnetic and antiferromagnetic interactions. For a finite number of spins, the ground-state energy strongly depends on the specific realization of the distribution $\left\lbrace J_{ij} \right\rbrace$ on the spin lattice.  
 
-In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground-state energy for a finite number of spins, to compute the degeneracy of this state, and to determine the distribution of spin excess. The availability of an exact solution, even for a relatively small number of spins, allows for testing approximate methods. By performing exhaustive enumeration, we identified all possible states, enabling us to calculate properties in the presence of an external magnetic field.
+In this work, we utilized an complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground-state energy for a finite number of spins, to compute the degeneracy of this state, and to determine the distribution of spin excess. The availability of an exact solution, even for a relatively small number of spins, allows for testing approximate methods. By performing complete enumeration method, we identified all possible states, enabling us to calculate properties in the presence of an external magnetic field.
 
 \section{Комбинаторика плакетов}
 
@@ -452,9 +452,9 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 
 Увеличение числа плакетов 2-го типа и связанное с ним увеличение количества фрустраций в большинстве случаев ведет к увеличению вырождения основных состояний. Но для некоторых образцов увеличение количества фрустраций не вызывает рост вырождения основного состояния (см. точки с наименьшим значением $g_{gs}=2$ на рис. \ref{fig:g(Q)}). 
 
-\section{Основное состояние во внешнем магнитном поле}
+\section{Ground state in an external magnetic field}
 
-В таблице \ref{tab:Egs} приведены значения энергии основного состояния спинового стекла. На рисунке (\ref{fig:cell_SI_SG_64}) представлены случаи спинового льда и спинового стекла, которые отличаются упорядоченным или неупорядоченным распределением обменных констант. Вычисления показывают, что энергия основного состояния на один спин при $P_+ = 0.5$ и отсутствии воздействия внешнего магнитного поля для моделей спинового льда составила -1.75 и -0.97 (рис. \ref{fig:cell_SI_SG_64}(a) и \ref{fig:cell_SI_SG_64}(c), соответственно), при этом удельная энергия основного состояния спинового стекла в модели Эдвардса-Андерсона составила -1.28. Под спиновым льдом обычно понимается магнетик с периодичностью в обменных ферромагнитных и антиферромагнитных взаимодействиях \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}. 
+Table \ref{tab:Egs} presents the ground state energy values of spin glass. Figure \ref{fig:cell_SI_SG_64} illustrates cases of spin ice and spin glass, which differ in the ordered or disordered distribution of exchange constants. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for spin ice models is -1.75 and -0.97 (Figs. \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively), while the specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally refers to a magnet with periodicity in ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}. 
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.3\linewidth}
@@ -472,15 +472,15 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 		\includegraphics[width=1\linewidth]{pictures/SI_64_J0}
 	\end{minipage}
 	\hfill
-	\caption{Спиновый лед (a,c) и спиновое стекло (b), 64 спина, $P_+ = 0.5$}
+	\caption{Spin ice (a,c) and spin glass (b) lattices consisting of 64 spins with an exchange constant distribution of $P_+ = 0.5$}
 	\label{fig:cell_SI_SG_64}
 
 \end{figure}
 
 
-На рисунке \ref{fig:cell_SI_SG_64}(a) представлена плоская решетка спинового льда, составленная из плакетов 1-го типа, в которой полностью отсутствуют фрустрации. 
-На рисунке \ref{fig:cell_SI_SG_64}(b) представлена решетка спинового стекла, в которой из 49 плакетов имеется 16 плакетов 1-го типа, 27 - 2-го типа и 6 плакетов 3-го типа, 15 фрустраций.
-В решетке спинового льда на рисунке \ref{fig:cell_SI_SG_64}(c) максимальное количество фрустраций, в данном примере, достигается путем заполнения системы плакетами 2-го типа. Всего 25 фрустраций на 49 плакетов.
+Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of spin ice composed of plaquettes of the first type, completely free of frustrations.
+Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the first type, 27 are of the second type, and 6 are of the third type, with a total of 15 frustrations.
+In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum number of frustrations in this example is achieved by filling the system with plaquettes of the second type, resulting in 25 frustrations across 49 plaquettes.
 
 
 \begin{figure}[H]
@@ -499,25 +499,25 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 		\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0}
 	\end{minipage}
 	
-	\caption{Спиновый лед (a, c) и спиновое стекло (b), 64 спина, $P_+ = 0.5$}
+	\caption{Spin excess and residual entropy of spin ice (a, c) and spin glass (b) (exchange constant distribution shown in Fig. \ref{fig:cell_SI_SG_64})}
 	\label{fig:_multiplot_SI_SG_64}
 	
 \end{figure}
 
 
-На рисунке \ref{fig:_multiplot_SI_SG_64} представлены зависимости спинового избытка и вырождения основного состояния от значения напряженности внешнего магнитного поля. 
-При отсутствии фрустраций и внешнего магнитного поля основное состояние спинового льда вырождено дважды (рисунок \ref{fig:_multiplot_SI_SG_64}(a)).
-В спиновом стекле с появлением фрустраций вырождение основного состояния достигает 64 (рисунок \ref{fig:_multiplot_SI_SG_64}(b)).
-Максимальное заполнение системы спинового льда фрустрированными плакетами 2-го типа приводит к макроскопическому вырождению основного состояния, количество вырождений достигает 3211264 конфигураций (рисунок \ref{fig:_multiplot_SI_SG_64}(c)).
+Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
+In the absence of frustrations and an external magnetic field, the ground state of spin ice is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
+In spin glass, the introduction of frustrations increases the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
+Maximal filling of the spin ice system with frustrated plaquettes of the second type leads to macroscopic ground state degeneracy, with the number of degenerate configurations exceeding $3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
 
 
 
-При воздействии внешнего магнитного поля больше всего ступенек на графике спинового избытка наблюдается в системе спинового стекла (рисунок \ref{fig:_multiplot_SI_SG_64}(b)). Причем их количество обуславливается не множеством фрустраций, а формой плотности распределения состояний (DOS), которая играет важную роль.
-Стоит заметить, что количество ступенек неявным образом зависит от числа фрустраций.
+Under the influence of an external magnetic field, the spin glass system exhibits the highest number of steps in the spin excess graph (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
+This number is determined not by the number of frustrations but by the shape of the density of states (DOS), which plays a significant role.
+It is worth noting that the number of steps implicitly depends on the number of frustrations.
 
-
-Методом исчерпывающего перечисления для образцов спинового льда и спинового стекла, представленных на рис. \ref{fig:cell_SI_SG_64}, были построены плотности распределения состояний в зависимости от значений внешнего магнитного поля (рис. \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass} и \ref{fig:HDOS_ice}).
-Энергия системы с учетом воздействия внешнего магнитного поля вычислялась по формуле (\ref{eq:ising_energy}).
+Using complete enumeration method, the densities of states were constructed for the spin ice and spin glass samples shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
+The system's energy under the influence of an external magnetic field was calculated using Equation (\ref{eq:ising_energy}).
 
 
 
@@ -525,7 +525,7 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_1.png}
-	\caption{Плотность состояний во внешнем магнитном поле $0\leq h/J \leq 2$ решетки спинового льда (распределение обменных констант на рис. \ref{fig:_multiplot_SI_SG_64}(a))}
+	\caption{Density of states in an external magnetic field $0\leq h/J \leq 2$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a))}
 	\label{fig:HDOS_ice_1}
 \end{figure}
 
@@ -535,7 +535,7 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SG_64_J0.png}
-	\caption{Плотность состояний во внешнем магнитном поле $0\leq h/J \leq 5$ решетки спинового стекла (распределение обменных констант на рис. \ref{fig:_multiplot_SI_SG_64}(b))}
+	\caption{Density of states in an external magnetic field $0\leq h/J \leq 5$ for the spin glass lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(b))}
 	\label{fig:HDOS_glass}
 \end{figure}
 
@@ -543,20 +543,20 @@ In this work, we utilized an exhaustive enumeration algorithm \cite{dias2023grou
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0.png}
-	\caption{Плотность состояний во внешнем магнитном поле $0\leq h/J \leq 4$ решетки спинового льда (распределение обменных констант на рис. \ref{fig:_multiplot_SI_SG_64}(c))}
+	\caption{Density of states in an external magnetic field $0\leq h/J \leq 4$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(c))}
 	\label{fig:HDOS_ice}
 \end{figure}
 
 
-Как мы можем видеть на рисунке \ref{fig:HDOS_ice_1} при $h/J=0$ для спинового льда (рис. \ref{fig:cell_SI_SG_64}(a)) можно видеть вырождение основного состояния. Увеличение значения внешнего магнитного поля до критического значения $h/J=1$ за счет увеличения энергии Зеемана приводит к тому, что значение энергии основного состояния со спиновым избытком $M=0$ становится равным значению энергии основного состояния со спиновым избытком $M=0.25$. Энтропии основных состояний складываются.
-Увеличение значения внешнего магнитного поля до $h/J=2$ приводит к ситуации, когда основными состояниями становятся состояния со спиновыми избытками $M=\pm0.25; \pm0.5; \pm0.75; \pm1$.
-Значение  $h/J=3$ есть поле насыщения, при котором остается только одна конфигурация.
+In Figure \ref{fig:HDOS_ice_1}, at $h/J=0$ for spin ice (Figure \ref{fig:cell_SI_SG_64}(a)), the ground state degeneracy can be observed. An increase in the external magnetic field to the critical value $h/J=1$, due to the growth of the Zeeman energy, results in the ground state energy with spin excess $M=0$ becoming equal to the ground state energy with spin excess $M=0.25$. The entropies of the ground states are summed.
+Further increasing the external magnetic field to $h/J=2$ eads to a situation where the ground states correspond to spin excess values of $M=\pm0.25; \pm0.5; \pm0.75; \pm1$.
+The value  $h/J=3$ is the saturation field, at which only one configuration remains.
 
 
-Для спинового стекла (рис. \ref{fig:cell_SI_SG_64}(b)) скачки энтропии при $T=0$ в критических полях обусловлены границами плотности состояний (см. рис. \ref{fig:HDOS_glass}).
+or spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T=0$ in the critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
 
 
-Спиновый лед (рис. \ref{fig:cell_SI_SG_64}(c)) имеет не такое большое разнообразие критических полей в отличие от спинового стекла (см. рис. \ref{fig:HDOS_ice}). Однако вырождение основных состояний больше, чем в спиновом стекле.
+Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits less variety in critical fields compared to spin glass (see Figure \ref{fig:HDOS_ice}). However, the ground state degeneracy is greater than that of spin glass.
 
 
 \section{Антиферромагнетизм, спиновое стекло и ферромагнетизм при $T = 0$}
