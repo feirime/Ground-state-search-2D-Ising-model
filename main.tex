@@ -335,69 +335,69 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 
 
 
-\section{Решение исчерпывающим перечислением}
+\section{Exhaustive Enumeration Solution}
 
-Для исследования быр разработан алгоритм исчерпывающего перечисления.
+To investigate the problem, an exhaustive enumeration algorithm was developed.
 
-Модель спинового стекла Эдвардса-Андерсона представляет собой плоскую решетку Изинга:
+The Edwards-Anderson spin glass model is represented by a 2D Ising lattice:
 
 \begin{equation}
 	E = -\sum J_{ij} S_i S_j + h \sum S_i.
 	\label{eq:ising_energy}
 \end{equation}
-Это приводит к конкурирующим антиферромагнитным (при $J_{ij}=-1$) и ферромагнитным (при $J_{ij}=+1$) взаимодействиям. В нашей модели энергия обменного взаимодействия не зависит от расстояния между взаимодействующими спинами. Однако, знакопеременный характер обменных интегралов $J_{ij}$ может быть связан с искажениями в размещении взаимодействующих атомов на решетке, осцилляциями электронной плотности.
 
-Рассмотрим одномерную цепочку из трёх спинов ($L=3$), взаимодействующих ферромагнитно. Таким образом, все $J_{ij}=+1$.  Обозначим $\beta = (kT)^{-1}$.  Статистическая сумма принимает вид:
+This results in competing antiferromagnetic (for $J_{ij} = -1$) and ferromagnetic (for $J_{ij} = +1$) interactions. In our model, the energy of exchange interactions does not depend on the distance between interacting spins. However, the alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of interacting atoms on the lattice or oscillations in electron density.
+
+Let us consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$. The partition function is given by:
 
 \begin{equation}
 	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
 	\label{eq:stat_3}
 \end{equation}
 
-Присоединим вторую цепочку параллельно первой. С учетом того, что у нас все взаимодействия ферромагнитные
+Now, let us attach a second chain parallel to the first one. Assuming all interactions are ferromagnetic:
 
 \begin{equation}
 	\label{eq:stat_3_un}
 	\begin{alignedat}{2}
-		Z_6 = Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{\beta  h-\beta }+Z_3 e^{3 \beta +3 \beta  h}+ \\
-		Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{\beta  (-h)-\beta }+Z_3 e^{3 \beta -3 \beta  h}.
+		Z_6 = Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{3 \beta +3 \beta h} + \\
+		Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{3 \beta -3 \beta h}.
 	\end{alignedat}
 \end{equation}
 
-В результате получаем статистическую сумму для решетки $3 \times 2$:
+As a result, the partition function for a $3 \times 2$ lattice is:
 
 \begin{equation}
 	\label{eq:stat_3_res}
 	\begin{alignedat}{2}
-		Z_6 = 6 e^{-5 \beta }+12 e^{-\beta }+2 e^{3 \beta }+e^{9 \beta -6 \beta  h}+6 e^{3 \beta -4 \beta  h}+6 e^{-3 \beta -2 \beta  h}+\\
-		9 e^{\beta -2 \beta  h}+6 e^{2 \beta  h-3 \beta }+9 e^{\beta +2 \beta  h}+6 e^{3 \beta +4 \beta  h}+e^{9 \beta +6 \beta  h}.
+		Z_6 = 6 e^{-5 \beta } + 12 e^{-\beta } + 2 e^{3 \beta } + e^{9 \beta -6 \beta  h} + 6 e^{3 \beta -4 \beta  h} + 6 e^{-3 \beta -2 \beta  h} + \\
+		9 e^{\beta -2 \beta  h} + 6 e^{2 \beta  h-3 \beta } + 9 e^{\beta +2 \beta  h} + 6 e^{3 \beta +4 \beta  h} + e^{9 \beta +6 \beta  h}.
 	\end{alignedat}
 \end{equation}
 
-Алгоритм численного расчета  параметров статистической суммы (плотности состояний, вырождения или энтропии, энергии и спинового избытка состояний) тогда выглядит следующим образом \ref{alg:addititional_algorithm}:
-
+The numerical algorithm for calculating partition function parameters (state density, degeneracy or entropy, energy, and spin excess) is then outlined as follows (\ref{alg:addititional_algorithm}):
 
 \begin{algorithm}[H]
-	\textbf{ВХОД:} Размер и геометрия решетки (количество и координаты спинов, граничные условия, число соседей), распределение обменных констант.\\
-	\textbf{ВЫХОД:} Параметры статистической суммы, плотность состояний - (вырождение или энтропия, энергия и спиновый избыток).
+	\textbf{INPUT:} Lattice size and geometry (number and coordinates of spins, boundary conditions, number of neighbors), distribution of exchange constants.\\
+	\textbf{OUTPUT:} Partition function parameters, state density (degeneracy or entropy, energy, and spin excess).
 	\begin{algorithmic}
-		\STATE {Рассчитать плотность состояний для первой 1D цепочки}
-		\FOR {Количество слоев в решетке\\}
+		\STATE {Compute state density for the first 1D chain.}
+		\FOR {Number of lattice layers \\}
 		{
-			\STATE {Рассчитать плотность состояний для присоединяемой 1D цепочки}
-			\FOR {длина 1D цепи\\}
+			\STATE {Compute state density for the attached 1D chain.}
+			\FOR {Length of the 1D chain \\}
 			{
-				\STATE {Рассчитать плотность состояний для получившейся решетки}
+				\STATE {Compute state density for the resulting lattice.}
 			}
-			\ENDFOR\\
+			\ENDFOR \\
 		}
 		\ENDFOR
 	\end{algorithmic}
-	\caption{Вычисление параметров статистической суммы методом присоединения 1D цепочек.}
+	\caption{Computing partition function parameters by attaching 1D chains.}
 	\label{alg:addititional_algorithm}
 \end{algorithm}
 
-В результате для квадратной решетки $L \times L=N$ сложность алгоритма полного перебора падает с $2^{N}$ до $L \cdot 2^L + (L - 1) \cdot 2^L$. Таким образом прирост производительности для решетки из 9-ти спинов составляет примерно 92\% и на 27 порядков для системы из 100 спинов.
+As a result, for a square lattice of size $L \times L = N$, the computational complexity of exhaustive enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
 
 
 \section{Энергия основного состояния}
@@ -427,11 +427,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 	\label{tab:Egs}
 \end{table}
 
-Мы вычислили значение энергии основного состояния в модели Эдвардса-Андерсона точно с помощью исчерпывающего перечисления (алгоритм \ref{alg:addititional_algorithm}). На графике \ref{fig:E(Q)} представлена зависимость удельной энергии основного состояния $E_{gs}/N$ от числа плакетов второго типа $Q$. 
-%и с помощью описанного выше подхода. Для исследования основных состояний были взяты 2000 различных решёток спинового стекла. Линейный размер $L$ в образцах был от 8 до 32.
-%Для каждого размера рассматривались системы с различным чётным $Q$ количеством плакетов 2-го типа от 2 до 16, и для каждого количества плакетов было взято по 10 систем со случайной расстановкой плакетов 2-го типа внутри системы. %Для исследования не  брались решётки с нечётным количеством плакетов 2-го типа так как тогда невозможно добиться одинакового количества отрицательных и положительных обменных интегралов в системе. 
-
-%Из графика \ref{fig:Egs_N_F} видно, что энергия основного состояния системы на один спин увеличивается с числом фрустрированных плакетов. Диапазон таких значений составляет -1.92578 ; -1.34375. Более низкое значение удельной энергии по сравнению с данными в таблице \ref{tab:Egs} обусловлено тем, что для данного исследования были взяты системы с небольшим количеством плакетов 2-го типа, что уменьшает количество фрустраций в основных состояниях.
+Мы вычислили значение энергии основного состояния в модели Эдвардса-Андерсона точно с помощью исчерпывающего перечисления (алгоритм \ref{alg:addititional_algorithm}). На графике \ref{fig:E(Q)} представлена зависимость удельной энергии основного состояния $E_{gs}/N$ от числа плакетов второго типа $Q$.
 
 \begin{figure}[H]
 	\centering
@@ -559,107 +555,98 @@ or spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T=0$ in the
 Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits less variety in critical fields compared to spin glass (see Figure \ref{fig:HDOS_ice}). However, the ground state degeneracy is greater than that of spin glass.
 
 
-\section{Антиферромагнетизм, спиновое стекло и ферромагнетизм при $T = 0$}
+\section{Antiferromagnetism, Spin Glass, and Ferromagnetism at $T = 0$}
 
-В работе \cite{trukhin4855337thermodynamic} определена фазовая диаграмма при отличной от нуля температуре во внешнем магнитном поле. Представляет интерес вопрос разделения фаз антиферромагнетика, спинового стекла и ферромагнетика при $T=0$.
+The phase diagram at non-zero temperatures in an external magnetic field was studied in \cite{trukhin4855337thermodynamic}. Of particular interest is the separation of antiferromagnetic, spin glass, and ferromagnetic phases at $T = 0$).
 
-В таблице \ref{tab:lit_phase} приведены данные теоретических и численных расчётов критической точки перехода (относительная концентрация ферромагнитных связей $P_+$) из фазы антиферромагнетика в фазу спинового стекла.
+Table \ref{tab:lit_phase} summarizes theoretical and numerical results for the critical transition point (relative concentration of ferromagnetic bonds $P_+$) from the antiferromagnetic phase to the spin glass phase.
 
 \begin{table}[!h]
+	\centering
 	\begin{tabular}{|l|c|l|}
 		\hline
-		Method                                   & $P_{+}$                                       & Reference                                           
-		\\ \hline
-		Series expansion 								& ~0.099                                  & \cite{PhysRevB.19.260}    \\ \hline
-	     Matching algorithm                            & 
-	     0.105 $\pm 0.01$                                        & \cite{H_Freund_1989} \\ \hline
-		Matching algorithm                      & 
-		$0.095<p_c<0.108$                                          & \cite{BENDISCH1994139}      \\ \hline
-		Exact ground states                       & 
-		$0.106 \pm 0.002$                               & \cite{N.Kawashima_1997}     \\ \hline
-		Ground state enumeration                             & 0.115                                          & \cite{PhysRevE.58.1502} \\ \hline
-    	Exact ground states        & 
-		$0.1031\pm0.0001$                                          & \cite{WANG200331}   \\ \hline
-		Exact ground states   & $0.103\pm0.001$                                       & \cite{amoruso2004domain} 
-		    \\ \hline
-			
+		Method & \( P_{+} \) & Reference \\ \hline
+		Series expansion & ~0.099 & \cite{PhysRevB.19.260} \\ \hline
+		Matching algorithm & \( 0.105 \pm 0.01 \) & \cite{H_Freund_1989} \\ \hline
+		Matching algorithm & \( 0.095 < p_c < 0.108 \) & \cite{BENDISCH1994139} \\ \hline
+		Exact ground states & \( 0.106 \pm 0.002 \) & \cite{N.Kawashima_1997} \\ \hline
+		Ground state enumeration & 0.115 & \cite{PhysRevE.58.1502} \\ \hline
+		Exact ground states & \( 0.1031 \pm 0.0001 \) & \cite{WANG200331} \\ \hline
+		Exact ground states & \( 0.103 \pm 0.001 \) & \cite{amoruso2004domain} \\ \hline
 	\end{tabular}
-	\caption{Критическая точка для перехода AFM-SG, концентрация ферромагнитных связей}
+	\caption{Critical point for the AFM-SG transition (ferromagnetic bond concentration \( P_+ \)).}
 	\label{tab:lit_phase}
 \end{table}
 
-На рисунке \ref{fig:Mgs(P+)} представлена диаграмма спиновых избытков основного состояния образцов квадратной решетки Изинга, которая получена на основе данных исчерпывающего перечисления. Плотность распределения ферромагнитных связей определяется параметром $P_+$. Связи распределены случайным образом с сохранением $P_+$ для одной серии. Каждая серия содержала \textbf{10 образцов} для численного расчёта. 
+Figure \ref{fig:Mgs(P+)} shows the dependence of the maximum spin excess in the ground state on the relative number of ferromagnetic bonds $P_+$. The density of ferromagnetic bonds is determined by $P_+$, and bonds are randomly distributed while maintaining $P_+$ within each series. Each series consisted of 10 samples for numerical calculations.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Mgs(P+).eps}
-	\caption{Значения максимального спинового избытка основного состояния в зависимости от относительного количества ферромагнитных связей $P_+$}
+	\caption{Maximum ground state spin excess as a function of the relative number of ferromagnetic bonds $P_+$.}
 	\label{fig:Mgs(P+)}
 \end{figure}
 
-Очевидно, что для чистого ферромагнетика ($P_+ = 1.0$) спиновый избыток будет равен количеству спинов ($M/N = 1.0$), а для чистого антиферромагнетика -- нулю (в случае чётного количества спинов). Для каждого заданного $P_+$ отношение числа точек, в которых максимальный спиновый избыток основного состояния равен нулю, к числу точек, где $M_{gs}/N \neq 0.0$, есть вероятность антиферромагнитного состояния, рис. \ref{fig:P_AFM_FM_Mmax} (a). Аналогичным образом, отношение числа точек с $M_{gs}/N = 1.0$ ферромагнитных спиновых избытков основного состояния к числу точек, когда $M_{gs}/N \neq 1.0$, есть вероятность ферромагнитного состояния, рис. \ref{fig:P_AFM_FM_Mmax} (b).
+For a pure ferromagnet ($P_+ = 1.0$), the spin excess equals the number of spins ($M/N = 1.0$), while for a pure antiferromagnet, it is zero (in the case of an even number of spins). For a given $P_+$, the ratio of points where the maximum ground state spin excess equals zero to the number of points where $M_{gs}/N \neq 0.0$ represents the probability of an antiferromagnetic state, as shown in Fig. \ref{fig:P_AFM_FM_Mmax}(a). Similarly, the ratio of points with $M_{gs}/N = 1.0$ (ferromagnetic spin excess) to the number of points where $M_{gs}/N \neq 1.0$ represents the probability of a ferromagnetic state, as shown in Fig. \ref{fig:P_AFM_FM_Mmax}(b).
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
-		\centering $(a)$
+		\centering (a)
 		\includegraphics[width=1\linewidth]{images/P_AFM_Mmax.eps}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.45\linewidth}
-		\centering $(b)$
+		\centering (b)
 		\includegraphics[width=1\linewidth]{images/P_FM_Mmax.eps}
 	\end{minipage}
-	\caption{Вероятность антиферромагнитного (a) и ферромагнитного (b) состояний при $T = 0$}
+	\caption{Probability of antiferromagnetic (a) and ferromagnetic (b) states at \( T = 0 \).}
 	\label{fig:P_AFM_FM_Mmax}
 \end{figure}
 
-Антиферромагнитная фаза при $T = 0$ реализуется при $0.0 \leq P_+ \leq 0.1$. Спиновое стекло реализуется при $0.1 \leq P_+ \leq 0.9$. Ферромагнитная фаза реализуется при $0.9 \leq P_+ \leq 1.0$. Полученные значения отделяют антиферромагнитную фазу в тех же значениях $P_+$, что и в работах, представленных в таблице \ref{tab:lit_phase}, а также позволяют отделить ферромагнитную фазу в нулевой температуре в отсутствие внешнего магнитного поля.
+The antiferromagnetic phase at $T = 0$ occurs for $0.0 \leq P_+ \leq 0.1$. The spin glass phase is realized for $0.1 \leq P_+ \leq 0.9$. The ferromagnetic phase occurs for $0.9 \leq P_+ \leq 1.0$. These results align with the critical values for the antiferromagnetic phase in Table \ref{tab:lit_phase} and provide boundaries for the ferromagnetic phase at zero temperature in the absence of an external magnetic field.
 
-Полная плотность состояний позволяет достоверно рассчитать свойства образцов во внешнем магнитном поле. Под действием внешнего магнитного поля ($h/J = 1$ и $h/J = 2$) доля ферромагнитной фазы увеличивается, доля антиферромагнитной фазы уменьшается, рис. \ref{fig:Mgs(P+)_H}. Точки перехода фаз во внешнем магнитном поле ведут себя схожим образом в работе \cite{trukhin4855337thermodynamic}
+The complete density of states allows reliable calculation of sample properties in an external magnetic field. Under an external magnetic field ($h/J = 1$ and $h/J = 2$), the proportion of the ferromagnetic phase increases while that of the antiferromagnetic phase decreases, as shown in Fig. \ref{fig:Mgs(P+)_H}. Phase transition points under an external field exhibit behavior similar to \cite{trukhin4855337thermodynamic}.
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
-		\centering $(a)$
+		\centering (a)
 		\includegraphics[width=1\linewidth]{images/Mgs(P+)_H1.eps}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.45\linewidth}
-		\centering $(b)$
+		\centering (b)
 		\includegraphics[width=1\linewidth]{images/Mgs(P+)_H2.eps}
 	\end{minipage}
-	\caption{Спиновый избыток основного состояния для всех значений плотности распределения обменных интегралов во внешнем магнитном поле $h/J = 1$ (a) и $h/J = 2$ (b)}
+	\caption{Ground state spin excess for all values of bond distribution density under external fields $h/J = 1$ (a) and $h/J = 2$ (b).}
 	\label{fig:Mgs(P+)_H}
 \end{figure}
 
-Теоретическая фазовая диаграмма $h -- P_+$ основного состояния представлена на рисунке \ref{fig:P+_afm_fm(H)}).  
+The theoretical ground state phase diagram ($h-P_+$) is shown in Fig. \ref{fig:P+_afm_fm(H)}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/P+_afm_fm(H)_filled.png}
-	\caption{Приблизительное разделение фаз при $T = 0$ во внешнем магнитном поле. Синие точки -- фаза антиферромагнетика, красные -- ферромагнетика. Точки это отличная от нуля вероятность того, что $M/N = 0$ или $M/N = 1$, для антиферромагнетика и ферромагнетика, соответственно TODO:подписать фазы}
+	\caption{Approximate phase separation at $T = 0$ in an external magnetic field. Blue dots: antiferromagnetic phase; red dots: ferromagnetic phase.}
 	\label{fig:P+_afm_fm(H)}
 \end{figure}
 
-Включение внешнего магнитного поля приводит к смещению границ существования фаз. Так для антиферромагнетика в поле $H/J > 1$ происходит спин-флоп для части образцов, в поле $H/J > 2$ -- для всех.
+Applying an external magnetic field shifts phase boundaries. For $H/J > 1$, a spin-flop transition occurs in some samples, and for $H/J > 2$, it occurs in all. At $H/J > 4$, all samples transition to a ferromagnetic state.
 
-Из диаграммы следует что во внешнем магнитном поле $H/J > 4$ все образцы переходят в состояние ферромагнетика. 
+The staircase-like behavior of the diagram can be explained by the competition between internal interaction energy ($E = -\sum J_{ij} S_i S_j$) and Zeeman energy ($E = - h \sum S_i$). At specific field values, the Zeeman energy dominates, causing phase transitions across groups of samples with varying $P_+$.
 
-Ступенеобразное поведения диаграммы может быть объяснено конкуренцией энергии внутренних взаимодействий ($E = -\sum J_{ij} S_i S_j$) и энергии Зеймана ($E = - h \sum S_i$). При определённых значниях поля энергия Зеймана перевешивает внутренние энергии приводит к фазовому переходу целой группы образцов с разными  $P_+$.
+It should be noted that open boundary conditions may introduce significant distortions. For example, a sample with $P_+ = 0.2$ (Figs. \ref{fig:Mgs(P+)}, \ref{fig:P_AFM_FM_Mmax}) exhibits antiferromagnetic properties due to ferromagnetic bonds ($J_{ij} = 1$) being concentrated along the edges.
 
-Необходимо отметить что открытые граничные условия могут внести существенные искажения в полученные результаты. Так один образец с $P_+ = 0.2$ (рис. \ref{fig:Mgs(P+)}, \ref{fig:P_AFM_FM_Mmax}) показывает свойства антиферромагнетика за счёт того что ферромагнитные связи $J_{ij} = 1$ располагаются вдоль границы.
+\section{Conclusion}
 
-\section{Заключение}
+An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an exhaustive enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
 
-Точное решение для основного состояния модели Эдвардса-Андерсона на простой квадратной решетке 8х8 спинов получено и исследовано методом исчерпывающего перечисления. Разработанный авторский алгоритм позволяет рассчитать вырождение, энергию и спиновый избыток для каждого из $2^N$ возможных состояний, провести исследования при отсутствии температуры, выполнить поиск основного состояния при $T=0$ и отличном от нуля внешнем магнитном поле $h/J$. 
+It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustrated plaquettes, i.e., the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground-state configurations based on the determination of frustration locations. The algorithm is limited by the number of possible arrangements of frustrations.
 
-Показано, что в модели Эдвардса-Андерсона для исследуемых образцов конечного размера макроскопическое вырождение основного состояния фрустрированных спиновых систем обусловлено комбинаторикой фрустрированных плакетов, т.е. количеством вариантов размещения фрустрированных пар спинов на решетке. Мы предложили алгоритм расчета энергии, спинового избытка и конфигураций основного состояния, который основан на определении расположения фрустраций. Алгоритм расчета основных состояний имеет ограничения, которые накладываются количеством возможных вариантов размещения фрустраций. 
+It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground-state degeneracy implies alternative arrangements of frustrations.
 
-Установлено, что плакеты 2-го типа являются единственной причиной возникновения фрустраций в основном состоянии в отсутствии внешнего магнитного поля. В конфигурациях  минимума энергии фрустрации могут также располагаться между плакетами 2-го типа или между фрустрированным плакетом и краем решётки в зависимости от расстояний и граничных условий. Макроскопическое вырождение основного состояния подразумевает альтернативные варианты размещения фрустраций.
+The dependence of the ground-state spin excess in the Edwards-Anderson model on the external magnetic field at $T \to 0$ exhibits a discrete (stepped, staircase-like) character. This behavior is caused by the discrete structure of the density of states. Critical values of the external magnetic field, where giant jumps in residual entropy are observed, have been calculated. The nature of these entropy jumps arises from the fact that at certain critical field values, multiple spin configurations with different interaction and Zeeman energies—but the same total energy—contribute equally to the ground state. Degeneracies of states with identical total energy are summed.
 
-Зависимость спинового избытка основного состояния в модели Эдвардса-Андерсона от внешнего магнитного поля при $T\rightarrow 0$ имеет дискретный (ступенчатообразный, лестничный) характер. Такое поведение обусловлено дискретной структурой плотности состояний. Вычислены критические значения внешнего магнитного поля, при которых наблюдаются гигантские скачки остаточной энтропии. Природа скачков энтропии обусловлена тем, что при определенных критических значениях внешнего магнитного поля сумма нескольких конфигураций спинов с разной энергией взаимодействия и энергией Зеемана, т.е. с разным значением спинового избытка, будут обладать одинаковой полной энергией. Кратности вырождения состояний с одинаковой полной энергией суммируются.
-
-
-Задача о максимальном количестве фрустраций в зависимости от количества спинов в системе для заданного типа решетки в модели Изинга с антиферромагнитным и ферромагнитным обменным взаимодействием может иметь интерес, поскольку наличие фрустраций приводит к появлению новых свойств. Показано, что в модели Эдвардса-Андерсона существуют системы с двукратным вырождением основного состояния, при этом в конфигурациях минимума энергии существуют фрустрации. Кроме того, может представлять интерес задача о размещении фрустраций в конфигурациях основного состояния (т.е. задача о вырождении состояний с отличным от нуля спиновым избытком), задача о подавлении фрустраций внешним магнитным полем. 
+The problem of the maximum number of frustrations as a function of the number of spins in a system for a given lattice type in the Ising model with antiferromagnetic and ferromagnetic exchange interactions is of interest, as the presence of frustrations gives rise to new properties. It has been shown that in the Edwards-Anderson model, systems with twofold ground-state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground-state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
 
 
 \section{Благодарности}
