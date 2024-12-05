@@ -337,7 +337,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 
 \section{Complete enumeration solution}
 
-To investigate the problem, an exhaustive enumeration algorithm was developed.
+To investigate the problem, an complete enumeration algorithm was developed.
 
 The Edwards-Anderson spin glass model is represented by a 2D Ising lattice:
 
@@ -397,7 +397,7 @@ The numerical algorithm for calculating partition function parameters (state den
 	\label{alg:addititional_algorithm}
 \end{algorithm}
 
-As a result, for a square lattice of size $L \times L = N$, the computational complexity of exhaustive enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
+As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
 
 
 \section{Энергия основного состояния}
@@ -638,7 +638,7 @@ It should be noted that open boundary conditions may introduce significant disto
 
 \section{Conclusion}
 
-An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an exhaustive enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
+An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an complete enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
 
 It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustrated plaquettes, i.e., the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground-state configurations based on the determination of frustration locations. The algorithm is limited by the number of possible arrangements of frustrations.
 
