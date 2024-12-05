@@ -88,7 +88,7 @@
 
 \begin{abstract}
 
-By the complete enumeration method, all possible states of the Edwards-Anderson model on a simple square lattice of 8×8 spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
+By the complete enumeration method, all possible states of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
 
 \end{abstract}
 
@@ -400,14 +400,14 @@ The numerical algorithm for calculating partition function parameters (state den
 As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
 
 
-\section{Энергия основного состояния}
+\section{Ground state energy}
 
-Результаты решения задачи о вычислении энергии основного состояния спинового стекла в модели Эдвардса-Андерсона приведены в таблице \ref{tab:Egs}. Из таблицы видно, что значения энергий основного состояния  имеют большой разброс.
+The results of solving the problem of calculating the ground state energy of spin glass in the Edwards-Anderson model are presented in Table \ref{tab:Egs}. The table shows that the ground state energy values exhibit significant variability.
 
 \begin{table}[h]
 	\begin{tabular}{|l|c|l|}
 		\hline
-		Method                                   & $E_{gs}$                                       & ссылка                                          \\ \hline
+		Method                                   & $E_{gs}$                                       & Ref.                                          \\ \hline
 		Thouless-Anderson-Palmer (TAP) Approach & 0                                              & \cite{thouless1977solution}    \\ \hline
 		Replica Method                            & $-2/\pi$                                       & \cite{sherrington1975solvable} \\ \hline
 		Partition function                      & -0.5                                           & \cite{tanaka1980analytic}      \\ \hline
@@ -423,30 +423,31 @@ As a result, for a square lattice of size $L \times L = N$, the computational co
 		
 		
 	\end{tabular}
-	\caption{Удельная энергия основного состояния}
+	\caption{Ground state specific energy}
 	\label{tab:Egs}
 \end{table}
 
-Мы вычислили значение энергии основного состояния в модели Эдвардса-Андерсона точно с помощью исчерпывающего перечисления (алгоритм \ref{alg:addititional_algorithm}). На графике \ref{fig:E(Q)} представлена зависимость удельной энергии основного состояния $E_{gs}/N$ от числа плакетов второго типа $Q$.
+We calculated the ground state energy in the Edwards-Anderson model exactly using complete enumeration algorithm \ref{alg:addititional_algorithm}. The graph in Figure \ref{fig:E(Q)} shows the dependence of the specific ground state energy $E_{gs}/N$ on the number of Type-II plaquettes $Q$.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.5\linewidth]{pictures/E_Q.eps}
-	\caption{Энергия основного состояния в зависимости от числа плакетов 2-го типа для $N=64$}
+	\caption{Ground state energy as a function of the number of Type-II plaquettes for $N=64$}
 	\label{fig:E(Q)}
 \end{figure}
 
-С увеличением количества плакетов 2-го типа $Q$ энергия основного состояния увеличивается в среднем. На скорость увеличения энергии влияет не только количество плакетов 2-го типа, но и их расположение на решетке. Этим объясняется разброс значений энергий основного состояния на рисунке \ref{fig:E(Q)} и в таблице \ref{tab:Egs}.
-Увеличение значения энергии основного состояния обусловлено ростом количества фрустраций с увеличением числа плакетов 2-го типа.
+With an increase in the number of Type-II plaquettes $Q$, the ground state energy increases on average. The rate of energy increase depends not only on the number of Type-II plaquettes but also on their arrangement within the lattice. This explains the variability in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}.
+The increase in ground state energy is driven by the growth in the number of frustrations as the number of Type-II plaquettes increases.
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{pictures/g_Q.eps}
-	\caption{Вырождение основного состояния в зависимости от числа плакетов 2-го типа для $N=64$}
+	\caption{Ground state degeneracy as a function of the number of Type-II plaquettes for $N=64$}
 	\label{fig:g(Q)}
 \end{figure}
 
-Увеличение числа плакетов 2-го типа и связанное с ним увеличение количества фрустраций в большинстве случаев ведет к увеличению вырождения основных состояний. Но для некоторых образцов увеличение количества фрустраций не вызывает рост вырождения основного состояния (см. точки с наименьшим значением $g_{gs}=2$ на рис. \ref{fig:g(Q)}). 
+An increase in the number of Type-II plaquettes, along with the associated rise in the number of frustrations, generally leads to an increase in ground state degeneracy. However, for some samples, an increase in the number of frustrations does not result in a growth in ground state degeneracy (see points with the minimum value $g_{gs}=2$ in Figure \ref{fig:g(Q)}). 
 
 \section{Ground state in an external magnetic field}
 
