@@ -140,11 +140,11 @@ It will be shown below that this variability may be related to the distribution 
 
 In this work, we utilized an complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground-state energy for a finite number of spins, to compute the degeneracy of this state, and to determine the distribution of spin excess. The availability of an exact solution, even for a relatively small number of spins, allows for testing approximate methods. By performing complete enumeration method, we identified all possible states, enabling us to calculate properties in the presence of an external magnetic field.
 
-\section{Комбинаторика плакетов}
+\section{Plaquette combinatorics}
 
-Пусть под плакетом понимается замкнутая цепочка спинов минимальной длины \cite{lebrecht2015j}. В рассмотренных далее примерах на квадратной решётке плакетами являются элементарные квадраты, см. рисунки \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. В модели спинового стекла Эдвардса-Андерсона плакеты можно разделить на три возможных типа. 
+Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}.In the following examples on a square lattice, the plaquettes are elementary squares, see figures \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 
-Если $P_+$ есть относительное количество ферромагнитных ($J_{ij}=+1$) обменных интегралов, тогда к первому типу, см. рис. \ref{fig:Type1}, относятся плакеты, в которых $P_+=0.5$. Для второго типа $P_+=0.75$ или $P_+=0.25$ (рис. \ref{fig:Type2}). Для третьего типа $P_+=1.0$ или $P_+=0.0$ (рис. \ref{fig:Type3}). Прямым и зубчатым линиям на рисунках соответствуют ферромагнитные и антиферромагнитные связи, соответственно. Белые и чёрные кружки на рисунках соответствуют спинам вверх и вниз в одной из конфигураций основного состояния.
+If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then type 1, see Fig. \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For type 2, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For type 3, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}).Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to up and down spins in one of the ground state configurations.
 
 
 \begin{figure}[H]
@@ -154,7 +154,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type1_1.eps}}
 		\hspace{-4pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type1_2.eps}}
-		\caption{Плакеты первого типа}
+		\caption{Plaquettes type 1}
 		\label{fig:Type1} 
 	\end{minipage}
 	\hspace{5pt} 
@@ -163,7 +163,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type2_1.eps}}
 		\hspace{-2pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type2_2.eps}}
-		\caption{Плакеты второго типа}
+		\caption{Plaquettes type 2}
 		\label{fig:Type2}
 	\end{minipage}
 	\hspace{5pt}
@@ -172,17 +172,17 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type3_1.eps}}
 		\hspace{-4pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type3_2.eps}}
-		\caption{Плакеты третьего типа}
+		\caption{Plaquettes type 3}
 		\label{fig:Type3}
 	\end{minipage}
 \end{figure}
 
 
-В каждом из рассмотренных выше плакетов существует $2^4$ конфигураций.
-Установлено, что фрустрация (возбуждение или положительная энергия обменного взаимодействия между $ij$-парой спинов) в основном состоянии обязательно появляется в плакетах второго типа, которые помечены знаком $"+"$. Причём фрустрированной парой может быть любая пара спинов.
+There are $2^4$ configurations in each of the above considered plaquettes.
+It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in type 2 plaquettes, which are marked by the $‘+’$ sign. Moreover the frustrated pair can be any pair of spins.
 
 
-Если система состоит из двух плакетов второго типа, например, как показано на рисунке \ref{fig:Type2_32}, то для минимизации энергии фрустрированная пара обязательно располагается на пересечении плакетов, вне зависимости от распределения обменных взаимодействий в остальной решетке. 
+If the system consists of two type 2 plaquettes, for example, as shown in Figure \ref{fig:Type2_32}, the frustrated pair is necessarily located at the intersection of the plaquettes to minimise the energy, regardless of the distribution of exchange interactions in the rest of the lattice. 
 
 \begin{figure}[H]
 	%\centering
@@ -201,14 +201,13 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\includegraphics[width=1\textwidth]{pictures/Type2_3x2_2.eps}
 		\label{fig:Type2_3x2_2}
 	\end{minipage}
-	\caption{Системы состоящие из двух плакетов второго типа}
+	\caption{Systems of two type 2 plaquettes}
 	\label{fig:Type2_32}
 \end{figure}
 
 
-Легко найти энергию, спиновый избыток и конфигурации основного состояния при известном расположении фрустрированных пар спинов. Энергия и кратность вырождения основного состояния для систем на рисунке \ref{fig:Type2_32} $E_{gs}/N=-0.83$, $g=2$. Спиновый избыток основного состояния $M_{gs}/N=0$ для системы на рисунке \ref{fig:Type2_32}(a) и $M_{gs}/N=\pm 0.33$ на рисунке \ref{fig:Type2_32}(b).
-
-На рисунках \ref{fig:4x4.1}(a-d) в центре решетки находится плакет 2-го типа, содержащий фрустрацию. Размещение фрустрации в плакете не 2-го типа приводит к возникновению еще одного возбуждения в нем. В данном примере существует 8 основных состояний ($E_{gs}/N=-1.25$, $g=8$, $M_{gs}/N=\pm 0.25$ - рисунок \ref{fig:4x4.1} (a), $M_{gs}/N=\pm 0.25$ - рисунки \ref{fig:4x4.1} (a,b), $M_{gs}/N=\pm 0.08$ - рисунок \ref{fig:4x4.1} (c), $M_{gs}/N=\pm 0.08$ - рисунок \ref{fig:4x4.1} (d)). Спиновый избыток основного состояния обусловлен соотношением количества ферромагнитных и антиферромагнитных связей. Фрустрации могут изменять это соотношение, потому что фрустрированная антиферромагнитная связь приведет к ферромагнитному упорядочению в паре спинов, и наоборот.
+It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in figure \ref{fig:Type2_32} $E_{gs}/N=-0.83$, $g_{gs}=2$. The ground state spin excess $M_{gs}/N=0$ for the system in figure \ref{fig:Type2_32}(a) and $M_{gs}/N=\pm 0.33$ in figure \ref{fig:Type2_32}(b).
+In Figures \ref{fig:4x4.1}(a-d), there is a type 2 plaquette containing frustration in the centre of the lattice. Placing frustration in a non-type 2 plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm 0.25$ - Figure \ref{fig:4x4. 1} (a), $M_{gs}/N=\pm 0.25$ - figures \ref{fig:4x4.1} (a,b), $M_{gs}/N=\pm 0.08$ - figure \ref{fig:4x4.1} (c), $M_{gs}/N=\pm 0.08$ - figure \ref{fig:4x4.1} (d)). The spin excess of the ground state is due to the ratio of the number of ferromagnetic to antiferromagnetic bonds. Frustrations can change this ratio because a frustrated antiferromagnetic bond will lead to ferromagnetic ordering in the spin pair, and vice versa.
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.2\linewidth}
@@ -230,12 +229,12 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(d)
 		\includegraphics[width=1\linewidth]{pictures/Cl1_Type2_gs4.eps}
 	\end{minipage}
-	\caption{Основные состояния системы (a, b, c, d). Фрустрированные пары спинов обведены.}
+	\caption{The ground states of the system (a, b, c, d). Frustrated pairs of spins are circled}
 	\label{fig:4x4.1}
 	
 \end{figure}
 
-Для примера на рисунке \ref{fig:4x7}, $E_{gs}/N=-1.18$, $M_{gs}/N=0$, существует только два основных состояния $g=2$. При этом имеется три фрустрированные пары. Таким образом, наличие фрустраций в основном состоянии не всегда приводит к макроскопическому вырождению. 
+For the example in Figure \ref{fig:4x7}, $E_{gs}/N=-1.18$, $M_{gs}/N=0$, there are only two ground states $g_{gs}=2$. At the same time, there are three frustrated pairs. Thus, the presence of frustrations in the ground state does not always lead to macroscopic degeneracy. 
 
 \begin{figure}[H]
 	\centering
@@ -244,7 +243,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 	\label{fig:4x7}
 \end{figure}
 
-На рисунке \ref{fig:5x5.22F} приведен пример ($E_{gs}/N=-1.44$, $g=4$, $M_{gs}/N=\pm 0.11$ для рисунка \ref{fig:4x7} (a) и $M_{gs}=\pm 0.04$ для \ref{fig:4x7} (b)), когда два плакета 2-го типа имеют один общий спин. Несмотря на уменьшение количества фрустрированных пар, по сравнению с предыдущим примером, наблюдается увеличение вырождения основного состояния. Комбинаторика возникает по причине того, что существует несколько вариантов размещения фрустрированных пар на решётке.
+Figure \ref{fig:5x5.22F} shows an example ($E_{gs}/N=-1.44$, $g_{gs}=4$, $M_{gs}/N=\pm 0.11$ for figure \ref{fig:4x7} (a) and $M_{gs}=\pm 0.04$ for \ref{fig:4x7} (b)) when two type 2 plaquettes share a common spin. Despite the decrease in the number of frustrated pairs, there is an increase in the ground state degeneracy compared to the previous example. The combinatorics arises because there are several options for the placement of frustrated pairs on the lattice.
 
 \begin{figure}[H]
 	\centering
@@ -257,21 +256,21 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(b)
 		\includegraphics[width=1\linewidth]{pictures/Cl5x5_Type2_gs2.eps}
 	\end{minipage}
-	\caption{Основные состояния решетки с двумя плакетами второго типа}
+	\caption{Ground states of the lattice with two plaquettes of type 2}
 	\label{fig:5x5.22F}
 \end{figure}
 
-На основе рассмотренных примеров можно сделать несколько выводов:
+Several conclusions can be drawn from the examples discussed:
 
 \begin{enumerate}
-	\item Плакеты 2-го типа являются единственной причиной возникновения фрустраций в основном состоянии.
-	\item В основном состоянии фрустрации расположены между плакетами 2-го типа или между плакетом и краем решётки в зависимости от расстояний.
-	\item Макроскопическое вырождение основного состояния обусловлено альтернативными вариантами размещения фрустраций.
+	\item Type 2 plaquettes are the only cause of frustrations in the ground state.
+	\item In the ground state, frustrations are located between type 2 plaquettes or between a plaquette and the edge of the grid, depending on the distances.
+	\item Macroscopic degeneration of the ground state is due to alternative frustration locations.
 \end{enumerate}
 
-\section{Природа вырождения основного состояния}
+\section{Nature of the ground state degeneracy}
 
-Можно вычислить все основные состояния путём попарного комбинирования плакетов 2-го типа. Рассмотрим работу алгоритма на примере решётки состоящей из 64 спинов \ref{fig:12PS_cell64_J72_5} (a).
+It is possible to calculate all ground states by pairwise combination of type 2 plaquettes. Let us consider the operation of the algorithm on the example of a lattice consisting of 64 spins \ref{fig:12PS_cell64_J72_5} (a).
 
 \begin{figure}[H]
 	\centering
@@ -289,14 +288,14 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(c)
 		\includegraphics[width=1\linewidth]{pictures/2PS_cell64_J72_5.eps}
 	\end{minipage}
-	\caption{(a) - пример решетки 64 спина, (b,c) - комбинации плакетов 2-го типа, обладающих минимальным числом фрустраций}
+	\caption{(a) is an example of a 64-spin lattice, (b,c) are combinations of type 2 plaquettes that have minimal frustrations}
 	\label{fig:12PS_cell64_J72_5}
 \end{figure}
 
 
-Сначала каждому плакету присваиваются координаты $x$ и $y$. Далее происходит комбинирование разбиений плакетов второго типа по парам. Рассматриваются случаи, когда фрустрации возникают между каждой парой плакетов и когда размещение возбуждений происходит между плакетом и краем решётки. Число фрустраций между $i,j$-той парой плакетов определяется как $\left|x_i-x_j\right|+\left|y_i-y_j\right|$,  число фрустраций, возникающее от плакета 2-го типа до ближайшего края решетки определяется как $R_{ij}+1$, где i - номер плакета 2-го типа, j - номер ближайшего плакета находящегося на краю решётки, $R_{ij}$ - расстояние между ними. После перебора всех пар плакетов 2-го типа рассматриваются комбинации, которые по подсчётам обладают минимальным числом фрустраций. Две из них представлены на рисунке \ref{fig:12PS_cell64_J72_5} (b,c).
+First, each plaquette is assigned coordinates $x$ and $y$. Next, the partitioning of the second type of plaquettes into pairs is combined. We consider the cases when frustrations occur between each pair of plaquettes and when the placement of excitations occurs between a plaquette and the edge of the lattice.The number of frustrations between $i,j$-th pair of plaquettes is defined as $\left|x_i-x_j\right|+\left|y_i-y_j\right|$, the number of frustrations occurring from the type 2 plaquette to the nearest edge of the grid is defined as $R_{ij}+1$, where i is the number of the type 2 plaquette, j is the number of the nearest plaquette on the edge of the grid, $R_{ij}$ is the distance between them. After enumerating all pairs of type 2 plaquettes, the combinations that are calculated to have the minimum number of frustrations are considered. Two of them are shown in Figure \ref{fig:12PS_cell64_J72_5} (b,c).
 
-На основании полученных комбинаций пары спинов, находящиеся между плакетами, отмечаются как фрустрированные (рис. \ref{fig:12F_cell64_J72_5}).
+Based on the combinations obtained, the spin pairs between the plaquettes are marked as frustrated (Figure \ref{fig:12F_cell64_J72_5}).
 
 \begin{figure}[H]
 	\centering
@@ -309,21 +308,19 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(b)
 		\includegraphics[width=1\linewidth]{pictures/2Conf_cell64_J72_5.eps}
 	\end{minipage}
-	\caption{Основные состояния решетки \ref{fig:12PS_cell64_J72_5} (a)}
+	\caption{Ground states of the lattice\ref{fig:12PS_cell64_J72_5} (a)}
 	\label{fig:12F_cell64_J72_5}
 \end{figure}
 
-Всего для данной решётки было получено $g=124$ основных состояния с энергией $E_{gs}/N=-1.34$ и спиновым избытком $M_{gs}/N$ от $\pm 0.28$ до $\pm 0.66$. Данное решение полностью совпадает с результатами, полученными с помощью алгоритма \ref{alg:addititional_algorithm}.
+In total, $g_{gs}=124$ ground states with energy $E_{gs}/N=-1.34$ and spin excess $M_{gs}/N$ from $\pm 0.28$ to $\pm 0.66$ were obtained for this lattice. This solution is in good agreement with the results obtained with the algorithm \ref{alg:addititional_algorithm}.
 
-Таким образом, высокая кратность вырождения основного состояния обусловлена несколькими причинами:
+Thus, the high multiplicity of the ground state degeneracy is due to several reasons:
 
-1. Различные комбинации плакетов 2-го типа могут давать одинаковое количество фрустраций, как показано в предыдущем примере на рисунках \ref{fig:12PS_cell64_J72_5} (b,c).
-
-2. Может существовать несколько вариантов размещения фрустраций между плакетами, если их координаты $x,y$ различаются (рис. \ref{fig:5x5.22F}).
-
-3. Выбор граничных условий может влиять на вырождение. Например в случает размещения фрустрированного плакета рядом с двумя границами приводит к увеличению вариантов размещения фрустраций (рис. \ref{fig:4x4.1}).
-
-
+\begin{enumerate}
+	\item Different combinations of type 2 plaquettes can produce the same number of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5} (b,c).
+	\item There may be several options for placing frustrations between plaquettes if their $x,y$ coordinates are different (Figure \ref{fig:5x5.22F}).
+	\item The choice of boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries leads to an increase in frustration choices (Figure \ref{fig:4x4.1}).
+\end{enumerate}
 
 \section{Complete enumeration solution}
 
