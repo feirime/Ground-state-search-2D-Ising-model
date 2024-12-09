@@ -1,9 +1,5 @@
 % \documentclass[review]{elsarticle}
 \documentclass[utf8, babel, sor, jor, amsmath, amssymb, reprint]{elsarticle} %удалить перед отправкой
-\usepackage{comment} %удалить перед отправкой
-\usepackage[T2A]{fontenc} %удалить перед отправкой
-\usepackage[utf8x]{inputenc} %удалить перед отправкой
-\usepackage[english,russian]{babel} %удалить перед отправкой
 \graphicspath{{images/}}
 
 \usepackage{lineno,hyperref}
@@ -88,7 +84,7 @@
 
 \begin{abstract}
 
-By the complete enumeration method, all possible states of the Edwards-Anderson model on a simple square lattice of 8×8 spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
+By the complete enumeration method, all possible states of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins were accurately calculated. The ground-state energy for the studied finite-size samples was determined. The macroscopic degeneracy of the ground state in frustrated spin systems is due to the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground-state configurations is based on identifying the arrangement of frustrations. The dependence of the ground-state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field at which giant jumps in residual entropy are observed were calculated. The nature of these large entropy jumps is explained by the fact that at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up.
 
 \end{abstract}
 
@@ -140,11 +136,11 @@ It will be shown below that this variability may be related to the distribution 
 
 In this work, we utilized an complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground-state energy for a finite number of spins, to compute the degeneracy of this state, and to determine the distribution of spin excess. The availability of an exact solution, even for a relatively small number of spins, allows for testing approximate methods. By performing complete enumeration method, we identified all possible states, enabling us to calculate properties in the presence of an external magnetic field.
 
-\section{Комбинаторика плакетов}
+\section{Plaquette combinatorics}
 
-Пусть под плакетом понимается замкнутая цепочка спинов минимальной длины \cite{lebrecht2015j}. В рассмотренных далее примерах на квадратной решётке плакетами являются элементарные квадраты, см. рисунки \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. В модели спинового стекла Эдвардса-Андерсона плакеты можно разделить на три возможных типа. 
+Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}.In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 
-Если $P_+$ есть относительное количество ферромагнитных ($J_{ij}=+1$) обменных интегралов, тогда к первому типу, см. рис. \ref{fig:Type1}, относятся плакеты, в которых $P_+=0.5$. Для второго типа $P_+=0.75$ или $P_+=0.25$ (рис. \ref{fig:Type2}). Для третьего типа $P_+=1.0$ или $P_+=0.0$ (рис. \ref{fig:Type3}). Прямым и зубчатым линиям на рисунках соответствуют ферромагнитные и антиферромагнитные связи, соответственно. Белые и чёрные кружки на рисунках соответствуют спинам вверх и вниз в одной из конфигураций основного состояния.
+If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to up and down spins in one of the ground state configurations.
 
 
 \begin{figure}[H]
@@ -154,7 +150,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type1_1.eps}}
 		\hspace{-4pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type1_2.eps}}
-		\caption{Плакеты первого типа}
+		\caption{Type-I plaquettes}
 		\label{fig:Type1} 
 	\end{minipage}
 	\hspace{5pt} 
@@ -163,7 +159,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type2_1.eps}}
 		\hspace{-2pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type2_2.eps}}
-		\caption{Плакеты второго типа}
+		\caption{Type-II plaquettes}
 		\label{fig:Type2}
 	\end{minipage}
 	\hspace{5pt}
@@ -172,21 +168,19 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type3_1.eps}}
 		\hspace{-4pt} 
 		\resizebox{45px}{45px}{\includegraphics{pictures/Type3_2.eps}}
-		\caption{Плакеты третьего типа}
+		\caption{Type-III plaquettes}
 		\label{fig:Type3}
 	\end{minipage}
 \end{figure}
 
 
-В каждом из рассмотренных выше плакетов существует $2^4$ конфигураций.
-Установлено, что фрустрация (возбуждение или положительная энергия обменного взаимодействия между $ij$-парой спинов) в основном состоянии обязательно появляется в плакетах второго типа, которые помечены знаком $"+"$. Причём фрустрированной парой может быть любая пара спинов.
+There are $2^4$ configurations in each of the above considered plaquettes.
+It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in Type-II plaquettes, which are marked by the $‘+’$ sign. Moreover the frustrated pair can be any pair of spins.
 
 
-Если система состоит из двух плакетов второго типа, например, как показано на рисунке \ref{fig:Type2_32}, то для минимизации энергии фрустрированная пара обязательно располагается на пересечении плакетов, вне зависимости от распределения обменных взаимодействий в остальной решетке. 
+If the system consists of two Type-II plaquettes, for example, as shown in Figure \ref{fig:Type2_32}, the frustrated pair is necessarily located at the intersection of the plaquettes to minimise the energy, regardless of the distribution of exchange interactions in the rest of the lattice. 
 
 \begin{figure}[H]
-	%\centering
-	%\begin{minipage}{0.4\textwidth}
 	\centering
 	\begin{minipage}{0.2\textwidth}
 		\centering
@@ -201,24 +195,13 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\includegraphics[width=1\textwidth]{pictures/Type2_3x2_2.eps}
 		\label{fig:Type2_3x2_2}
 	\end{minipage}
-	\caption{Системы состоящие из двух плакетов второго типа}
+	\caption{Systems of two Type-II plaquettes}
 	\label{fig:Type2_32}
-%\end{minipage}
-%\hspace{40pt}
-%\begin{minipage}{0.3\textwidth}
-	%\centering
-	%\resizebox{100px}{70px}{\includegraphics{pictures/Type2_5x4.eps}}
-	%\caption{Система из 20 спинов с двумя плакетами 2-го типа в центре}
-	%\label{fig:Type2_5x4}
-%\end{minipage}
 \end{figure}
 
 
-Легко найти энергию, спиновый избыток и конфигурации основного состояния при известном расположении фрустрированных пар спинов. Энергия и кратность вырождения основного состояния для систем на рисунке \ref{fig:Type2_32} $E_{gs}/N=-0.83$, $g=2$. Спиновый избыток основного состояния $M_{gs}/N=0$ для системы на рисунке \ref{fig:Type2_32}(a) и $M_{gs}/N=\pm 0.33$ на рисунке \ref{fig:Type2_32}(b).
-
-%На рисунке \eqref{fig:Type2_5x4} представлена система из двадцати спинов, в центре которой находятся два плакета 2-го типа, имеющие общую пару спинов. Исходя из предыдущего примера, данная система должна обладать одной фрустрированной парой отмеченной на рисунке. Полный перебор состояний подтверждает, что в данной системе есть два основных состояния ($E_{gs}/N=-1.45$, $M_{gs}=\pm 8$), а фрустрация действительно расположена так, как показано на рисунке \eqref{fig:Type2_5x4}.
-
-На рисунках \ref{fig:4x4.1}(a-d) в центре решетки находится плакет 2-го типа, содержащий фрустрацию. Размещение фрустрации в плакете не 2-го типа приводит к возникновению еще одного возбуждения в нем. В данном примере существует 8 основных состояний ($E_{gs}/N=-1.25$, $g=8$, $M_{gs}/N=\pm 0.25$ - рисунок \ref{fig:4x4.1} (a), $M_{gs}/N=\pm 0.25$ - рисунки \ref{fig:4x4.1} (a,b), $M_{gs}/N=\pm 0.08$ - рисунок \ref{fig:4x4.1} (c), $M_{gs}/N=\pm 0.08$ - рисунок \ref{fig:4x4.1} (d)). Спиновый избыток основного состояния обусловлен соотношением количества ферромагнитных и антиферромагнитных связей. Фрустрации могут изменять это соотношение, потому что фрустрированная антиферромагнитная связь приведет к ферромагнитному упорядочению в паре спинов, и наоборот.
+It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in Figure \ref{fig:Type2_32} $E_{gs}/N=-0.83$, $g_{gs}=2$. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N=\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
+In Figures \ref{fig:4x4.1}(a-d), there is a Type-II plaquette containing frustration in the center of the lattice. Placing frustration in a non-Type-II plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm 0.25$ - Figure \ref{fig:4x4.1}(a), $M_{gs}/N=\pm 0.25$ - Figures \ref{fig:4x4.1}(a,b), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(c), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(d)). The spin excess of the ground state is due to the ratio of the number of ferromagnetic to antiferromagnetic bonds. Frustrations can change this ratio because a frustrated antiferromagnetic bond will lead to ferromagnetic ordering in the spin pair, and vice versa.
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.2\linewidth}
@@ -240,21 +223,21 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(d)
 		\includegraphics[width=1\linewidth]{pictures/Cl1_Type2_gs4.eps}
 	\end{minipage}
-	\caption{Основные состояния системы (a, b, c, d). Фрустрированные пары спинов обведены.}
+	\caption{The ground states of the system (a, b, c, d). Frustrated pairs of spins are circled.}
 	\label{fig:4x4.1}
 	
 \end{figure}
 
-Для примера на рисунке \ref{fig:4x7}, $E_{gs}/N=-1.18$, $M_{gs}/N=0$, существует только два основных состояния $g=2$. При этом имеется три фрустрированные пары. Таким образом, наличие фрустраций в основном состоянии не всегда приводит к макроскопическому вырождению. 
+For the example in Figure \ref{fig:4x7}, $E_{gs}/N=-1.18$, $M_{gs}/N=0$, there are only two ground states $g_{gs}=2$. At the same time, there are three frustrated pairs. Thus, the presence of frustrations in the ground state does not always lead to macroscopic degeneracy. 
 
 \begin{figure}[H]
 	\centering
 	\resizebox{150px}{75px}{\includegraphics{pictures/Cl7x4_Type2.eps}}
-	\caption{Основное состояние решетки с двумя плакетами второго типа}
+	\caption{The ground state of the lattice with two Type-II plaquettes}
 	\label{fig:4x7}
 \end{figure}
 
-На рисунке \ref{fig:5x5.22F} приведен пример ($E_{gs}/N=-1.44$, $g=4$, $M_{gs}/N=\pm 0.11$ для рисунка \ref{fig:4x7} (a) и $M_{gs}=\pm 0.04$ для \ref{fig:4x7} (b)), когда два плакета 2-го типа имеют один общий спин. Несмотря на уменьшение количества фрустрированных пар, по сравнению с предыдущим примером, наблюдается увеличение вырождения основного состояния. Комбинаторика возникает по причине того, что существует несколько вариантов размещения фрустрированных пар на решётке.
+Figure \ref{fig:5x5.22F} shows an example ($E_{gs}/N=-1.44$, $g_{gs}=4$, $M_{gs}/N=\pm 0.11$ for Figure \ref{fig:4x7}(a) and $M_{gs}=\pm 0.04$ for \ref{fig:4x7}(b)) when two Type-II plaquettes share a common spin. Despite the decrease in the number of frustrated pairs, there is an increase in the ground state degeneracy compared to the previous example. The combinatorics arises because there are several options for the placement of frustrated pairs on the lattice.
 
 \begin{figure}[H]
 	\centering
@@ -267,21 +250,21 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(b)
 		\includegraphics[width=1\linewidth]{pictures/Cl5x5_Type2_gs2.eps}
 	\end{minipage}
-	\caption{Основные состояния решетки с двумя плакетами второго типа}
+	\caption{Ground states of the lattice with two Type-II plaquettes}
 	\label{fig:5x5.22F}
 \end{figure}
 
-На основе рассмотренных примеров можно сделать несколько выводов:
+Several conclusions can be drawn from the examples discussed:
 
 \begin{enumerate}
-	\item Плакеты 2-го типа являются единственной причиной возникновения фрустраций в основном состоянии.
-	\item В основном состоянии фрустрации расположены между плакетами 2-го типа или между плакетом и краем решётки в зависимости от расстояний.
-	\item Макроскопическое вырождение основного состояния обусловлено альтернативными вариантами размещения фрустраций.
+	\item Type-II plaquettes are the only cause of frustrations in the ground state.
+	\item In the ground state, frustrations are located between Type-II plaquettes or between a plaquette and the edge of the grid, depending on the distances.
+	\item Macroscopic degeneration of the ground state is due to alternative frustration locations.
 \end{enumerate}
 
-\section{Природа вырождения основного состояния}
+\section{Nature of the ground state degeneracy}
 
-Можно вычислить все основные состояния путём попарного комбинирования плакетов 2-го типа. Рассмотрим работу алгоритма на примере решётки состоящей из 64 спинов \ref{fig:12PS_cell64_J72_5} (a).
+It is possible to calculate all ground states by pairwise combination of Type-II plaquettes. Let us consider the operation of the algorithm on the example of a lattice consisting of 64 spins \ref{fig:12PS_cell64_J72_5}(a).
 
 \begin{figure}[H]
 	\centering
@@ -299,14 +282,14 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(c)
 		\includegraphics[width=1\linewidth]{pictures/2PS_cell64_J72_5.eps}
 	\end{minipage}
-	\caption{(a) - пример решетки 64 спина, (b,c) - комбинации плакетов 2-го типа, обладающих минимальным числом фрустраций}
+	\caption{(a) - an example of a lattice with 64 spins, (b, c) - combinations of Type-II plaquettes with the minimal number of frustrations}
 	\label{fig:12PS_cell64_J72_5}
 \end{figure}
 
 
-Сначала каждому плакету присваиваются координаты $x$ и $y$. Далее происходит комбинирование разбиений плакетов второго типа по парам. Рассматриваются случаи, когда фрустрации возникают между каждой парой плакетов и когда размещение возбуждений происходит между плакетом и краем решётки. Число фрустраций между $i,j$-той парой плакетов определяется как $\left|x_i-x_j\right|+\left|y_i-y_j\right|$,  число фрустраций, возникающее от плакета 2-го типа до ближайшего края решетки определяется как $R_{ij}+1$, где i - номер плакета 2-го типа, j - номер ближайшего плакета находящегося на краю решётки, $R_{ij}$ - расстояние между ними. После перебора всех пар плакетов 2-го типа рассматриваются комбинации, которые по подсчётам обладают минимальным числом фрустраций. Две из них представлены на рисунке \ref{fig:12PS_cell64_J72_5} (b,c).
+First, each plaquette is assigned coordinates $x$ and $y$. Next, the partitioning of the Type-II plaquettes into pairs is combined. We consider the cases when frustrations occur between each pair of plaquettes and when the placement of excitations occurs between a plaquette and the edge of the lattice.The number of frustrations between $i,j$-th pair of plaquettes is defined as $\left|x_i-x_j\right|+\left|y_i-y_j\right|$, the number of frustrations occurring from the Type-II plaquette to the nearest edge of the grid is defined as $R_{ij}+1$, where $i$ is the number of the Type-II plaquette, $j$ is the number of the nearest plaquette on the edge of the grid, $R_{ij}$ is the distance between them. After enumerating all pairs of Type-II plaquettes, the combinations that are calculated to have the minimum number of frustrations are considered. Two of them are shown in Figure \ref{fig:12PS_cell64_J72_5}(b,c).
 
-На основании полученных комбинаций пары спинов, находящиеся между плакетами, отмечаются как фрустрированные (рис. \ref{fig:12F_cell64_J72_5}).
+Based on the combinations obtained, the spin pairs between the plaquettes are marked as frustrated (Figure \ref{fig:12F_cell64_J72_5}).
 
 \begin{figure}[H]
 	\centering
@@ -319,26 +302,23 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 		\centering(b)
 		\includegraphics[width=1\linewidth]{pictures/2Conf_cell64_J72_5.eps}
 	\end{minipage}
-	\caption{Основные состояния решетки \ref{fig:12PS_cell64_J72_5} (a)}
+	\caption{Ground states of the lattice\ref{fig:12PS_cell64_J72_5}(a)}
 	\label{fig:12F_cell64_J72_5}
 \end{figure}
 
-Всего для данной решётки было получено $g=124$ основных состояния с энергией $E_{gs}/N=-1.34$ и спиновым избытком $M_{gs}/N$ от $\pm 0.28$ до $\pm 0.66$. Данное решение полностью совпадает с результатами, полученными с помощью алгоритма \ref{alg:addititional_algorithm}.
+In total, $g_{gs}=124$ ground states with energy $E_{gs}/N=-1.34$ and spin excess $M_{gs}/N$ from $\pm 0.28$ to $\pm 0.66$ were obtained for this lattice. This solution is in good agreement with the results obtained with the algorithm \ref{alg:addititional_algorithm}.
 
-Таким образом, высокая кратность вырождения основного состояния обусловлена несколькими причинами:
+Thus, the high multiplicity of the ground state degeneracy is due to several reasons:
 
-1. Различные комбинации плакетов 2-го типа могут давать одинаковое количество фрустраций, как показано в предыдущем примере на рисунках \ref{fig:12PS_cell64_J72_5} (b,c).
+\begin{enumerate}
+	\item Different combinations of Type-II plaquettes can produce the same number of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5}(b,c).
+	\item There may be several options for placing frustrations between plaquettes if their $x,y$ coordinates are different (Figure \ref{fig:5x5.22F}).
+	\item The choice of boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries leads to an increase in frustration choices (Figure \ref{fig:4x4.1}).
+\end{enumerate}
 
-2. Может существовать несколько вариантов размещения фрустраций между плакетами, если их координаты $x,y$ различаются (рис. \ref{fig:5x5.22F}).
+\section{Complete enumeration solution}
 
-3. Выбор граничных условий может влиять на вырождение. Например в случает размещения фрустрированного плакета рядом с двумя границами приводит к увеличению вариантов размещения фрустраций (рис. \ref{fig:4x4.1}).
-
-
-
-\section{Exhaustive Enumeration Solution}
-
-To investigate the problem, an exhaustive enumeration algorithm was developed.
-
+To investigate the problem, an complete enumeration algorithm was developed.
 The Edwards-Anderson spin glass model is represented by a 2D Ising lattice:
 
 \begin{equation}
@@ -397,17 +377,17 @@ The numerical algorithm for calculating partition function parameters (state den
 	\label{alg:addititional_algorithm}
 \end{algorithm}
 
-As a result, for a square lattice of size $L \times L = N$, the computational complexity of exhaustive enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
+As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
 
 
-\section{Энергия основного состояния}
+\section{Ground state energy}
 
-Результаты решения задачи о вычислении энергии основного состояния спинового стекла в модели Эдвардса-Андерсона приведены в таблице \ref{tab:Egs}. Из таблицы видно, что значения энергий основного состояния  имеют большой разброс.
+The results of solving the problem of calculating the ground state energy of spin glass in the Edwards-Anderson model are presented in Table \ref{tab:Egs}. The table shows that the ground state energy values exhibit significant variability.
 
 \begin{table}[h]
 	\begin{tabular}{|l|c|l|}
 		\hline
-		Method                                   & $E_{gs}$                                       & ссылка                                          \\ \hline
+		Method                                   & $E_{gs}$                                       & Ref.                                          \\ \hline
 		Thouless-Anderson-Palmer (TAP) Approach & 0                                              & \cite{thouless1977solution}    \\ \hline
 		Replica Method                            & $-2/\pi$                                       & \cite{sherrington1975solvable} \\ \hline
 		Partition function                      & -0.5                                           & \cite{tanaka1980analytic}      \\ \hline
@@ -423,34 +403,35 @@ As a result, for a square lattice of size $L \times L = N$, the computational co
 		
 		
 	\end{tabular}
-	\caption{Удельная энергия основного состояния}
+	\caption{Ground state specific energy}
 	\label{tab:Egs}
 \end{table}
 
-Мы вычислили значение энергии основного состояния в модели Эдвардса-Андерсона точно с помощью исчерпывающего перечисления (алгоритм \ref{alg:addititional_algorithm}). На графике \ref{fig:E(Q)} представлена зависимость удельной энергии основного состояния $E_{gs}/N$ от числа плакетов второго типа $Q$.
+We calculated the ground state energy in the Edwards-Anderson model exactly using complete enumeration algorithm \ref{alg:addititional_algorithm}. The graph in Figure \ref{fig:E(Q)} shows the dependence of the specific ground state energy $E_{gs}/N$ on the number of Type-II plaquettes $Q$.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.5\linewidth]{pictures/E_Q.eps}
-	\caption{Энергия основного состояния в зависимости от числа плакетов 2-го типа для $N=64$}
+	\caption{Ground state energy as a function of the number of Type-II plaquettes for $N=64$}
 	\label{fig:E(Q)}
 \end{figure}
 
-С увеличением количества плакетов 2-го типа $Q$ энергия основного состояния увеличивается в среднем. На скорость увеличения энергии влияет не только количество плакетов 2-го типа, но и их расположение на решетке. Этим объясняется разброс значений энергий основного состояния на рисунке \ref{fig:E(Q)} и в таблице \ref{tab:Egs}.
-Увеличение значения энергии основного состояния обусловлено ростом количества фрустраций с увеличением числа плакетов 2-го типа.
+With an increase in the number of Type-II plaquettes $Q$, the ground state energy increases on average. The rate of energy increase depends not only on the number of Type-II plaquettes but also on their arrangement within the lattice. This explains the variability in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}.
+The increase in ground state energy is driven by the growth in the number of frustrations as the number of Type-II plaquettes increases.
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{pictures/g_Q.eps}
-	\caption{Вырождение основного состояния в зависимости от числа плакетов 2-го типа для $N=64$}
+	\caption{Ground state degeneracy as a function of the number of Type-II plaquettes for $N=64$}
 	\label{fig:g(Q)}
 \end{figure}
 
-Увеличение числа плакетов 2-го типа и связанное с ним увеличение количества фрустраций в большинстве случаев ведет к увеличению вырождения основных состояний. Но для некоторых образцов увеличение количества фрустраций не вызывает рост вырождения основного состояния (см. точки с наименьшим значением $g_{gs}=2$ на рис. \ref{fig:g(Q)}). 
+An increase in the number of Type-II plaquettes, along with the associated rise in the number of frustrations, generally leads to an increase in ground state degeneracy. However, for some samples, an increase in the number of frustrations does not result in a growth in ground state degeneracy (see points with the minimum value $g_{gs}=2$ in Figure \ref{fig:g(Q)}). 
 
 \section{Ground state in an external magnetic field}
 
-Table \ref{tab:Egs} presents the ground state energy values of spin glass. Figure \ref{fig:cell_SI_SG_64} illustrates cases of spin ice and spin glass, which differ in the ordered or disordered distribution of exchange constants. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for spin ice models is -1.75 and -0.97 (Figs. \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively), while the specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally refers to a magnet with periodicity in ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}. 
+Table \ref{tab:Egs} presents the ground state energy values of spin glass. Figure \ref{fig:cell_SI_SG_64} illustrates cases of spin ice and spin glass, which differ in the ordered or disordered distribution of exchange constants. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for spin ice models is -1.75 and -0.97 (Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively), while the specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally refers to a magnet with periodicity in ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}. 
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.3\linewidth}
@@ -468,15 +449,15 @@ Table \ref{tab:Egs} presents the ground state energy values of spin glass. Figur
 		\includegraphics[width=1\linewidth]{pictures/SI_64_J0}
 	\end{minipage}
 	\hfill
-	\caption{Spin ice (a,c) and spin glass (b) lattices consisting of 64 spins with an exchange constant distribution of $P_+ = 0.5$}
+	\caption{Spin ice (a, c) and spin glass (b) lattices consisting of 64 spins with an exchange constant distribution of $P_+ = 0.5$}
 	\label{fig:cell_SI_SG_64}
 
 \end{figure}
 
 
-Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of spin ice composed of plaquettes of the first type, completely free of frustrations.
-Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the first type, 27 are of the second type, and 6 are of the third type, with a total of 15 frustrations.
-In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum number of frustrations in this example is achieved by filling the system with plaquettes of the second type, resulting in 25 frustrations across 49 plaquettes.
+Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of spin ice composed of Type-I plaquettes, completely free of frustrations.
+Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the Type-I, 27 are of Type-II, and 6 are of the Type-III, with a total of 15 frustrations.
+In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum number of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
 
 
 \begin{figure}[H]
@@ -495,7 +476,7 @@ In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum 
 		\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0}
 	\end{minipage}
 	
-	\caption{Spin excess and residual entropy of spin ice (a, c) and spin glass (b) (exchange constant distribution shown in Fig. \ref{fig:cell_SI_SG_64})}
+	\caption{Spin excess and residual entropy of spin ice (a, c) and spin glass (b) (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64})}
 	\label{fig:_multiplot_SI_SG_64}
 	
 \end{figure}
@@ -504,7 +485,7 @@ In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum 
 Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
 In the absence of frustrations and an external magnetic field, the ground state of spin ice is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
 In spin glass, the introduction of frustrations increases the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
-Maximal filling of the spin ice system with frustrated plaquettes of the second type leads to macroscopic ground state degeneracy, with the number of degenerate configurations exceeding $3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
+Maximal filling of the spin ice system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations exceeding $3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
 
 
 
@@ -515,18 +496,12 @@ It is worth noting that the number of steps implicitly depends on the number of 
 Using complete enumeration method, the densities of states were constructed for the spin ice and spin glass samples shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
 The system's energy under the influence of an external magnetic field was calculated using Equation (\ref{eq:ising_energy}).
 
-
-
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_1.png}
 	\caption{Density of states in an external magnetic field $0\leq h/J \leq 2$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a))}
 	\label{fig:HDOS_ice_1}
 \end{figure}
-
-
-
 
 \begin{figure}[H]
 		\centering
@@ -543,21 +518,20 @@ The system's energy under the influence of an external magnetic field was calcul
 	\label{fig:HDOS_ice}
 \end{figure}
 
-
 In Figure \ref{fig:HDOS_ice_1}, at $h/J=0$ for spin ice (Figure \ref{fig:cell_SI_SG_64}(a)), the ground state degeneracy can be observed. An increase in the external magnetic field to the critical value $h/J=1$, due to the growth of the Zeeman energy, results in the ground state energy with spin excess $M=0$ becoming equal to the ground state energy with spin excess $M=0.25$. The entropies of the ground states are summed.
-Further increasing the external magnetic field to $h/J=2$ eads to a situation where the ground states correspond to spin excess values of $M=\pm0.25; \pm0.5; \pm0.75; \pm1$.
+Further increasing the external magnetic field to $h/J=2$ leads to a situation where the ground states correspond to spin excess values of $M=\pm0.25; \pm0.5; \pm0.75; \pm1$.
 The value  $h/J=3$ is the saturation field, at which only one configuration remains.
 
 
-or spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T=0$ in the critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
+For spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T=0$ in the critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
 
 
 Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits less variety in critical fields compared to spin glass (see Figure \ref{fig:HDOS_ice}). However, the ground state degeneracy is greater than that of spin glass.
 
 
-\section{Antiferromagnetism, Spin Glass, and Ferromagnetism at $T = 0$}
+\section{Antiferromagnetism, spin glass, and ferromagnetism at $T = 0$}
 
-The phase diagram at non-zero temperatures in an external magnetic field was studied in \cite{trukhin4855337thermodynamic}. Of particular interest is the separation of antiferromagnetic, spin glass, and ferromagnetic phases at $T = 0$).
+The phase diagram at non-zero temperatures in an external magnetic field was studied in \cite{trukhin2024thermodynamic}. Of particular interest is the separation of antiferromagnetic, spin glass, and ferromagnetic phases at $T = 0$).
 
 Table \ref{tab:lit_phase} summarizes theoretical and numerical results for the critical transition point (relative concentration of ferromagnetic bonds $P_+$) from the antiferromagnetic phase to the spin glass phase.
 
@@ -574,7 +548,7 @@ Table \ref{tab:lit_phase} summarizes theoretical and numerical results for the c
 		Exact ground states & \( 0.1031 \pm 0.0001 \) & \cite{WANG200331} \\ \hline
 		Exact ground states & \( 0.103 \pm 0.001 \) & \cite{amoruso2004domain} \\ \hline
 	\end{tabular}
-	\caption{Critical point for the AFM-SG transition (ferromagnetic bond concentration \( P_+ \)).}
+	\caption{Critical point for the AFM-SG transition (ferromagnetic bond concentration \( P_+ \))}
 	\label{tab:lit_phase}
 \end{table}
 
@@ -583,11 +557,11 @@ Figure \ref{fig:Mgs(P+)} shows the dependence of the maximum spin excess in the 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Mgs(P+).eps}
-	\caption{Maximum ground state spin excess as a function of the relative number of ferromagnetic bonds $P_+$.}
+	\caption{Maximum ground state spin excess as a function of the relative number of ferromagnetic bonds $P_+$}
 	\label{fig:Mgs(P+)}
 \end{figure}
 
-For a pure ferromagnet ($P_+ = 1.0$), the spin excess equals the number of spins ($M/N = 1.0$), while for a pure antiferromagnet, it is zero (in the case of an even number of spins). For a given $P_+$, the ratio of points where the maximum ground state spin excess equals zero to the number of points where $M_{gs}/N \neq 0.0$ represents the probability of an antiferromagnetic state, as shown in Fig. \ref{fig:P_AFM_FM_Mmax}(a). Similarly, the ratio of points with $M_{gs}/N = 1.0$ (ferromagnetic spin excess) to the number of points where $M_{gs}/N \neq 1.0$ represents the probability of a ferromagnetic state, as shown in Fig. \ref{fig:P_AFM_FM_Mmax}(b).
+For a pure ferromagnet ($P_+ = 1.0$), the spin excess equals the number of spins ($M/N = 1.0$), while for a pure antiferromagnet, it is zero (in the case of an even number of spins). For a given $P_+$, the ratio of points where the maximum ground state spin excess equals zero to the number of points where $M_{gs}/N \neq 0.0$ represents the probability of an antiferromagnetic state, as shown in Figure \ref{fig:P_AFM_FM_Mmax}(a). Similarly, the ratio of points with $M_{gs}/N = 1.0$ (ferromagnetic spin excess) to the number of points where $M_{gs}/N \neq 1.0$ represents the probability of a ferromagnetic state, as shown in Figure \ref{fig:P_AFM_FM_Mmax}(b).
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
@@ -599,13 +573,13 @@ For a pure ferromagnet ($P_+ = 1.0$), the spin excess equals the number of spins
 		\centering (b)
 		\includegraphics[width=1\linewidth]{images/P_FM_Mmax.eps}
 	\end{minipage}
-	\caption{Probability of antiferromagnetic (a) and ferromagnetic (b) states at \( T = 0 \).}
+	\caption{Probability of antiferromagnetic (a) and ferromagnetic (b) states at \( T = 0 \)}
 	\label{fig:P_AFM_FM_Mmax}
 \end{figure}
 
 The antiferromagnetic phase at $T = 0$ occurs for $0.0 \leq P_+ \leq 0.1$. The spin glass phase is realized for $0.1 \leq P_+ \leq 0.9$. The ferromagnetic phase occurs for $0.9 \leq P_+ \leq 1.0$. These results align with the critical values for the antiferromagnetic phase in Table \ref{tab:lit_phase} and provide boundaries for the ferromagnetic phase at zero temperature in the absence of an external magnetic field.
 
-The complete density of states allows reliable calculation of sample properties in an external magnetic field. Under an external magnetic field ($h/J = 1$ and $h/J = 2$), the proportion of the ferromagnetic phase increases while that of the antiferromagnetic phase decreases, as shown in Fig. \ref{fig:Mgs(P+)_H}. Phase transition points under an external field exhibit behavior similar to \cite{trukhin4855337thermodynamic}.
+The complete density of states allows reliable calculation of sample properties in an external magnetic field. Under an external magnetic field ($h/J = 1$ and $h/J = 2$), the proportion of the ferromagnetic phase increases while that of the antiferromagnetic phase decreases, as shown in Figure \ref{fig:Mgs(P+)_H}. Phase transition points under an external field exhibit behavior similar to \cite{trukhin2024thermodynamic}.
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.45\linewidth}
@@ -617,28 +591,28 @@ The complete density of states allows reliable calculation of sample properties 
 		\centering (b)
 		\includegraphics[width=1\linewidth]{images/Mgs(P+)_H2.eps}
 	\end{minipage}
-	\caption{Ground state spin excess for all values of bond distribution density under external fields $h/J = 1$ (a) and $h/J = 2$ (b).}
+	\caption{Ground state spin excess for all values of bond distribution density under external fields $h/J = 1$ (a) and $h/J = 2$ (b)}
 	\label{fig:Mgs(P+)_H}
 \end{figure}
 
-The theoretical ground state phase diagram ($h-P_+$) is shown in Fig. \ref{fig:P+_afm_fm(H)}.
+The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig:P+_afm_fm(H)}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/P+_afm_fm(H)_filled.png}
-	\caption{Approximate phase separation at $T = 0$ in an external magnetic field. Blue dots: antiferromagnetic phase; red dots: ferromagnetic phase.}
+	\caption{Approximate phase separation at $T = 0$ in an external magnetic field. Blue dots: antiferromagnetic phase; red dots: ferromagnetic phase}
 	\label{fig:P+_afm_fm(H)}
 \end{figure}
 
-Applying an external magnetic field shifts phase boundaries. For $H/J > 1$, a spin-flop transition occurs in some samples, and for $H/J > 2$, it occurs in all. At $H/J > 4$, all samples transition to a ferromagnetic state.
+Applying an external magnetic field shifts phase boundaries. For $h/J > 1$, a spin-flop transition occurs in some samples, and for $h/J > 2$, it occurs in all. At $h/J > 4$, all samples transition to a ferromagnetic state.
 
 The staircase-like behavior of the diagram can be explained by the competition between internal interaction energy ($E = -\sum J_{ij} S_i S_j$) and Zeeman energy ($E = - h \sum S_i$). At specific field values, the Zeeman energy dominates, causing phase transitions across groups of samples with varying $P_+$.
 
-It should be noted that open boundary conditions may introduce significant distortions. For example, a sample with $P_+ = 0.2$ (Figs. \ref{fig:Mgs(P+)}, \ref{fig:P_AFM_FM_Mmax}) exhibits antiferromagnetic properties due to ferromagnetic bonds ($J_{ij} = 1$) being concentrated along the edges.
+It should be noted that open boundary conditions may introduce significant distortions. For example, a sample with $P_+ = 0.2$ (Figures \ref{fig:Mgs(P+)} and \ref{fig:P_AFM_FM_Mmax}) exhibits antiferromagnetic properties due to ferromagnetic bonds ($J_{ij} = 1$) being concentrated along the edges.
 
 \section{Conclusion}
 
-An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an exhaustive enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
+An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an complete enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
 
 It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustrated plaquettes, i.e., the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground-state configurations based on the determination of frustration locations. The algorithm is limited by the number of possible arrangements of frustrations.
 
@@ -649,9 +623,7 @@ The dependence of the ground-state spin excess in the Edwards-Anderson model on 
 The problem of the maximum number of frustrations as a function of the number of spins in a system for a given lattice type in the Ising model with antiferromagnetic and ferromagnetic exchange interactions is of interest, as the presence of frustrations gives rise to new properties. It has been shown that in the Edwards-Anderson model, systems with twofold ground-state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground-state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
 
 
-\section{Благодарности}
-
-Исследование выполнено за счет гранта Российского научного фонда № 24-71-10069, https://rscf.ru/project/24-71-10069/.
+\section{Acknowledgments}
 
 The research was supported by the Russian Science Foundation grant No. 24-71-10069, https://rscf.ru/en/project/24-71-10069/.
 
