@@ -94,6 +94,8 @@ By the complete enumeration method, all possible states of the Edwards-Anderson 
 	\item The effect of finite-size scaling on the entropy and energy of the ground state has been accurately computed, and the asymptotic behavior of the residual entropy has been determined.  
 	\item The phenomenon of macroscopic degeneracy of the ground state is due to the arrangement of frustrated plaquettes in the lattice.  
 	\item The spin excess in the ground state is determined by the lattice phase.  
+	\item The spin excess of the ground state is due to the ratio of the number of ferromagnetic to antiferromagnetic bonds. 
+	\item Frustrations can change this ratio because a frustrated antiferromagnetic bond will lead to ferromagnetic ordering in the spin pair, and vice versa.
 \end{highlights}  
 
 
@@ -136,7 +138,7 @@ In this work, we utilized an complete enumeration algorithm \cite{dias2023ground
 
 \section{Plaquette combinatorics}
 
-Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}.In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
+Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}. In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 
 If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to up and down spins in one of the ground state configurations.
 
@@ -173,7 +175,7 @@ If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integral
 
 
 There are $2^4$ configurations in each of the above considered plaquettes.
-It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in Type-II plaquettes, which are marked by the $‘+’$ sign. Moreover the frustrated pair can be any pair of spins.
+It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in Type-II plaquettes, which are marked by the $‘+’$ sign. The frustrated pair can be any pair of spins.
 
 
 If the system consists of two Type-II plaquettes, for example, as shown in Figure \ref{fig:Type2_32}, the frustrated pair is necessarily located at the intersection of the plaquettes to minimise the energy, regardless of the distribution of exchange interactions in the rest of the lattice. 
@@ -199,7 +201,7 @@ If the system consists of two Type-II plaquettes, for example, as shown in Figur
 
 
 It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in Figure \ref{fig:Type2_32} $E_{gs}/N=-0.83$, $g_{gs}=2$. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N=\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
-In Figures \ref{fig:4x4.1}(a-d), there is a Type-II plaquette containing frustration in the center of the lattice. Placing frustration in a non-Type-II plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm 0.25$ - Figure \ref{fig:4x4.1}(a), $M_{gs}/N=\pm 0.25$ - Figures \ref{fig:4x4.1}(a,b), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(c), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(d)). The spin excess of the ground state is due to the ratio of the number of ferromagnetic to antiferromagnetic bonds. Frustrations can change this ratio because a frustrated antiferromagnetic bond will lead to ferromagnetic ordering in the spin pair, and vice versa.
+In Figures \ref{fig:4x4.1}(a-d), there is a Type-II plaquette containing frustration in the center of the lattice. Placing frustration in a non-Type-II plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm 0.25$ - Figure \ref{fig:4x4.1}(a), $M_{gs}/N=\pm 0.25$ - Figures \ref{fig:4x4.1}(a,b), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(c), $M_{gs}/N=\pm 0.08$ - Figure \ref{fig:4x4.1}(d)). 
 
 \begin{figure}[H]
 	\begin{minipage}[h]{0.2\linewidth}
@@ -252,13 +254,7 @@ Figure \ref{fig:5x5.22F} shows an example ($E_{gs}/N=-1.44$, $g_{gs}=4$, $M_{gs}
 	\label{fig:5x5.22F}
 \end{figure}
 
-Several conclusions can be drawn from the examples discussed:
-
-\begin{enumerate}
-	\item Type-II plaquettes are the only cause of frustrations in the ground state.
-	\item In the ground state, frustrations are located between Type-II plaquettes or between a plaquette and the edge of the grid, depending on the distances.
-	\item Macroscopic degeneration of the ground state is due to alternative frustration locations.
-\end{enumerate}
+Thus Type-II plaquettes are the only cause of frustrations in the ground state. In the ground state, frustrations are located between Type-II plaquettes or between a plaquette and the edge of the grid, depending on the distances. Macroscopic degeneration of the ground state is due to alternative frustration locations.
 
 \section{Nature of the ground state degeneracy}
 
