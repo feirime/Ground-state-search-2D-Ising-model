@@ -1,5 +1,5 @@
 % \documentclass[review]{elsarticle}
-\documentclass[utf8, babel, sor, jor, amsmath, amssymb, reprint]{elsarticle} %удалить перед отправкой
+\documentclass[preprint,12pt]{elsarticle} %удалить перед отправкой
 \graphicspath{{images/}}
 
 \usepackage{lineno,hyperref}
@@ -90,12 +90,10 @@ By the complete enumeration method, all possible states of the Edwards-Anderson 
 
 
 \begin{highlights}  
-	\item The presence of frustrations in the ground state does not necessarily lead to macroscopic degeneracy.  
-	\item The effect of finite-size scaling on the entropy and energy of the ground state has been accurately computed, and the asymptotic behavior of the residual entropy has been determined.  
-	\item The phenomenon of macroscopic degeneracy of the ground state is due to the arrangement of frustrated plaquettes in the lattice.  
-	\item The spin excess in the ground state is determined by the lattice phase.  
-	\item The spin excess of the ground state is due to the ratio of the number of ferromagnetic to antiferromagnetic bonds. 
-	\item Frustrations can change this ratio because a frustrated antiferromagnetic bond will lead to ferromagnetic ordering in the spin pair, and vice versa.
+	\item The presence of frustrations in the ground state does not necessarily lead to macroscopic degeneracy.
+	\item Macroscopic degeneracy of the ground state is due to combinatorics frustrated pairs on the lattice.
+	\item The variations of the spin excess of the ground state are due to the frustrations on FM and AFM bonds. 
+	\item The ground state degeneracy of spin ice is larger than that of spin glass
 \end{highlights}  
 
 
@@ -306,7 +304,7 @@ Thus, the macroscopic degeneration of the ground state degeneracy is due to seve
 
 \begin{enumerate}
 	\item Different combinations of Type-II plaquettes can produce the same number of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5}(b,c).
-	\item There may be several options for placing frustrations between plaquettes if their $x,y$ coordinates are different (Figure \ref{fig:5x5.22F}).
+	\item There may be several variants for placing frustrations between plaquettes if the coordinates of these plaquettes are different (Figure \ref{fig:5x5.22F}).
 	\item The choice of boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries leads to an increase in frustration choices (Figure \ref{fig:4x4.1}).
 \end{enumerate}
 
@@ -409,7 +407,7 @@ We calculated the ground state energy in the Edwards-Anderson model exactly usin
 	\label{fig:E(Q)}
 \end{figure}
 
-With an increase in the quantity of Type-II plaquettes $Q$, the ground state energy increases on average. Energy depends not only on the quantity of Type-II plaquettes but also on their arrangement within the lattice. This explains the dispersion in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}. The increase in ground state energy value is driven by the growth in the quantity of frustrations as the number of Type-II plaquettes increases.
+With an increase in the quantity of Type-II plaquettes $Q$, the ground state energy increases on average. Energy depends not only on the quantity of Type-II plaquettes but also on their arrangement within the lattice. This explains the dispersion in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}. The increase in the number of frustrated type II plaquettes leads to an increase in the value of the ground state energy.
 
 
 \begin{figure}[H]
@@ -591,23 +589,23 @@ The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig
 	\label{fig:P+_afm_fm(H)}
 \end{figure}
 
-External magnetic field shifts phase boundaries. For $h/J > 1$, a spin-flop transition occurs in some samples, and for $h/J > 2$, it occurs in all. At $h/J > 4$, all samples transition to a ferromagnetic state.
+External magnetic field shifts the phase boundaries. For $h/J > 1$, at $P_+ < 0.1$ a spin-flop transition occurs in some cases, and for $h/J > 2$, it occurs in all. At $h/J > 4$, all samples go to a ferromagnetic state.
 
-The staircase-like behavior of the diagram can be explained by the competition between internal interaction energy ($E = -\sum J_{ij} S_i S_j$) and Zeeman energy ($E = - h \sum S_i$). At specific field values, the Zeeman energy dominates, causing phase transitions across groups of samples with varying $P_+$.
+The staircase-like behavior on the diagram can be explained by the competition between internal interaction energy and Zeeman energy. At critical field values, the Zeeman energy dominates, causing phase transitions across groups of samples with varying $P_+$.
 
-It should be noted that open boundary conditions may introduce significant distortions. For example, a sample with $P_+ = 0.2$ (Figures \ref{fig:Mgs(P+)} and \ref{fig:P_AFM_FM_Mmax}) exhibits antiferromagnetic properties due to ferromagnetic bonds ($J_{ij} = 1$) being concentrated along the edges.
+It should be noted that open boundary conditions may introduce significant influence on results. For example, a cases with $P_+ = 0.2$ (Figures \ref{fig:Mgs(P+)} and \ref{fig:P_AFM_FM_Mmax}) exhibits antiferromagnetic properties due to ferromagnetic bonds ($J_{ij} = 1$) being concentrated along the edges.
 
 \section{Conclusion}
 
-An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an complete enumeration method. The developed algorithm enables calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
+An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an complete enumeration method. The developed algorithm enables the calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
 
-It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustrated plaquettes, i.e., the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground-state configurations based on the determination of frustration locations. The algorithm is limited by the number of possible arrangements of frustrations.
+It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustration in  Type-II plaquettes, i.e., the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground-state configurations based on the determination of frustration locations.
 
-It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground-state degeneracy implies alternative arrangements of frustrations.
+It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground-state degeneration implies alternative arrangements of frustrations.
 
 The dependence of the ground-state spin excess in the Edwards-Anderson model on the external magnetic field at $T \to 0$ exhibits a discrete (stepped, staircase-like) character. This behavior is caused by the discrete structure of the density of states. Critical values of the external magnetic field, where giant jumps in residual entropy are observed, have been calculated. The nature of these entropy jumps arises from the fact that at certain critical field values, multiple spin configurations with different interaction and Zeeman energies—but the same total energy—contribute equally to the ground state. Degeneracies of states with identical total energy are summed.
 
-The problem of the maximum number of frustrations as a function of the number of spins in a system for a given lattice type in the Ising model with antiferromagnetic and ferromagnetic exchange interactions is of interest, as the presence of frustrations gives rise to new properties. It has been shown that in the Edwards-Anderson model, systems with twofold ground-state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground-state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
+The problem of the maximal possible number of frustrations as a function of the number of spins in a system for a given lattice type in the Ising model with antiferromagnetic and ferromagnetic exchange interactions is of interest, as the presence of frustrations gives rise to new properties. It has been shown that in the Edwards-Anderson model, systems with twofold ground-state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground-state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
 
 
 \section{Acknowledgments}
