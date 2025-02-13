@@ -1,10 +1,11 @@
 % \documentclass[review]{elsarticle}
-\documentclass[preprint,12pt]{elsarticle} %удалить перед отправкой
+\documentclass[preprint,12pt]{elsarticle} 
 \graphicspath{{images/}}
 
 \usepackage{lineno,hyperref}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{xcolor}%удалить перед отправкой
 \modulolinenumbers[5]
 
 \journal{Physica A: Statistical Mechanics and its Applications}
@@ -137,6 +138,87 @@ Ground-state configurations, as well as excitations in the ground and low-energy
 Estimation of the ground-state energy and understanding the nature of its macroscopic degeneracy have remained open problems for many years. At low temperatures, the spin glass in its ground state is realized solely through configurations with minimal interaction energy, while the ensemble of other configurations in the Gibbs distribution plays no role. Ground-state energies calculated by various methods in studies \cite{thouless1977solution, sherrington1975solvable, tanaka1980analytic, klein1976comparison, kirkpatrick1978infinite, karandashev2019global, palmer1999ground, campbell2004energy, roma2009ground} show significant variability. It will be shown below that this variability may be related to the distribution of frozen disorder in the bonds, i.e., competing ferromagnetic and antiferromagnetic interactions. For a finite number of spins, the ground-state energy strongly depends on the specific realization of the distribution $\left\lbrace J_{ij} \right\rbrace$ on the spin lattice.  
 
 In this work, we utilized an complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground-state energy for a finite number of spins, to calculate the degeneracy of this state, and to determine the distribution of spin excess.
+
+\section{Complete enumeration solution}
+
+To investigate the problem, an complete enumeration algorithm was developed. We use standard Hamiltonian of Ising model:
+
+\begin{equation}
+	\color{red}
+	E = -\sum^{N - 1}_{i=1}\sum^N_{j = i + 1} J_{ij} S_i S_j - h \sum^N_{i=1} S_i.
+	\label{eq:ising_energy}
+\end{equation}
+
+We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) \textcolor{red}{interactions between nearest neighbor spins (Ising spin variables) $S_i = \pm1$}. 
+
+\begin{equation}
+	\color{red}
+	M = \sum^N_{i=1} S_i.
+	\label{eq:spin_excess} 
+\end{equation}
+\textcolor{red}{$M$ is a spine excess. Each configuration is recognized by two parameters, $E$ and $M$.}
+
+
+Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
+
+Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Bolsman constant, T -- temperature in values of $J$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
+
+\begin{equation}
+	\color{red}
+	Z = \sum_{i = 1}^{2 ^ N} e^{\frac{-E_i}{kT}},
+	\label{eq:stat_difinition}
+\end{equation}
+
+\noindent \textcolor{red}{is partition function.} The partition function for 3 spins is given by:
+
+\begin{equation}
+	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
+	\label{eq:stat_3}
+\end{equation}
+
+Now, let us attach a second chain parallel to the first one. Assuming all interactions are ferromagnetic:
+
+\begin{equation}
+	\label{eq:stat_3_un}
+	\begin{alignedat}{2}
+		Z_6 = Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{3 \beta +3 \beta h} + \\
+		Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{3 \beta -3 \beta h}.
+	\end{alignedat}
+\end{equation}
+
+As a result, the partition function for a $3 \times 2$ lattice is:
+
+\begin{equation}
+	\label{eq:stat_3_res}
+	\begin{alignedat}{2}
+		Z_6 = 6 e^{-5 \beta } + 12 e^{-\beta } + 2 e^{3 \beta } + e^{9 \beta -6 \beta  h} + 6 e^{3 \beta -4 \beta  h} + 6 e^{-3 \beta -2 \beta  h} + \\
+		9 e^{\beta -2 \beta  h} + 6 e^{2 \beta  h-3 \beta } + 9 e^{\beta +2 \beta  h} + 6 e^{3 \beta +4 \beta  h} + e^{9 \beta +6 \beta  h}.
+	\end{alignedat}
+\end{equation}
+
+\textcolor{red}{Equations \ref{eq:stat_3}, \ref{eq:stat_3_res}, \ref{eq:stat_3_un} show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this exhaustive enumeration.}
+
+\begin{algorithm}[H]
+	\textbf{INPUT:} Lattice size and geometry (number and coordinates of spins, boundary conditions, number of neighbors), distribution of exchange constants.\\
+	\textbf{OUTPUT:} Partition function parameters, density of states (degeneracy, energy and spin excess).
+	\begin{algorithmic}
+		\STATE {Compute state density for the first 1D chain.}
+		\FOR {Number of lattice layers \\}
+		{
+			\STATE {Compute state density for the attached 1D chain.}
+			\FOR {Length of the 1D chain \\}
+			{
+				\STATE {Compute state density for the resulting lattice.}
+			}
+			\ENDFOR \\
+		}
+		\ENDFOR
+	\end{algorithmic}
+	\caption{Computing partition function parameters by attaching 1D chains.}
+	\label{alg:addititional_algorithm}
+\end{algorithm}
+
+\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
 
 \section{Plaquette combinatorics}
 
@@ -311,69 +393,6 @@ Thus, the macroscopic degeneration of the ground state degeneracy is due to seve
 	\item There may be several variants for placing frustrations between plaquettes if the coordinates of these plaquettes are different (Figure \ref{fig:5x5.22F}).
 	\item The choice of boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries leads to an increase in frustration choices (Figure \ref{fig:4x4.1}).
 \end{enumerate}
-
-\section{Complete enumeration solution}
-
-To investigate the problem, an complete enumeration algorithm was developed. We use standard Hamiltonian of Ising model:
-
-\begin{equation}
-	E = -\sum J_{ij} S_i S_j + h \sum S_i.
-	\label{eq:ising_energy}
-\end{equation}
-
-We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) interactions between nearest neighbors. Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
-
-Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$. The partition function is given by:
-
-\begin{equation}
-	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
-	\label{eq:stat_3}
-\end{equation}
-
-Now, let us attach a second chain parallel to the first one. Assuming all interactions are ferromagnetic:
-
-\begin{equation}
-	\label{eq:stat_3_un}
-	\begin{alignedat}{2}
-		Z_6 = Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{3 \beta +3 \beta h} + \\
-		Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{3 \beta -3 \beta h}.
-	\end{alignedat}
-\end{equation}
-
-As a result, the partition function for a $3 \times 2$ lattice is:
-
-\begin{equation}
-	\label{eq:stat_3_res}
-	\begin{alignedat}{2}
-		Z_6 = 6 e^{-5 \beta } + 12 e^{-\beta } + 2 e^{3 \beta } + e^{9 \beta -6 \beta  h} + 6 e^{3 \beta -4 \beta  h} + 6 e^{-3 \beta -2 \beta  h} + \\
-		9 e^{\beta -2 \beta  h} + 6 e^{2 \beta  h-3 \beta } + 9 e^{\beta +2 \beta  h} + 6 e^{3 \beta +4 \beta  h} + e^{9 \beta +6 \beta  h}.
-	\end{alignedat}
-\end{equation}
-
-The numerical algorithm for calculating partition function parameters (state density, entropy, energy, and spin excess) is then outlined as follows (\ref{alg:addititional_algorithm}):
-
-\begin{algorithm}[H]
-	\textbf{INPUT:} Lattice size and geometry (number and coordinates of spins, boundary conditions, number of neighbors), distribution of exchange constants.\\
-	\textbf{OUTPUT:} Partition function parameters, state density (degeneracy or entropy, energy, and spin excess).
-	\begin{algorithmic}
-		\STATE {Compute state density for the first 1D chain.}
-		\FOR {Number of lattice layers \\}
-		{
-			\STATE {Compute state density for the attached 1D chain.}
-			\FOR {Length of the 1D chain \\}
-			{
-				\STATE {Compute state density for the resulting lattice.}
-			}
-			\ENDFOR \\
-		}
-		\ENDFOR
-	\end{algorithmic}
-	\caption{Computing partition function parameters by attaching 1D chains.}
-	\label{alg:addititional_algorithm}
-\end{algorithm}
-
-As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
-
 
 \section{Ground state energy}
 
