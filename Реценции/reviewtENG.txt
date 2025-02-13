@@ -1,0 +1,113 @@
+Reviewer #1: The presented manuscript is devoted to a theoretical study of the ground state of frustrated two-dimensional Ising spins model, i.e., the Edwards-Anderson model, subject to an external magnetic field applied perpendicular to the x-y plane. The (anti)ferromagnetic ZZ interaction between adjacent spins is provided. Two models with disordered (spin glass) and ordered (spin ice) distribution of (anti) ferromagnetic interactions were considered. By making use of a numerical analysis the authors calculated the ground state energy, the degeneracy factor, and spin excess for a frustrated 8x8 spin lattice. As the main result of the paper the authors obtained that the ground state is due to the presence of various combinations of specific frustrated plaquette, i.e., square 1x1 plaquette contained by a single frustrated spin pair. The ground state energy is determined by the number of frustrated pairs but the degeneracy factor, and spin excess can vary depending on the number and type of different configurations of frustrated spin pairs. In the presence of the magnetic field a system demonstrates the steps in the dependence of the magnetization on an external magnetic field. These steps occur at the particular values of magnetic field $h$, and are accompanied by the jumps in the degeneracy factor. The phase diagram $h-P_+$ displaying three phases, i.e., the ferromagnetic, antiferromagnetic and spin glass (spin ice), has been obtained.
+
+The obtained results can present some interest for the scientific community working on frustrated magnetic systems, but in order to be published in Physica A: Statistical Mechanics and its Application this manuscript has to be substantially revised, and the presentation has to be improved. The comments are following:
+
+1. Section 4 "Complete enumeration solution". The presentation of this section has to be improved. First of all, it is not clear why the authors present equations for finite temperature $T$ but the analysis is presented for $T=0$. The authors have to carefully explain this point.
+
+2. Section 4 "Complete enumeration solution". All results are heavily based on the numerical algorithm allowing one to find all spins configurations corresponding to the ground state. Authors claimed that their algorithm allows one to drastically reduce the complexity up to $~2^L$ (from $2^(L^2)$). This is a very important claim, and authors have to explain the algorithm in detail, and put the references on that (if any).
+
+3. The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. Therefore, the authors have to provide the discussion how the results (degeneracy, exchange energy, and spin excess) vary with a change of distribution of the spins interactions.
+
+4. Table 1. It is not clear in what conditions these values are valid. What were $P_+$_ the lattice size, average procedure over different distributions for these references? The authors have to provide details and explain the relevance between the table 1 and 10.
+
+5. There is the contradiction between Fig. 9 (and text after that) and the Fig. 18 and 20. In Fig. 9 one can see a big spread of magnetizations but in Fig. 20 (phase diagram) it is indicated as the probability zero to have AFM/FM states. The authors have to explain that.
+
+6. There are some typos, and errors. E.g., the authors have to check the magnetization values for Fig. 5 and 7; some text at the end of page 12 is missed; "an complete".
+
+7. Please, also provide the value of $P_+$ in figure captions because it will enhance the readability of the text.
+Thus, my recommendation is to revise and resubmit the manuscript.
+
+
+Reviewer #2: The manuscript is devoted to the investigation of the sources of frustration
+in the \pm J Ising model on the square lattice by a systematic analysis
+(more precisely, by direct enumeration) of the corresponding ground states
+on a rather small piece of such a lattice given by 8x8 square with total number
+of spin variables 64. The elementary interactional structures that lead to
+frustration are identified. The ground-state phase diagram of the studied system
+is found when the external magnetic field is applied.
+
+The performed analysis is quite interesting and surely desires publishing.
+Nevertheless, I have the following question: Since the studied piece of the
+square lattice is very small, it seems that the results must be strongly
+influenced by the presence of the surface spin variables, the number of which is
+quite large in comparison to the number of the bulk spin variables (there are
+28 surface sites of the lattice, i.e., almost the half of all spin variables are
+on the surface). Is there a possibility to estimate the influence of the large number
+of surface spin variables on the obtained results? In other words, are the obtained
+results relevant for the regular square lattice?
+
+
+Reviewer #3: The manuscript "Nature of frustration in the ground state of the +/-J Ising model on a square lattice" presents a numerical study of the ground state degeneracy of the Edward Anderson model in a 8x8 square lattice. The subject may be interesting and relevant for the readers of Physica A. However, some important revisions are necessary before the manuscript may be considered for publication. Comments and questions are listed below:
+
+1) The title should be rewritten to address the main point /result of the work
+
+2) I believe that the way the authors introduce the different types of plaquettes and discuss different arrangements/combinations in Sec. II with increasingly larger plaquetttes is a nice idea. However, some rewriting is necessary. For starters, the model/Hamiltonian should be introduced before discussing the plaquettes, not later in the work, and clearly state that the spins \sigma_i are valued +/- 1. Quantities like "spin excess" (which I believe is also known as the magnetisation) should be clearly defined.
+
+If I understand correctly, in the first figures, the authors consider for example one arrangement of values of the bonds (J=+1,-1) in a small plaquette with a given number of spins, and study the energy of the ground state (gs), its degeneracy, magnetisation/spin excess, considering open boundary conditions, is this so? Is each realisation of the lattice interactions for a given number of sites what the authors refer to as "system"? Then perhaps this could be clarified a bit. Also, for example in the example of Fig. 4, the authors could say briefly why the degeneracy is 2 (I understand that this is because these configurations have the same energy when flipping \sigma→ -\sigma).
+
+3) Figures need better and more descriptive captions, the reader should be able to understand what they represent.
+
+4) The authors constantly refer as "frustration" to a frustrated bond. Phrases like those in the paragraph around line 135, "frustrations in the ground state" "frustrations are located" are not clear, so the authors should revise the use of the word "frustration" and change it adequately.
+
+5) Line 163 reads "The choice of boundary conditions". I believe the authors refer to s how the boundaries between the different types of plaquettes are arranged, is this correct? Usually the term "boundary conditions" refers to as whether each plaquette has open or continuous boundary conditions.
+
+6) An important issue is what do the authors refer to as "spin ice". Spin ice systems are those with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. I do not see how the lattices presented in Fig. 12 (a) and (c) are spin ices, could the authors please elaborate?
+
+7) The authors talk about "jumps" and "steps" in different quantities as a function of the magnetic field, do they refer to plateaux? Also, a small comment: h/J should read h/|J| since J could be +1 or -1
+
+8) Could the authors please explain what they wish to convey in the paragraph starting in line 230?
+
+9) What can be concluded comparing Figs. 14, 15 and 16? What information may be extracted from these figures?
+
+10) In general, some paragraphs, specially those where there are relevant discussions, could benefit for some rewriting.
+
+
+Reviewer #4: The authors present a study of the Edwards-Anderson model based on exact enumeration for a finite square lattice. The behavior of entropy is analysed and the effects of an external magnetic field are considered. The abstract is well written, making clear the model and method used. They also present and explain the main results. In addition, in the introduction, the authors made an extensive review of the literature, highlighting the main challenges to obtain the thermodynamic properties of frustrated spin ice and spin glass system models. They also drew attention to the computational complexity involved, citing several approximate methods in the literature, and finally, justify the choice of an exact enumeration approach to obtain physical predictions of the Edwards-Anderson model.
+On the one hand, the illustrations of the plaquettes and the spin lattice are very enlightening and the text of sessions 2 and 3 is very detailed. On the other hand, there are points that should be improved in the methodology, such as the description of the caption of some figures, the definitions adopted in session 4, a review of the calculation of the partition function and broadening the discussion of the approach employed.
+Although in the results section the authors have indicated a long list of results from the literature for different methods, it is not clear what connection with the results obtained, i.e., whether they corroborate. On the other hand, the conclusion is well written, clarifying the main results.
+I found in the paper some passages that need to be corrected, which I left listed below. Soon after, another list with recommendations that should be seen as optional.
+
+Suggested corrections
+In line 93, an 'and' was missing: 'Figures 1, 2, 3' for 'Figures 1, 2, and 3';
+In the caption of Figs. 1 to 4 and 6 to 20 the period was missing;
+On line 105, it seems that there was a typo, " '+ ́ 105 sign ", when closing the single quotation mark;
+In line 114, a comma is missing after 'Figure 4'. In addition, this passage would need to be rewritten, to make the definition of energy and degeneracy multiplicity clearer;
+In line 119, I counted 5 spins up for panel (a), so the absolute difference between spins up and down divided by N=16 spins was (11-5)/16 = 0.375. While for the panel (c), I counted 7 spins up, so (9-7)/16 = 0.125. In panel (d) the magnetization would be 0.652. I suggest reviewing these calculations;
+In line 121, I counted 45 connections, 3 are frustrated, so 42 contribute energetically, and then dividing by N=28 spins I found E/N = -39/28 = -1.39. Therefore, it would be good to review this calculation;
+In line 125, I observed 11 spins up, so M/N = (14-11)/25 = 0.12. I suggest checking these calculations;
+In line 126, I believe there was a typo: 'Figure 7(a)' should be used instead of 'Figure 6(a)'; 7(b) instead of 6(b).
+In line 139, 'in Figure' was missing at the end of the sentence;
+In line 144, a blank space was missing before "The number of frustrations...";
+In Eq. 1, the sum index must be explicitly stated or indicated in the text that it is a special sum over pairs of spins. In addition, also not defined h;
+In line 174, the constant k and its value were not specified;
+Eq. 2 is wrong, there is no way to have a contribution from the magnetic field that is not proportional to . In addition, the exchange term is being accounted for twice. In a chain of spins, the number of interactions is N-1; If the authors considered periodic boundary conditions, it should be clearly stated. A figure showing the 3-site chain and the interactions could help the reader.
+In line 183, a dot is not a symbol of multiplication between two scalars. 'x' or parentheses should be used;
+In Table 1, there is no period in the caption;
+In Fig. 14, in the caption, it says that the maximum field is 2, but there is a panel with field h/J = 3.
+
+
+Recommendations (optional)
+On page 1, there is no author with the label of affiliation b;on the spin lattice' is;
+In line 85, he could have given more details about the 'distribution {Jij} on the spin lattice';
+I believe it would be better to define the Hamiltonian of Eq. 1 before you start describing the plaquettes. In this way, the term exchange would be defined, describing its role in terms of energetic favoring with the alignment or anti-alignment between spins. In addition, the exchange interaction Jij could be defined as J+ (ferromagnetic) and J- (antiferromagnetic);
+On line 102, the number of configurations could have been set more generally, rather than 'There are 24 configurations', it could be 'There are Nc=2N configurations'. It was also not explicit whether it is a 1/2 spin system;
+In line 114, it is said that the degeneration is of order 2. This degree of degeneration could be explained to the reader (is it through a global reversal of spins?).
+In line 115, you reference all the panels, so the figure itself. Thus, 'Figures 5(a-d)' could be changed to 'Figure 5', or simply 'Fig. 5';
+In Fig. 5, the caption is very generic, it could inform how the plaquettes were generated, or in which they are similar/distinct. In addition, the identification of subfigures (a) to (d) is redundant, since they are all the subfigures that make up Fig 5. On the other hand, he highlighted the frustrated spins on the plates. However, this could have been done already in Fig. 2, where it appears for the first time, and is only referenced in Fig. 5;
+Between lines 118 to 120 it is confusing. It would be better to replace the parentheses with ':', as well as being repetitive. Because panels (a) and (b) have the same Mgs, as do panels (c) and (d). In addition, I could make it explicit that there are 8 (degenerate) states;
+The caption in Fig. 6 is the same as in Fig. 7, but they are not the same figures. It would need to be more descriptive;
+In line 145, Rij=|xi-xj|+|yi-yj|?;
+In Eq. (1), in the case of a chain of spins, the first sum can be written in terms of a single index;
+On lines 169 and 170, competitive interactions are a consequence of having only ferromagnetic and/or antiferromagnetic first neighbor interactions, leading to system frustration. In addition, it could better discuss the energy contribution of competitive interactions and the external magnetic field to Hamiltonian;
+In line 173, it is redundant to speak of a one-dimensional chain of spins, as they are synonymous. But I could say a linear chain of spins;
+In lines 174 and 175, it is necessary to make the definitions more fluid, as the text is very truncated. Also, before presenting the partition function for a specific case (Eq. 2), it is a good practice to define the general canonical partition function first. If T=0, then there is a divergence in the partition function, how was this circumvented?;
+Eq. 2 can be written in terms of the cosh function. In addition, it could have been mentioned that the Ising chain with a longitudinal magnetic field has an analytical solution, obtained through the transfer matrix technique. It would be more didactic to start from the simplest possible case (interaction of two spins) and then gradually add complexity;
+In Eq. (3), the term Z3 could be highlighted. Also, it is not explicit in the text whether the first chain of spins interacts with the second parallel chain. I believe that a figure, showing these two chains, would help to illustrate the method;
+If Eq. (4) was obtained from Eq. (2), she is also wrong. Even in the 3x2 lattice of Fig. 4, there are 7 interactions between first neighbors, hence the maximum of cooperative interactions. However, in Eq. (4) There is a term that exceeds this value. I suggest reviewing this calculation;
+In line 183, I could make the strategy adopted clearer as well as the reduction in complexity through this algorithm;
+Fig. 10 could be placed next to Fig. 11, since the caption is identical for both, thus optimizing space;
+In Fig. 12, you could alternate panels (b) and (c), thus leaving the two spin ice settings side by side;
+In Fig. 13, the label of the axes can be simplified by increasing the area of the graph, since the vertical label of the upper panels is the same. Same suggestion for Fig. 14. In addition, in Fig. 13 the lower panels are not aligned with the upper ones. With alignment, the steps would be more easily associated between the upper and lower panels;
+The caption of Fig. 14 to 16 is basically identical, I suggest making a more specific description, commenting on part one of the results;
+In line 251, the discussion of Fig. 15 could be expanded, becoming clearer, as was done in line 242 in the discussion of Fig. 14. The same for Fig. 16;
+On line 287, the paragraph is loose, I suggest joining it with the paragraph in the sequence.
