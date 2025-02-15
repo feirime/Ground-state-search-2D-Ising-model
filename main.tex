@@ -399,34 +399,35 @@ Thus, the macroscopic degeneration of the ground state degeneracy is due to seve
 Calculated the ground state energies of spin glass in the Edwards-Anderson model are presented in Table \ref{tab:Egs}. The table shows that the ground state energy values exhibit significant dispersion.
 
 \begin{table}[h]
-	\begin{tabular}{|l|c|l|}
+	\begin{tabular}{|l|c|c|l|}
 		\hline
-		Method                                   & $E_{gs}$                                       & Ref.                                          \\ \hline
-		Thouless-Anderson-Palmer (TAP) Approach & 0                                              & \cite{thouless1977solution}    \\ \hline
-		Replica Method                            & $-2/\pi$                                       & \cite{sherrington1975solvable} \\ \hline
-		Partition function                      & -0.5                                           & \cite{tanaka1980analytic}      \\ \hline
-		Mean random field                       & $-1/\sqrt{2\pi}$                               & \cite{klein1976comparison}     \\ \hline
-		Monte-Carlo                             & -0.76                                          & \cite{kirkpatrick1978infinite} \\ \hline
-		Algorithm of Shraudorphs-Kamensky        & -1.33                                          & \cite{karandashev2019global}   \\ \hline
-		Parallel Tempering   & -1.40193                                       & \cite{palmer1999ground}        \\ \hline
-		Branch-and-Cut Algorithm              & -1.40197                         
+		Method     &     \textcolor{red}{Distribution}                         &
+		  $E_{gs}$                                       &  Ref.                                          \\ \hline
+		Thouless-Anderson-Palmer (TAP) Approach& Gaussian &  0                                              & \cite{thouless1977solution}    \\ \hline
+		Replica Method   & Gaussian                         & $-2/\pi$                                       & \cite{sherrington1975solvable} \\ \hline
+		Partition function   &   -                 & -0.5                                           & \cite{tanaka1980analytic}      \\ \hline
+		Mean random field  &   Gaussian  &                   $-1/\sqrt{2\pi}$                               & \cite{klein1976comparison}     \\ \hline
+		Monte-Carlo      &   Gaussian    &        -0.76                                          & \cite{kirkpatrick1978infinite} \\ \hline
+		Algorithm of Shraudorphs-Kamensky   &  Uniform &     -1.33                                          & \cite{karandashev2019global}   \\ \hline
+		Parallel Tempering &   -       & -1.40193                                       & \cite{palmer1999ground}        \\ \hline
+		Branch-and-Cut Algorithm  & Bimodal               & -1.40197                         
 		& \cite{campbell2004energy}      \\ \hline
 		
-		Parallel tempering Monte-Carlo  & -1.31479                                       & \cite{roma2009ground}          \\ \hline
+		Parallel tempering Monte-Carlo    &  Gaussian         & -1.31479                                       & \cite{roma2009ground}          \\ \hline
 		
 		
 		
 	\end{tabular}
-	\caption{Ground state specific energy}
+	\caption{Ground state specific energy ($P_+\approx$ 0.5)}
 	\label{tab:Egs}
 \end{table}
-
-We calculated the ground state energy in the Edwards-Anderson model exactly using complete enumeration algorithm \ref{alg:addititional_algorithm}. The graph in Figure \ref{fig:E(Q)} shows the dependence of the specific ground state energy $E_{gs}/N$ on the number of Type-II plaquettes $Q$.
+\textcolor{red}{
+The graph in Figure \ref{fig:E(Q)} shows the dependence of the ground state specific energy $E_{gs}/N$ on the relative amount of ferromagnetic exchange integrals (Gaussian distribution). The points on the graph are marked in different colors depending on the quantity of Type-II plaquettes ($Q$)}
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=0.5\linewidth]{pictures/E_Q.eps}
-	\caption{Ground state energy as a function of the quantity of Type-II plaquettes for $N=64$}
+		\includegraphics[width=1.0\linewidth]{pictures/E_P_Q.eps}
+	\caption{\textcolor{red}{Ground state specific energy as a function of the relative amount of ferromagnetic exchange integrals ($P_+$) for $N=64$. The color scale shows the quantity of Type-II plaquettes ($Q$) in the lattice.}}
 	\label{fig:E(Q)}
 \end{figure}
 
