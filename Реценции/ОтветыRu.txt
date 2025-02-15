@@ -3,7 +3,7 @@
 "Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this exhaustive enumeration."
 2) Мы объяснили причину снижение сложности: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined"
 \\todo прикрутить ссылку на Glaurung
-3) 
+3) В параграфе 6 добавлено обсуждение поведения обменной энергии и спинового избытка для решетки с одинаковым P+, но разным распределением ферромагнитных и антиферромагнитных связей.
 
 Рецензент № 2
 1) 

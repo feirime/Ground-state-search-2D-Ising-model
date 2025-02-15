@@ -169,7 +169,7 @@ Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferrom
 	\label{eq:stat_difinition}
 \end{equation}
 
-\noindent \textcolor{red}{is partition function.} The partition function for 3 spins is given by:
+\noindent \textcolor{red}{is partition function.} The partition function for 3 spins is given by (all interactions is ferromagnetic $J = 1$):
 
 \begin{equation}
 	Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
@@ -495,11 +495,20 @@ In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum 
 	
 \end{figure}
 
+\textcolor{red}{The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three P+ = 0.5 samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.}
+
+\textcolor{red}{The lattice energy in Figure \ref{fig:cell_SI_SG_64} (a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.}
+
+\textcolor{red}{For the same P+ = 0.5 with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure 12b, we observe 15 frustrations. So the energy will be equal to $E = -112 + 15*2 = -82$, which coincides with the results of the complete enumeration.}
+
+\textcolor{red}{Figure 12 c represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure 12 c represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest number of frustrations (25) leads to the highest ground state energy: $E = -112 + 2*25 = -62$}
 
 Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
 In the absence of frustrations and an external magnetic field, the ground state of spin ice is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
 In spin glass, the introduction of frustrations increases the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
 Maximal filling of the spin ice system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations $> 3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
+
+\textcolor{red}{In Figure \ref{fig:_multiplot_SI_SG_64} (a) the spin excess is zero for the two configurations in the absence of frustrations and $\ln 2$ degeneracy. The presence of frustrations in Figure \ref{fig:_multiplot_SI_SG_64} (b, c) leads to the degeneracy of the ground state. The ground state configurations have spin excesses different from zero.}
 
 Under the influence of an external magnetic field, the spin glass system exhibits the highest number of steps in the spin excess dependency from external magnetic field (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
 General quantity of critical values of magnetic field is determined by the number of frustrations and by the shape of the density of states (DOS), which plays a more significant role.
