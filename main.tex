@@ -157,7 +157,7 @@
 		M = \sum^N_{i=1} S_i.
 		\label{eq:spin_excess} 
 	\end{equation}
-	\textcolor{red}{$M$ is a spine excess. Each configuration is recognized by two parameters, $E$ and $M$.}
+	\textcolor{red}{$M$ is a spin excess of given configuration. Each configuration is recognized by two parameters, $E$ and $M$.}
 	
 	
 	Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
@@ -170,7 +170,15 @@
 		\label{eq:stat_difinition}
 	\end{equation}
 	
-	\noindent \textcolor{red}{is partition function.} The partition function for 3 spins is given by (all interactions is ferromagnetic $J = 1$):
+	\noindent \textcolor{red}{is partition function. Magnetisation is defined as:} 
+	
+	\begin{equation}
+		\color{red}
+		<M> = \frac{1}{Z} \sum_{i = 1}^{2^N} M_i e^{\frac{-E_i}{kT}}.
+		\label{magnetisation}
+	\end{equation}
+	
+	The partition function for 3 spins is given by (all interactions is ferromagnetic $J = 1$):
 	
 	\begin{equation}
 		Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
@@ -580,7 +588,25 @@
 		\label{fig:Mgs(P+)}
 	\end{figure}
 	
-	For a pure ferromagnet ($P_+ = 1.0$), the spin excess equals the number of spins ($M_{gs}/N = 1.0$), while for a pure antiferromagnet, it is zero (in the case of an even number of spins). For a given $P_+$, the ratio of points where the maximal spin excess, of given ground states equals zero to the number of points where $M_{gs}/N \neq 0.0$ represents the probability of an antiferromagnetic state, as shown in Figure \ref{fig:P_AFM_FM_Mmax}(a). Similarly, the ratio of points with $M_{gs}/N = 1.0$ (ferromagnetic spin excess) to the number of points where $M_{gs}/N \neq 1.0$ is the probability of a ferromagnetic state, as shown in Figure \ref{fig:P_AFM_FM_Mmax}(b).
+	\textcolor{red}{Let $M_{gs}$ -- the absolute value of a maximum spin excess of the ground state. For a pure ferromagnet $P_+ = 1.0$, the spin excess of ground state equals $M_{gs}/N = 1.0$. In a pure antiferromagnet $P_+ = 0.0$, the spin excess of ground state equals $M_{gs}/N = 0.0$ (in the case of an even number of spins). Thus, if}
+		
+	\begin{equation}
+		\color{red}
+		M_{gs}/N = 1.0,
+		\label{eq:ferr_deffinition}
+	\end{equation}
+		
+	\textcolor{red}{\noindent the sample is considered as ferromagnet, if}
+	
+	\begin{equation}
+		\color{red}
+		M_{gs}/N = 0.0,
+		\label{eq:aferr_deffinition}
+	\end{equation}
+	
+	\textcolor{red}{\noindent the sample as antiferromagnet.}
+	
+	\textcolor{red}{For each $P_+$ value, the set of 10 samples was considered. The probability of ferromagnetic state $P_{FM}$ is defined as relative number of ferromagnetic samples in set, Figure \ref{fig:P_AFM_FM_Mmax} (b). Similarly, relative number of antiferromagnetic samples in set is the probability $P_{AFM}$, Figure \ref{fig:P_AFM_FM_Mmax}(a).}
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.45\linewidth}
@@ -614,7 +640,7 @@
 		\label{fig:Mgs(P+)_H}
 	\end{figure}
 	
-	The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig:P+_afm_fm(H)}.
+	The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig:P+_afm_fm(H)}. \textcolor{red}{Both Figure \ref{fig:Mgs(P+)_H} and Figure \ref{fig:P+_afm_fm(H)} were constructed based on the definitions of probability of ferromagnetism (equation \ref{eq:ferr_deffinition}) and antiferromagnetism (equation \ref{eq:aferr_deffinition}.)}
 	
 	\begin{figure}[H]
 		\centering
@@ -623,7 +649,7 @@
 		\label{fig:P+_afm_fm(H)}
 	\end{figure}
 	
-	External magnetic field shifts the phase boundaries. For $h/J > 1$, at $P_+ < 0.1$ a spin-flop transition occurs in some cases, and for $h/J > 2$, it occurs in all. At $h/J > 4$, all samples go to a ferromagnetic state.
+	External magnetic field shifts the phase boundaries. For $h/J > 1$, at $P_+ < 0.1$ a spin-flop transition occurs in some cases, and for $h/J > 2$, it occurs in all. \textcolor{red}{Spin glass at $P_+ = 0.5$ at $h/J < 3$ because no sample fits the definition of ferromagnetic (equation \ref{eq:ferr_deffinition}) or antiferromagnetic (equation \ref{eq:aferr_deffinition}).} At $h/J > 4$, all samples go to a ferromagnetic state. 
 	
 	The staircase-like behavior on the diagram can be explained by the competition between internal interaction energy and Zeeman energy. At critical field values, the Zeeman energy dominates, causing phase transitions across groups of samples with varying $P_+$.
 	
