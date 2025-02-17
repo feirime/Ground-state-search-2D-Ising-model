@@ -3,6 +3,7 @@
 "Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this exhaustive enumeration."
 2) Мы объяснили причину снижение сложности: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined". Added a link to the algorithm
 3) В параграфе 6 добавлено обсуждение поведения обменной энергии и спинового избытка для решетки с одинаковым P+, но разным распределением ферромагнитных и антиферромагнитных связей.
+4) Добавлен метод распределения P+ (это не все)
 
 Рецензент № 2
 1) 
@@ -13,4 +14,18 @@
 \\todo дописать ответ
 
 Рецензент № 4
-1) 
+1) В строке 93 добавлено "и" (Рисунок "1", "2" и "3")
+2) В подписях к рисункам 1-4 и 6-20 добавлена точка
+3) В строке 105 кавычки "+" исправлены на двойные
+4)
+5) В строке 119 исправлены расчеты для Mgs/N
+6) В строке 121 исправлены расчеты для Egs/N
+7) В строке 125 исправлены расчеты Mgs/N
+8) В строке 126 опечатка "Рисунок 6(a), 6(b)" исправлена на "Рисунок 7(a), 7(b)"
+9) В строке 139 в конце предложения добавлено слово "Рисунок"
+10) В строке 144 добавлен пробел между точкой и новым предложением
+11)
+12)
+13)
+14)
+15) В таблицу 1 в подпись добавлена точка
