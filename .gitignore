@@ -42,3 +42,4 @@ images/scripts_and_programs/GS multiplicity/data/*
 images/scripts_and_programs/GS multiplicity/.venv/*
 images/scripts_and_programs/GS multiplicity/.idea/*
 *.pdf
+!Graphical Abstract.pdf
