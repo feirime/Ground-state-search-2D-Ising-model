@@ -4,7 +4,8 @@
 2) Мы объяснили причину снижение сложности: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined". Added a link to the algorithm
 3) В параграфе 6 добавлено обсуждение поведения обменной энергии и спинового избытка для решетки с одинаковым P+, но разным распределением ферромагнитных и антиферромагнитных связей.
 4) Добавлен метод распределения P+ (это не все)
-
+5)
+6) Исправлены ошибка в значениях "намагниченности" (спинового избытка) для рисунков 5 и 7 (это не все)
 Рецензент № 2
 1) 
 
