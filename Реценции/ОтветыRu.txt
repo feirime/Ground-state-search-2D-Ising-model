@@ -12,7 +12,7 @@
 1) К сожалению алгоритм полного перебора который применяется в данной работе имеет недостаток: он выигрывает в скорости обработки за счёт потери памяти о состояниях уже обработанной решетки. Поэтому переодические граничные условия не реализуемы в таком подходе. В первую главу добавленно "The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice."
 
 Рецензент № 3
-1) 
+1) Мы поменяди название на "Numerical solution for the low-temperature phase in the Ising $\pm J$ model on a square lattice".
 2) Мы перенесли параграф "Complete enumeration solution" до введения Плакетов. Определили что спины (спиновые переменные) принимают значения +/-1. Определили термин спиновый избыток.
 \\todo дописать ответ
 3) 
