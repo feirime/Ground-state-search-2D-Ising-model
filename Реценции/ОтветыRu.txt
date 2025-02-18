@@ -6,6 +6,7 @@
 4) Добавлен метод распределения P+ (это не все)
 5) We have described in more detail the probability definitions of ferromagnetic and antiferromagnetic phases in Chapter 7. There is no contradiction between Figures 18, 20 and 9: the probability of ferromagnetic and antiferromagnetic states for Figures 18 and 20 is defined as “For a pure ferromagnet $P_+ = 1.0$, the spin excess of ground state equals $M_{gs}/N = 1.0$. In a pure antiferromagnet $P_+ = 0.0$, the spin excess of ground state equals $M_{gs}/N = 0.0$”. Figure 9 shows two ground state configurations. The maximum spin excess of these configurations, normalized by the number of spins does not take the values 1.0 or 0.0.
 6) Исправлены ошибка в значениях "намагниченности" (спинового избытка) для рисунков 5 и 7 (это не все). Пропущенный текст добавлен: "This explains the dispersion in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}. The increase in the number of frustrated type II plaquettes leads to an increase in the value of the ground state energy."
+7) P+ указаны к рисункам
 
 Рецензент № 2
 1) 
