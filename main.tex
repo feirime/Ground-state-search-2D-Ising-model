@@ -227,7 +227,7 @@
 		\label{alg:addititional_algorithm}
 	\end{algorithm}
 	
-	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins.
+	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins. \textcolor{red}{The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice.}
 	
 	\section{Plaquette combinatorics}
 	
