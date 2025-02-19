@@ -25,25 +25,26 @@
 4) Мы уточнили что "By a frustrated spin pair we mean a pair for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.". Это должно сделать использование этого термина более понятным. Исправлено "frustrations in the ground state" на "frustrations in configurations of the ground state"
 
 5) В этом предложении мы имели ввиду границы образца, а не плакета. Мы переписали предложение: "Free boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries of lattice leads to an increase in the number of options for the placement of frustrations."
-6) 
+6) Добавлено определение спинового льда. Изменено название рисунков 13-15 (a) и соответственно текст, описывающий их. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes.
 7) Абзац был переформулирован. As seen in Figures 13(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure 13(b)). Despite the maximum number of frustrations in the spin ice (Figure 13(c)), the number of plateaus is lower than in Figure 13(b). This is related to the shape of the density of states (DOS) distribution; see Figures 14–16.
 8) Добавлены выводы по рисункам. Добавлен абзац. An important conclusion is that Figures 14–16 clearly illustrate the emergence of entropy jumps in Figure 13 and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
 The number of critical fields (including $h/J = 0$) in Figures 14, 15, and 16 matches the number of plateaus in Figures 13(a), 13(b), and 13(c), respectively.
-9) 
+9) Абзацы, особенно те, в которых были обсуждения двухподрешеточного антиферромагнетика, спинового стекла и спинового льда (после рисунка 13) были переписаны. 
 
 Рецензент № 4
 1) В строке 93 добавлено "и" (Рисунок "1", "2" и "3")
 2) В подписях к рисункам 1-4 и 6-20 добавлена точка
 3) В строке 105 кавычки "+" исправлены на двойные
-4)
+4) В строке 114 добавлена запятая после "Рисунок 4". Для более понятного определения энергии и кратности вырождения, этот отрывок был переписан.
 5) В строке 119 исправлены расчеты для Mgs/N
 6) В строке 121 исправлены расчеты для Egs/N
 7) В строке 125 исправлены расчеты Mgs/N
 8) В строке 126 опечатка "Рисунок 6(a), 6(b)" исправлена на "Рисунок 7(a), 7(b)"
 9) В строке 139 в конце предложения добавлено слово "Рисунок"
 10) В строке 144 добавлен пробел между точкой и новым предложением
-11)
-12)
+11) Переписано уравнение 1. Индекс суммы указан явно. Дано определения h.
+12) Указано значение константы k (Bolsman constant)
 13)
-14)
+14) В строке 183 точка исправлена на x
 15) В таблицу 1 в подпись добавлена точка
+16) Исправлена подпись к рисунку 15 (14). Density of states in an external magnetic field 0=<h/J=<3

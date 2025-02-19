@@ -150,7 +150,7 @@
 		\label{eq:ising_energy}
 	\end{equation}
 	
-	We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) \textcolor{red}{interactions between nearest neighbor spins (Ising spin variables) $S_i = \pm1$}. 
+	We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) \textcolor{red}{interactions between nearest neighbor spins (Ising spin variables) $S_i = \pm1$, $h$ - external magnetic field in units of $J$.} 
 	
 	\begin{equation}
 		\color{red}
@@ -162,7 +162,7 @@
 	
 	Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
 	
-	Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Bolsman constant, T -- temperature in values of $J$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
+	Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Bolsman constant, T -- temperature in units of $J$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
 	
 	\begin{equation}
 		\color{red}
@@ -227,7 +227,7 @@
 		\label{alg:addititional_algorithm}
 	\end{algorithm}
 	
-	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a 100 spins. \textcolor{red}{The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice.}
+	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \textcolor{red}{\times} 2^L + (L - 1) \textcolor{red}{\times} 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a 100 spins. \textcolor{red}{The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice.}
 	
 	\section{Plaquette combinatorics}
 	
@@ -292,7 +292,7 @@
 	\end{figure}
 	
 	
-	It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in Figure \ref{fig:Type2_32}a and \ref{fig:Type2_32}b $E_{gs}/N\textcolor{red}{\approx}-0.83$, $g_{gs}=2$. \textcolor{red}{Because ground state configurations have the same energy when flipping each $S_i \rightarrow -S_i$}. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N\textcolor{red}{\approx}\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
+	It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy of the ground state for the systems, in Figure \ref{fig:Type2_32}(a) and \ref{fig:Type2_32}(b) \textcolor{red}{$E_{gs}/N=(-6+1)/6\approx-0.83$. In the system the energies of 6 pairs are negative and 1 pair is excited (frustrated).} \textcolor{red}{Degeneracy $g_{gs}=2$, because ground state configurations have the same energy when flipping each $S_i \rightarrow -S_i$}. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N\textcolor{red}{\approx}\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
 	In Figures \ref{fig:4x4.1}(a-d), there is a Type-II plaquette containing frustration in the center of the lattice. Placing frustration in a non-Type-II plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm\textcolor{red}{0.375}$ - Figure \ref{fig:4x4.1}(a), $M_{gs}/N=\pm \textcolor{red}{0.375}$ - \textcolor{red}{Figures \ref{fig:4x4.1}(b)}, $M_{gs}/N=\pm \textcolor{red}{0.125}$ - Figure \ref{fig:4x4.1}(c), $M_{gs}/N=\pm \textcolor{red}{0.625}$ - Figure \ref{fig:4x4.1}(d)). 
 	
 	\begin{figure}[H]
@@ -460,7 +460,7 @@
 	
 	\section{Ground state in an external magnetic field}
 	
-	Table \ref{tab:Egs} presents the ground state energy values of spin glass. \textcolor{red}{Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Figure \ref{fig:cell_SI_SG_64} illustrates cases of spin ice, spin glass and two-sublattice antiferromagnet, which differ in the ordered or disordered distribution of exchange constants.} Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for spin ice models is -1.75 and -0.97 (Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively), while the specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}. 
+	Table \ref{tab:Egs} presents the ground state energy values of spin glass. \textcolor{red}{Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64} (a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively.} Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for \textcolor{red}{two-sublattice antiferromagnet and} spin ice models is -1.75 and -0.97 (Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively), while the specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}, \textcolor{red}{but this is not enough for macroscopic degeneracy of the ground state.} 
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.3\linewidth}
@@ -478,15 +478,15 @@
 			\includegraphics[width=1\linewidth]{pictures/SI_64_J0}
 		\end{minipage}
 		\hfill
-		\caption{\textcolor{red}{Ground states configurations of} spin ice (a, c) and spin glass (b) lattices consisting of 64 spins with an exchange constant distribution of $P_+ = 0.5$.}
+		\caption{\textcolor{red}{Ground states configurations of two-sublattice antiferromagnet (a), spin glass (b) and spin ice (c)} lattices consisting of 64 spins with an exchange constant distribution of $P_+ = 0.5$.}
 		\label{fig:cell_SI_SG_64}
 		
 	\end{figure}
 	
 	
-	Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of spin ice composed of Type-I plaquettes, completely free of frustrations.
+	Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of two-sublattice antiferromagnet composed of Type-I plaquettes, completely free of frustrations.
 	Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the Type-I, 27 are of Type-II, and 6 are of the Type-III, with a total of 15 frustrations.
-	In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum number of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
+	In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum quantity of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
 	
 	
 	\begin{figure}[H]
@@ -505,7 +505,7 @@
 			\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0}
 		\end{minipage}
 		
-		\caption{Spin excess and residual entropy of spin ice (a, c) and spin glass (b) (exchange constant distribution of $P_+ = 0.5$ shown in Figure \ref{fig:cell_SI_SG_64}).}
+		\caption{Spin excess and residual entropy of \textcolor{red}{two-sublattice antiferromagnet (a), spin glass (b) and spin ice (c)} (exchange constant distribution of $P_+ = 0.5$ shown in Figure \ref{fig:cell_SI_SG_64}).}
 		\label{fig:_multiplot_SI_SG_64}
 		
 	\end{figure}
@@ -514,12 +514,12 @@
 	
 	\textcolor{red}{The lattice energy in Figure \ref{fig:cell_SI_SG_64} (a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.}
 	
-	\textcolor{red}{For the same P+ = 0.5 with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure 12(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.}
+	\textcolor{red}{For the same P+ = 0.5 with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.}
 	
-	\textcolor{red}{Figure 12(c) represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure 12(c) represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest quantity of frustrations (25) leads to the highest ground state energy: $E = -112 + 2\times25 = -62$.}
+	\textcolor{red}{Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest quantity of frustrations (25) leads to the highest ground state energy: $E = -112 + 2\times25 = -62$.}
 	
 	Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
-	In the absence of frustrations and an external magnetic field, the ground state of spin ice is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
+	In the absence of frustrations and an external magnetic field, the ground state of \textcolor{red}{two-sublattice antiferromagnet} is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
 	In spin glass, the frustrations increase the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
 	Maximal filling of the spin ice system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations $> 3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
 	
@@ -537,7 +537,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_1.png}
-		\caption{Density of states in an external magnetic field $0\leq h/J \leq 2$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a)), $P_+ = 0.5$.}
+		\caption{Density of states in an external magnetic field \textcolor{red}{$0\leq h/J \leq 3$} for the \textcolor{red}{two-sublattice antiferromagnet} lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a)), $P_+ = 0.5$.}
 		\label{fig:HDOS_ice_1}
 	\end{figure}
 	
@@ -556,7 +556,7 @@
 		\label{fig:HDOS_ice}
 	\end{figure}
 	
-	\textcolor{red}{In Figure \ref{fig:HDOS_ice_1}, at $h/J = 0$ for spin ice (Figure \ref{fig:cell_SI_SG_64}(a)), a twofold degeneracy of the ground state can be observed. The external magnetic field value $h/J = 1$ is critical. At this field, the ground states with spin excess $M = 0$ and $M = 0.25$ have the same energy. This occurs due to the increasing contribution of the Zeeman energy, leading to the addition of the entropies of the ground states.  
+	\textcolor{red}{In Figure \ref{fig:HDOS_ice_1}, at $h/J = 0$ for \textcolor{red}{two-sublattice antiferromagnet} (Figure \ref{fig:cell_SI_SG_64}(a)), a twofold degeneracy of the ground state can be observed. The external magnetic field value $h/J = 1$ is critical. At this field, the ground states with spin excess $M = 0$ and $M = 0.25$ have the same energy. This occurs due to the increasing contribution of the Zeeman energy, leading to the addition of the entropies of the ground states.  
 	Increasing the external magnetic field to the critical value $h/J = 2$ results in a situation where the ground states correspond to spin excess values $M = \pm0.25, \pm0.5, \pm0.75, \pm1$. The degeneracies of these four states add up, leading to a higher entropy jump than at $h/J = 1$.  
 	The value $h/J = 3$ corresponds to the saturation field, at which only a single configuration remains.}
 	
@@ -565,7 +565,7 @@
 	\textcolor{red}{Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.}
 	
 	\textcolor{red}{An important conclusion is that Figures \ref{fig:HDOS_ice_1}–\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy jumps in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
-	The number of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.}
+	The quantity of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.}
 	
 	
 	\section{Antiferromagnetism, spin glass, and ferromagnetism at $T = 0$}
