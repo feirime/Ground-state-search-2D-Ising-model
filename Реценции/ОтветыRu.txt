@@ -21,7 +21,7 @@
 
 Добавили объяснение "Because ground state configurations have the same energy when flipping each $S_i \rightarrow -S_i$"
 3) В рисунки добавлены P+ там где их не хватало. В риснках 1, 2 и 3 уточнили что это "Two systems". В рисунках 1-7 уточнено что "The ground state configurations of the systems…".  
-4) 
+4) Мы уточнили что "By a frustrated spin pair we mean a pair for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.". Это должно сделать использование этого термина более понятным. Исправлено "frustrations in the ground state" на "frustrations in configurations of the ground state"
 5) 
 6) 
 7) Абзац был переформулирован. As seen in Figures 13(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure 13(b)). Despite the maximum number of frustrations in the spin ice (Figure 13(c)), the number of plateaus is lower than in Figure 13(b). This is related to the shape of the density of states (DOS) distribution; see Figures 14–16.
