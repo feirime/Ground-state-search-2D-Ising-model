@@ -20,7 +20,7 @@
 Добавили определние системы перед её использованием: "Hereinafter we understand the system as a set of N interacting moments."
 
 Добавили объяснение "Because ground state configurations have the same energy when flipping each $S_i \rightarrow -S_i$"
-3) 
+3) В рисунки добавлены P+ там где их не хватало. В риснках 1, 2 и 3 уточнили что это "Two systems". В рисунках 1-7 уточнено что "The ground state configurations of the systems…".  
 4) 
 5) 
 6) 
