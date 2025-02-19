@@ -227,7 +227,7 @@
 		\label{alg:addititional_algorithm}
 	\end{algorithm}
 	
-	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a system with 100 spins. \textcolor{red}{The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice.}
+	\textcolor{red}{A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm \ref{alg:addititional_algorithm} is performed only once for each element to be joined}. As a result, for a square lattice of size $L \times L = N$, the computational complexity of complete enumeration is reduced from $2^{N}$ to $L \cdot 2^L + (L - 1) \cdot 2^L$. Thus, the performance gain is approximately 92\% for a 9-spin lattice and spans 27 orders of magnitude for a 100 spins. \textcolor{red}{The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice.}
 	
 	\section{Plaquette combinatorics}
 	
@@ -268,10 +268,10 @@
 	
 	
 	There are $2^4$ configurations in each of the above considered plaquettes.
-	It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in Type-II plaquettes, which are marked by the $\textcolor{red}{"+"}$ sign. The frustrated pair can be any pair of spins.
+	It was found that frustration (excitation or positive energy of the exchange interaction between $ij$-pairs of spins) in the ground state necessarily appears in Type-II plaquettes, which are marked by the $\textcolor{red}{"+"}$ sign. The frustrated pair can be any pair of spins, Figure \ref{fig:Type2}.
 	
 	
-	If the system consists of two Type-II plaquettes, for example, as shown in Figure \ref{fig:Type2_32}, the frustrated pair is necessarily located at the intersection of the plaquettes to minimise the energy, regardless of the distribution of exchange interactions in the rest of the lattice. 
+	\textcolor{red}{Hereinafter we understand the system as a set of N interacting moments.} If the system consists of two Type-II plaquettes, for example, as shown in Figure \ref{fig:Type2_32}, the frustrated pair is necessarily located at the intersection of the plaquettes to minimise the energy, regardless of the distribution of exchange interactions in the rest of the lattice. \textcolor{red}{This arrangement of frustration satisfies the rule: each Type-II plaquette necessarily has at least one frustration.}
 	
 	\begin{figure}[H]
 		\centering
@@ -293,7 +293,7 @@
 	\end{figure}
 	
 	
-	It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in Figure \ref{fig:Type2_32} $E_{gs}/N\textcolor{red}{\approx}-0.83$, $g_{gs}=2$. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N\textcolor{red}{\approx}\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
+	It is easy to find the energy, spin excess and configurations of the ground state at the known arrangement of frustrated pairs of spins. The energy and degeneracy multiplicity of the ground state for the systems in Figure \ref{fig:Type2_32}a and \ref{fig:Type2_32}b $E_{gs}/N\textcolor{red}{\approx}-0.83$, $g_{gs}=2$. \textcolor{red}{Because ground state configurations have the same energy when flipping $S_i \rightarrow -S_i$}. The ground state spin excess $M_{gs}/N=0$ for the system in Figure \ref{fig:Type2_32}(a) and $M_{gs}/N\textcolor{red}{\approx}\pm 0.33$ in Figure \ref{fig:Type2_32}(b).
 	In Figures \ref{fig:4x4.1}(a-d), there is a Type-II plaquette containing frustration in the center of the lattice. Placing frustration in a non-Type-II plaquette results in another excitation in it. In this example, there are 8 ground states ($E_{gs}/N=-1.25$, $g_{gs}=8$, $M_{gs}/N=\pm\textcolor{red}{0.375}$ - Figure \ref{fig:4x4.1}(a), $M_{gs}/N=\pm \textcolor{red}{0.375}$ - \textcolor{red}{Figures \ref{fig:4x4.1}(b)}, $M_{gs}/N=\pm \textcolor{red}{0.125}$ - Figure \ref{fig:4x4.1}(c), $M_{gs}/N=\pm \textcolor{red}{0.625}$ - Figure \ref{fig:4x4.1}(d)). 
 	
 	\begin{figure}[H]
