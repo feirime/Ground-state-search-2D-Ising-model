@@ -3,16 +3,16 @@
 "Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this exhaustive enumeration."
 2) Мы объяснили причину снижение сложности: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined". Added a link to the algorithm
 3) В параграфе 6 добавлено обсуждение поведения обменной энергии и спинового избытка для решетки с одинаковым P+, но разным распределением ферромагнитных и антиферромагнитных связей.
-4) Добавлен метод распределения P+ (это не все)
+4) Добавлен метод распределения P+ в таблицу. Подписано что все значения в талице даны для P+ = 0.5. Рисунок 11 (бывший рисунок 10) переделан: зависимосеть E(колличество платкетов второго типа) переделана на зависимость E(P+), колличество плакетов нанесены цветовым градиентом.
 5) We have described in more detail the probability definitions of ferromagnetic and antiferromagnetic phases in Chapter 7. There is no contradiction between Figures 18, 20 and 9: the probability of ferromagnetic and antiferromagnetic states for Figures 18 and 20 is defined as “For a pure ferromagnet $P_+ = 1.0$, the spin excess of ground state equals $M_{gs}/N = 1.0$. In a pure antiferromagnet $P_+ = 0.0$, the spin excess of ground state equals $M_{gs}/N = 0.0$”. Figure 9 shows two ground state configurations. The maximum spin excess of these configurations, normalized by the number of spins does not take the values 1.0 or 0.0.
 6) Исправлены ошибка в значениях "намагниченности" (спинового избытка) для рисунков 5 и 7 (это не все). Пропущенный текст добавлен: "This explains the dispersion in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}. The increase in the number of frustrated type II plaquettes leads to an increase in the value of the ground state energy."
 7) P+ указаны к рисункам
 
 Рецензент № 2
-1) 
+1) К сожалению алгоритм полного перебора который применяется в данной работе имеет недостаток: он выигрывает в скорости обработки за счёт потери памяти о состояниях уже обработанной решетки. Поэтому переодические граничные условия не реализуемы в таком подходе. В первую главу добавленно "The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice."
 
 Рецензент № 3
-1) 
+1) Мы поменяди название на "Low-temperature phases in the Ising $\pm J$ model on a square lattice". Добавили в abstract и conclusions результаты по фазовой диаграммы.
 2) Мы перенесли параграф "Complete enumeration solution" до введения Плакетов. Определили что спины (спиновые переменные) принимают значения +/-1. Определили термин спиновый избыток.
 \\todo дописать ответ
 3) 
