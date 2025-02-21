@@ -162,7 +162,7 @@
 	
 	Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
 	
-	Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Bolsman constant, T -- temperature in units of $J$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
+	Let consider a one-dimensional chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $J$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
 	
 	\begin{equation}
 		\color{red}
@@ -178,13 +178,13 @@
 		\label{magnetisation}
 	\end{equation}
 	
-	The partition function for 3 spins is given by (all interactions is ferromagnetic $J = 1$):
-	
+	The partition function for a chain of 3 spins with open boundary conditions is given by (all interactions is ferromagnetic $J = 1$):
+	\textcolor{red}{
 	\begin{equation}
-		Z_3 = e^{3\beta - 3\beta h} + 3e^{\beta - h - \beta} + 3e^{\beta h - \beta} + e^{3\beta + 3\beta h}.
+		Z_3 = e^{2\beta + 3h\beta} + 2e^{h\beta} + e^{- 2\beta + h\beta } + e^{- 2\beta -h\beta}  + 2e^{-h\beta} + e^{2\beta - 3h\beta}.
 		\label{eq:stat_3}
 	\end{equation}
-	
+}
 	Now, let us attach a second chain parallel to the first one. Assuming all interactions are ferromagnetic:
 	
 	\begin{equation}
