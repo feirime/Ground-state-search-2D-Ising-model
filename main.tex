@@ -172,7 +172,7 @@
 	
 	\begin{equation}
 		\color{red}
-		Z = \sum_{i = 1}^{2 ^ N} e^{-\frac{E_i}{kT}},
+		Z = \sum_{i = 1}^{2 ^ N} Z_i = \sum_{i = 1}^{2 ^ N} e^{-\frac{E_i}{kT}},
 		\label{eq:stat_difinition}
 	\end{equation}
 	
@@ -193,34 +193,47 @@
 }
 	Now, let us attach a second chain parallel to the first one. Assuming all interactions are ferromagnetic:
 	
-	
+	\textcolor{red}{
 	\begin{equation}
 		\label{eq:stat_3_un}
 		\begin{alignedat}{2}
-			Z_6 = \sum{ Z_{3} Z_{3i}^* \circ E_{i}}.
+			Z_6 =  Z_{3}Z_{3}I(Z_{3i},Z_{3j}).
 		\end{alignedat}
 	\end{equation}
+}
+	\noindent \textcolor{red}{where $I(Z_{3i},Z_{3j})$ is the state contribution of the interaction energy between two chains in states $Z_{3i}$ and $Z_{3j}$. For example, if the state of the first chain is $e^{-2\beta+3h\beta}$ (all spins ``up'') and the second chain is $e^{-2\beta+3h\beta}$ (all spins ``down''), then $I(e^{-2\beta+3h\beta}, e^{-2\beta+3h\beta})=e^{3\beta}$. Thus the partition function of two connected chains:}
 	
-	
-	
-	\begin{equation}
-		\label{eq:stat_3_un}
-		\begin{alignedat}{2}
-			Z_6 = Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{\beta h-\beta} + Z_3 e^{3 \beta +3 \beta h} + \\
-			Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{-\beta h-\beta} + Z_3 e^{3 \beta -3 \beta h}.
-		\end{alignedat}
-	\end{equation}
+	\textcolor{red}{
+		\begin{equation}
+			\label{eq:stat_3_un}
+			\begin{alignedat}{3}
+			Z_6 = Z_{3}e^{2\beta + 3h\beta}I(Z_{3i}, e^{2\beta + 3h\beta}) + 2Z_{3}e^{h\beta}I(Z_{3i}, e^{h\beta}) + \\
+			Z_{3}e^{- 2\beta + h\beta }I(Z_{3i}, e^{- 2\beta + h\beta }) + Z_{3}e^{- 2\beta -h\beta}I(Z_{3i}, e^{- 2\beta -h\beta})  + \\
+			2Z_{3}e^{-h\beta}I(Z_{3i}, e^{-h\beta}) + Z_{3}e^{2\beta - 3h\beta}I(Z_{3i}, e^{2\beta - 3h\beta}).
+			\end{alignedat}
+		\end{equation}
+	}
 	
 	As a result, the partition function for a $3 \times 2$ lattice is:
-	
+	\textcolor{red}{
 	\begin{equation}
 		\label{eq:stat_3_res}
-		\begin{alignedat}{2}
-			Z_6 = 6 e^{-5 \beta } + 12 e^{-\beta } + 2 e^{3 \beta } + e^{9 \beta -6 \beta  h} + 6 e^{3 \beta -4 \beta  h} + 6 e^{-3 \beta -2 \beta  h} + \\
-			9 e^{\beta -2 \beta  h} + 6 e^{2 \beta  h-3 \beta } + 9 e^{\beta +2 \beta  h} + 6 e^{3 \beta +4 \beta  h} + e^{9 \beta +6 \beta  h}.
+		\begin{alignedat}{3}
+			Z_6 = 4 e^{ - 3 \beta-2 h\beta} + 4 e^{- 3 \beta+2 h\beta} + 5 e^{- \beta-2 h\beta } + 5 e^{- \beta+2 h\beta } + 2 e^{-7 \beta} + 4 e^{-3 \beta} + \\
+			8 e^{-\beta} + 6 e^{\beta} + 2 e^{\beta-4 h\beta } + 4 e^{\beta-2 h\beta } + 4 e^{\beta+2 h\beta } + 2 e^{\beta+4 h\beta } + \\
+			4 e^{3 \beta-4 h\beta } + 2 e^{3 \beta-2 h\beta } + 2 e^{3 \beta+2 h\beta } + 4 e^{3 \beta+4 h\beta } + e^{7 \beta-6 h\beta } + e^{7 \beta+6 h\beta }.
 		\end{alignedat}
 	\end{equation}
-	
+}
+\textcolor{red}{Then add one more chain in the same way and calculate the partition function for a $3 \times 3$ lattice:}
+\textcolor{red}{
+\begin{equation}
+	\label{eq:stat_9_un}
+	\begin{alignedat}{2}
+		Z_9 =  Z_{3}Z_{6}I(Z_{3i},Z_{6j}).
+	\end{alignedat}
+\end{equation}
+}
 	\textcolor{red}{Equations \eqref{eq:stat_3}, \eqref{eq:stat_3_res}, and \eqref{eq:stat_3_un} show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.}
 	
 	\textcolor{red}{The formula can be rewritten using the cosh function for periodic boundary conditions. In addition, it could have been mentioned that the Ising chain with a longitudinal magnetic field has an analytical solution obtained through the transfer matrix technique. However, when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.}
@@ -533,11 +546,11 @@
 		
 	\end{figure}
 	
-	\textcolor{red}{The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three P+ = 0.5 samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.}
+	\textcolor{red}{The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three $P_+ = 0.5$ samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.}
 	
 	\textcolor{red}{The lattice energy in Figure \ref{fig:cell_SI_SG_64} (a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.}
 	
-	\textcolor{red}{For the same P+ = 0.5 with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.}
+	\textcolor{red}{For the same $P_+ = 0.5$ with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.}
 	
 	\textcolor{red}{Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest quantity of frustrations (25) leads to the highest ground state energy: $E = -112 + 2\times25 = -62$.}
 	
