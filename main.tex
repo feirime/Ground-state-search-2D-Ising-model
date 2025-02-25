@@ -170,9 +170,9 @@
 	
 	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$\textcolor{red}{, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $|J|$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:}
 	
-	\begin{equation}
+		\begin{equation}
 		\color{red}
-		Z = \sum_{i = 1}^{2 ^ N} Z_i = \sum_{i = 1}^{2 ^ N} e^{-\frac{E_i}{kT}},
+		Z = \sum_{i = 1}^{2 ^ N} e^{-\frac{E_i}{kT}},
 		\label{eq:stat_difinition}
 	\end{equation}
 	
@@ -186,7 +186,7 @@
 	
 	\textcolor{red}{Let $Z_3$ be the partition function for a chain of 3 spins with open boundary conditions} (all interactions is ferromagnetic $J = +1$):
 	\textcolor{red}{
-	\begin{equation}
+		\begin{equation}
 		Z_3 = e^{2\beta + 3h\beta} + 2e^{h\beta} + e^{- 2\beta + h\beta } + e^{- 2\beta -h\beta}  + 2e^{-h\beta} + e^{2\beta - 3h\beta}.
 		\label{eq:stat_3}
 	\end{equation}
@@ -195,9 +195,9 @@
 	
 	\textcolor{red}{
 	\begin{equation}
-		\label{eq:stat_3_un}
+		\label{eq:stat_z3}
 		\begin{alignedat}{2}
-			Z_6 =  Z_{3}Z_{3}I(Z_{3i},Z_{3j}).
+			Z_6 =  Z_{3i}Z_{3j}I(Z_{3i},Z_{3j}).
 		\end{alignedat}
 	\end{equation}
 }
@@ -205,7 +205,7 @@
 	
 	\textcolor{red}{
 		\begin{equation}
-			\label{eq:stat_3_un}
+			\label{eq:stat_6}
 			\begin{alignedat}{3}
 			Z_6 = Z_{3}e^{2\beta + 3h\beta}I(Z_{3i}, e^{2\beta + 3h\beta}) + 2Z_{3}e^{h\beta}I(Z_{3i}, e^{h\beta}) + \\
 			Z_{3}e^{- 2\beta + h\beta }I(Z_{3i}, e^{- 2\beta + h\beta }) + Z_{3}e^{- 2\beta -h\beta}I(Z_{3i}, e^{- 2\beta -h\beta})  + \\
@@ -217,7 +217,7 @@
 	As a result, the partition function for a $3 \times 2$ lattice is:
 	\textcolor{red}{
 	\begin{equation}
-		\label{eq:stat_3_res}
+		\label{eq:stat_6_res}
 		\begin{alignedat}{3}
 			Z_6 = 4 e^{ - 3 \beta-2 h\beta} + 4 e^{- 3 \beta+2 h\beta} + 5 e^{- \beta-2 h\beta } + 5 e^{- \beta+2 h\beta } + 2 e^{-7 \beta} + 4 e^{-3 \beta} + \\
 			8 e^{-\beta} + 6 e^{\beta} + 2 e^{\beta-4 h\beta } + 4 e^{\beta-2 h\beta } + 4 e^{\beta+2 h\beta } + 2 e^{\beta+4 h\beta } + \\
@@ -234,7 +234,7 @@
 	\end{alignedat}
 \end{equation}
 }
-	\textcolor{red}{Equations \eqref{eq:stat_3}, \eqref{eq:stat_3_res}, and \eqref{eq:stat_3_un} show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.}
+	\textcolor{red}{Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\ref{eq:stat_9_un}) show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.}
 	
 	\textcolor{red}{The formula can be rewritten using the cosh function for periodic boundary conditions. In addition, it could have been mentioned that the Ising chain with a longitudinal magnetic field has an analytical solution obtained through the transfer matrix technique. However, when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.}
 	
