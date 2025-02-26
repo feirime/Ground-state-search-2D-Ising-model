@@ -1,6 +1,6 @@
 Рецензент № 1
 1) Мы расписали определение статистической суммы и добавили в текст:
-"Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this exhaustive enumeration."
+"Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this complete enumeration."
 2) Мы объяснили причину снижение сложности: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined". Added a link to the algorithm
 3) В параграфе 6 добавлено обсуждение поведения обменной энергии и спинового избытка для решетки с одинаковым P+, но разным распределением ферромагнитных и антиферромагнитных связей.
 4) Добавлен метод распределения P+ в таблицу. Подписано что все значения в талице даны для P+ = 0.5. Рисунок 11 (бывший рисунок 10) переделан: зависимосеть E(колличество платкетов второго типа) переделана на зависимость E(P+), колличество плакетов нанесены цветовым градиентом.
@@ -47,7 +47,7 @@ The number of critical fields (including $h/J = 0$) in Figures 14, 15, and 16 ma
 10) В строке 144 добавлен пробел между точкой и новым предложением
 11) Переписано уравнение 1. Индекс суммы указан явно. Дано определения h.
 12) Указано значение константы k=1 (Boltzmann constant)
-13)
+13) Уравнения исправлены так, чтобы сделать алгоритм более понятным.
 14) В строке 183 точка исправлена на x
 15) В таблицу 1 в подпись добавлена точка
 16) Исправлена подпись к рисунку 15 (14). Density of states in an external magnetic field 0=<h/J=<3
@@ -56,7 +56,7 @@ The number of critical fields (including $h/J = 0$) in Figures 14, 15, and 16 ma
 Рекомендации (необязательные)
 1) Исправлено
 2) В ссылках на литературу в таблице 1 и в тексте за ней представлена более подробная информация о {Jij}.
-3) Гамильтониан исправлен в параграфе 2. Рекомендации $\pmJ$ учтены.
+3) Гамильтониан исправлен в параграфе 2. Рекомендации учтены.
 4) Замечания учтены. Значения спинов определены в параграфе 2.
 5) Замечания учтены.
 6) Замечания учтены.
@@ -68,13 +68,13 @@ The number of critical fields (including $h/J = 0$) in Figures 14, 15, and 16 ma
 12) Competing ferromagnetic and antiferromagnetic interactions between nearest neighbors lead to the presence of at least one frustration in the ground state configurations only if a Type-II plaquette is formed.
 13) Замечания учтены.
 14) Замечания учтены. При Т=0 статсумму необходимо нормировать на exp(-Egs/kT), ссылка на JCAM.
-15) The formula can be rewritten using the cosh function for periodic boundary conditions. In addition, it could have been mentioned that the Ising chain with a longitudinal magnetic field has an analytical solution obtained through the transfer matrix technique. However, when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.
-16) Я считаю, что рисунок, показывающий эти две цепочки, помог бы проиллюстрировать метод;
-17) 
+15) Внесены разъяснения в текст. Note that when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.
+16) В формулы были внесены изменения.
+17) Уравнения переписаны.
 18) Замечания учтены.
-19) Рисунки изменены на более информативные. Можно ли разместить рядом?
+19) Рисунки изменены на более информативные.
 20) Подрисуночная подпись изменена. Изменения внесены в текст.
-21) The lower panels are aligned with the upper ones. Как упростить надписи?
-22) сделать более конкретное описание, комментируя первую часть результатов
-23) Надо расписать
-24) 
+21) The lower panels are aligned with the upper ones.
+22) Замечания учтены.
+23) Исправления внесены в текст.
+24) В текст внесены изменения.

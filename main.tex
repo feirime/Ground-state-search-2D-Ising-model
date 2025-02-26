@@ -236,7 +236,7 @@
 }
 	\textcolor{red}{Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\ref{eq:stat_9_un}) show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.}
 	
-	\textcolor{red}{The formula can be rewritten using the cosh function for periodic boundary conditions. In addition, it could have been mentioned that the Ising chain with a longitudinal magnetic field has an analytical solution obtained through the transfer matrix technique. However, when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.}
+	\textcolor{red}{Note that when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.}
 	
 	
 	\begin{algorithm}[H]
@@ -472,8 +472,9 @@
 		\caption{Ground state specific energy \textcolor{red}{obtained by different methods} ($P_+\approx$ 0.5).}
 		\label{tab:Egs}
 	\end{table}
+	
 	\textcolor{red}{
-		The graph in Figure \ref{fig:E(Q)} shows the dependence of the ground state specific energy $E_{gs}/N$ on the relative amount of ferromagnetic exchange integrals (Gaussian distribution). The points on the graph are marked in different colors depending on the quantity of Type-II plaquettes ($Q$)}
+		The Figure \ref{fig:E(Q)} shows the dependence of the ground state specific energy $E_{gs}/N$ on the relative amount of ferromagnetic exchange integrals (Gaussian distribution). The points are marked in different colors depending on the quantity of Type-II plaquettes ($Q$).}
 	
 	\begin{figure}[H]
 		\centering
@@ -576,14 +577,14 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0_1.png}
-		\caption{Density of states in an external magnetic field \textcolor{red}{$0\leq h/J \leq 3$} for the \textcolor{red}{two-sublattice antiferromagnet} lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a)), $P_+ = 0.5$.}
+		\caption{Density of states in an external magnetic field \textcolor{red}{$0\leq h/J \leq 3$} for the \textcolor{red}{two-sublattice antiferromagnet} lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(a)), $P_+ = 0.5$. \textcolor{red}{The plateau at $h/J=1$ arises due to free boundary conditions. The absence of Type-II plaquettes in a two-sublattice antiferromagnet leads to a spin reversal at an external field value of $h/J=2$. At this value of the critical field, the entropies of the states are summed.}}
 		\label{fig:HDOS_ice_1}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SG_64_J0.png}
-		\caption{Density of states in an external magnetic field $0\leq h/J \leq 5$ for the spin glass lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(b)), $P_+ = 0.5$.}
+		\caption{Density of states in an external magnetic field $0\leq h/J \leq 5$ for the spin glass lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(b)), $P_+ = 0.5$. \textcolor{red}{There are 7 values of critical fields at which entropy jumps are observed.}}
 		\label{fig:HDOS_glass}
 	\end{figure}
 	
@@ -591,17 +592,17 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0.png}
-		\caption{Density of states in an external magnetic field $0\leq h/J \leq 4$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(c)), $P_+ = 0.5$.}
+		\caption{Density of states in an external magnetic field $0\leq h/J \leq 4$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(c)), $P_+ = 0.5$. \textcolor{red}{The value $M=1$ is achieved at the critical field $h/J=3$. This value is lower for spin ice than for spin glass.}}
 		\label{fig:HDOS_ice}
 	\end{figure}
 	
 	\textcolor{red}{In Figure \ref{fig:HDOS_ice_1}, at $h/J = 0$ for \textcolor{red}{two-sublattice antiferromagnet} (Figure \ref{fig:cell_SI_SG_64}(a)), a twofold degeneracy of the ground state can be observed. The external magnetic field value $h/J = 1$ is critical. At this field, the ground states with spin excess $M = 0$ and $M = 0.25$ have the same energy. This occurs due to the increasing contribution of the Zeeman energy, leading to the addition of the entropies of the ground states.  
-	Increasing the external magnetic field to the critical value $h/J = 2$ results in a situation where the ground states correspond to spin excess values $M = \pm0.25, \pm0.5, \pm0.75, \pm1$. The degeneracies of these four states add up, leading to a higher entropy jump than at $h/J = 1$.  
+	Increasing the external magnetic field to the critical value $h/J = 2$ results in a situation where the ground states correspond to spin excess values $M = 0.25, 0.5, 0.75, 1$. The degeneracies of these four states add up, leading to a higher entropy jump than at $h/J = 1$.  
 	The value $h/J = 3$ corresponds to the saturation field, at which only a single configuration remains.}
 	
-	\textcolor{red}{For the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T = 0$ in critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).}
-	
-	\textcolor{red}{Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.}
+	\textcolor{red}{For the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T = 0$ in critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
+	Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.
+	The presence of Type-I, Type-II, and Type-III plaquettes in the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)) leads to a wide variety of critical field values. In the two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), there were only Type-I plaquettes, while in spin ice (Figure \ref{fig:cell_SI_SG_64}(c)), only Type-II plaquettes were present.}
 	
 	\textcolor{red}{An important conclusion is that Figures \ref{fig:HDOS_ice_1}–\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy jumps in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
 	The quantity of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.}
