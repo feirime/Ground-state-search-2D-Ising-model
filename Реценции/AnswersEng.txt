@@ -1,0 +1,82 @@
+Reviewer № 1
+1) We spelled out the definition of statistical sum and added to the text:
+"Equations 4, 5, 6 show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm 1 works on this principle, but operates on Energies, Spin excesses and degeneracy of states. Temperature is not used in this complete enumeration."
+2) We explained the reason for the decrease in complexity: "A two-dimensional lattice is assembled from L elements (one-dimensional chains with size L). The enumeration in Algorithm 1 is performed only once for each element to be joined". Added a link to the algorithm
+3) In paragraph 6 we add a discussion of the behavior of the exchange energy and spin excess for a lattice with the same P+ but different distributions of ferromagnetic and antiferromagnetic bonds.
+4) Added P+ distribution method to the table. Signed that all values in the table are for P+ = 0.5. Figure 11 (former Figure 10) has been redesigned: the dependence network E(number of plaquettes of the second type) has been changed to dependence E(P+), the number of plaquettes is plotted with a color gradient.
+5) We have described in more detail the probability definitions of ferromagnetic and antiferromagnetic phases in Chapter 7. There is no contradiction between Figures 18, 20 and 9: the probability of ferromagnetic and antiferromagnetic states for Figures 18 and 20 is defined as “For a pure ferromagnet $P_+ = 1.0$, the spin excess of ground state equals $M_{gs}/N = 1.0$. In a pure antiferromagnet $P_+ = 0.0$, the spin excess of ground state equals $M_{gs}/N = 0.0$”. Figure 9 shows two ground state configurations. The maximum spin excess of these configurations, normalized by the number of spins does not take the values 1.0 or 0.0.
+6) Corrected "magnetization" (spin excess) values for Figures 5 and 7. Missing text added:"This explains the dispersion in ground state energy values shown in Figure \ref{fig:E(Q)} and Table \ref{tab:Egs}. The increase in the number of frustrated type II plaquettes leads to an increase in the value of the ground state energy."
+7) P+ are referenced to the figures
+
+
+Reviewer № 2
+1) Unfortunately, the brute-force algorithm used in this paper has a disadvantage: it gains in processing speed due to the loss of memory about the states of the already processed lattice. Therefore, recurrent boundary conditions are not realizable in this approach. In the first chapter we added: "The gain in processing speed arises due to the exclusion of the operation of storing information about the states of the already processed part of the lattice. This leads to the impossibility of processing the lattice with periodic boundary conditions. The analysis of dimensional effects at scaling was carried out in paper \cite{trukhin2024thermodynamic} and showed that the influence of surface spins on the obtained results is insignificant. Thus, the obtained results are relevant for a regular lattice."
+
+Reviewer № 3
+1) We changed the title to "Low-temperature phases in the Ising $\pm J$ model on a square lattice". Added to abstract and conclusions the phase diagram results.
+2) We've moved the paragraph "Complete enumeration solution" before the introduction of Plaquettes. We determined that spins (spin variables) take values +/-1. We defined the term spin excess (formula 2) and magnetization (formula 4). 
+
+We have considered three types of plaquettes in the first figures for free boundary conditions, further in the paper we consider the coupling of these plaquettes into a more complex system of interacting spins.
+
+Added system definition before using it: "Hereinafter we understand the system as a set of N interacting moments."
+
+They added an explanation "Because ground state configurations have the same energy when flipping each $S_i \rightarrow -S_i$"
+
+3) P+'s have been added to the drawings where they were missing. In Figures 1, 2 and 3 it was clarified that these are "Two systems". Figures 1-7 specify that "The ground state configurations of the systems…". The number of type 2 plackets for the systems shown in the figures is given.
+
+4) Мы уточнили что "By a frustrated spin pair we mean a pair for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.". This should make the use of the term more understandable. Corrected "frustrations in the ground state" to "frustrations in configurations of the ground state"
+
+5) In this sentence, we meant sample boundaries, not plaquette boundaries. We have rewritten the sentence: "Free boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries of lattice leads to an increase in the number of options for the placement of frustrations."
+6) Added definition of spin ice. Changed the title of Figures 13-15 (a) and the text describing them accordingly. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes.
+
+7-8) We have added a clarification in the first paragraph. In the figure captions we will omit the modulus sign for $J$. The paragraph has been reworded. As seen in 
+Figures 13(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure 13(b)). Despite the maximum number of frustrations in the spin ice (Figure 13(c)), the number of plateaus is lower than in Figure 13(b). This is related to the shape of the density of states (DOS) distribution; see Figures 14–16.
+
+9) Figure conclusions have been added. Added paragraph. An important conclusion is that Figures 14–16 clearly illustrate the emergence of entropy jumps in Figure 13 and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
+The number of critical fields (including $h/J = 0$) in Figures 14, 15, and 16 matches the number of plateaus in Figures 13(a), 13(b), and 13(c), respectively.
+10) The paragraphs, especially those with discussions of double-sublattice antiferromagnetics, spin glass, and spin ice (after Figure 13) have been rewritten.
+
+Reviewer № 4
+1) In line 93, "and" is added (Figure "1", "2", and "3")
+2) A dot has been added to the captions of Figures 1-4 and 6-20
+3) On line 105, quotation marks "+" corrected to double quotation marks
+4) In line 114, added comma after "Figure 4". This passage has been rewritten to make the definition of energy and multiplicity of degeneracy clearer.
+5) Line 119 corrects the calculations for Mgs/N
+6) Line 121 corrects the calculations for Egs/N
+7) Line 125 corrected calculations Mgs/N
+8) In line 126, the typo "Figure 6(a), 6(b)" is corrected to "Figure 7(a), 7(b)"
+9) In line 139, the word "Figure" is added at the end of the sentence
+10) In line 144, added a space between the period and the new sentence
+11) Equation 1 is rewritten. The sum index is explicitly stated. The definition of h is given.
+12) The value of the constant is specified k=1 (Boltzmann constant)
+13) The equations have been corrected to make the algorithm more understandable.
+14) In line 183, the dot is corrected to x
+15) A dot has been added to the caption in Table 1
+16) Corrected caption for figure 15 (14). Density of states in an external magnetic field 0=<h/J=<3
+
+
+Recommendations (optional)
+1) Corrected
+2) The literature references in Table 1 and the text behind it provide more information about the {Jij}.
+3) The Hamiltonian is corrected in paragraph 2. Recommendations are taken into account.
+4) Comments taken into account. The values of spins are defined in paragraph 2.
+5) Comments taken into account.
+6) Comments taken into account.
+7) Comments taken into account.
+8) Comments taken into account.
+9) Comments taken into account.
+10) Comments taken into account.
+11) The formula has been corrected.
+12) Competing ferromagnetic and antiferromagnetic interactions between nearest neighbors lead to the presence of at least one frustration in the ground state configurations only if a Type-II plaquette is formed.
+13) Comments taken into account.
+14) Comments taken into account. At T=0, the statsum must be normalized by exp(-Egs/kT), reference JCAM.
+15) Clarifications have been made to the text. Note that when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.
+16) The formulas have been amended.
+17) The equations are rewritten.
+18) Comments taken into account.
+19) The drawings have been changed to be more informative. Since in the new version of the article the figures are rectangular, placing them side by side would result in smaller graphs and poor readability of captions on the axes.
+20) The caption has been changed. Changes have been made to the text.
+21) The lower panels are aligned with the upper ones.
+22) Comments taken into account.
+23) Corrections have been made to the text.
+24) The text has been amended.
