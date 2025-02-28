@@ -25,6 +25,15 @@ main rus.blg
 main rus.spl
 main rus.toc
 main rus.out
+main red lines.synctex.gz
+main red lines.pdf
+main red lines.log
+main red lines.aux
+main red lines.bbl
+main red lines.blg
+main red lines.spl
+main red lines.toc
+main red lines.out
 mainNotes.bib
 images/scripts_and_programs/dos
 images/scripts_and_programs/States calc/data/*
