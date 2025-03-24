@@ -81,7 +81,7 @@ Optional:
 In Eq. (3), it would be interesting to explicitly define the term Ei as the eigenvalue of the Hamiltonian, since the index i is not the same as that of Eq. (1);
 In Eq. (4), I suggest replacing '<M>' by '\langle M \rangle', 'M_{i}' by 'S_{i}', and '1/kT' by '\beta', since you've already defined \beta and used it in later equations;
 At the end of the caption in Fig. 4, it could be changed from '[...] plaquettes ((a): P+ ≈ 0.14 [...]' to '[...] plaquettes with P+≈ 0.14 (a) and [...]';
-In line 116, it would be nice to add a comma after 'In Figure 14(a)';
+In line 306, it would be nice to add a comma after 'In Figure 14(a)';
 It would be good to standardize the spacing between the panel label and the figure number, for example in line 308, 'Figure 14 (b, c)' or 'Figure 14(b, c)'.
 
 

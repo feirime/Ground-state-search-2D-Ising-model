@@ -164,15 +164,15 @@
 	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $|J|$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:
 	
 		\begin{equation}
-		Z = \sum_{i = 1}^{2 ^ N} e^{-\frac{E_i}{kT}},
+		Z = \sum_{i = 1}^{2 ^ N} e^{-\beta E_i},
 		\label{eq:stat_difinition}
 	\end{equation}
 	
-	\noindent is partition function. Magnetisation is defined as: 
+	\noindent is partition function. Magnetization is defined as: 
 	
 	\begin{equation}
-		<M> = \frac{1}{Z} \sum_{i = 1}^{2^N} M_i e^{-\frac{E_i}{kT}}.
-		\label{magnetisation}
+		\langle M \rangle = \frac{1}{Z} \sum_{i = 1}^{2^N} M_i e^{-\beta E_i}.
+		\label{magnetization}
 	\end{equation}
 	
 	Let $Z_3$ be the partition function for a chain of 3 spins with open boundary conditions (all interactions is ferromagnetic $J = +1$):
@@ -246,7 +246,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	\section{Plaquette combinatorics}
 	
-	Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}. In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2} and \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
+	Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}. In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, and \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 	
 	If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to ``up'' and ``down'' spins in one of the ground state configurations. Frustrated pairs of spins are circled. By a frustrated spin pair we mean a pair for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.
 	
@@ -302,7 +302,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 			\includegraphics[width=1\textwidth]{pictures/Type2_3x2_2.eps}
 			\label{fig:Type2_3x2_2}
 		\end{minipage}
-		\caption{The ground state configurations of the systems consisting of two Type-II plaquettes ((a): $P_+\approx0.14$, (b): $P_+\approx0.43$}).
+		\caption{The ground state configurations of the systems consisting of two Type-II plaquettes with $P_+\approx0.14$ (a) and $P_+\approx0.43$ (b).}
 		\label{fig:Type2_32}
 	\end{figure}
 	
@@ -405,7 +405,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 			\centering(b)
 			\includegraphics[width=1\linewidth]{pictures/2Conf_cell64_J72_5.eps}
 		\end{minipage}
-		\caption{Ground state configurations  and plaquettes distribution of the system from Figure \ref{fig:12PS_cell64_J72_5}(a) ($P_+\approx0.82$) correspond to combinations of the Type-II plaquettes \ref{fig:12PS_cell64_J72_5} (b) and (c).}
+		\caption{Ground state configurations  and plaquettes distribution of the system from Figure \ref{fig:12PS_cell64_J72_5}(a) ($P_+\approx0.82$) correspond to combinations of the Type-II plaquettes \ref{fig:12PS_cell64_J72_5}(b) and \ref{fig:12PS_cell64_J72_5}(c).}
 		\label{fig:12F_cell64_J72_5}
 	\end{figure}
 	
@@ -479,7 +479,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	\section{Ground state in an external magnetic field}
 	
-	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64} (a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
+	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.3\linewidth}
@@ -511,19 +511,19 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.32\linewidth}
 			\centering
-			\hspace{1cm} (a)
+			\hspace{1cm}(a)
 			\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0_1}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.32\linewidth}
 			\centering
-			\hspace{1cm} (b)
+			\hspace{1cm}(b)
 			\includegraphics[width=1\linewidth]{pictures/_multiplot_SG64_J0}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[h]{0.32\linewidth}
 			\centering
-			\hspace{1cm} (c)
+			\hspace{1cm}(c)
 			\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0}
 		\end{minipage}
 		
@@ -534,7 +534,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at Figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three $P_+ = 0.5$ samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.
 	
-	The lattice energy in Figure \ref{fig:cell_SI_SG_64} (a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.
+	The lattice energy in Figure \ref{fig:cell_SI_SG_64}(a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.
 	
 	For the same $P_+ = 0.5$ with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.
 	
@@ -545,7 +545,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	In spin glass, the frustrations increase the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
 	Maximal filling of the spin ice system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations $> 3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
 	
-	In Figure \ref{fig:_multiplot_SI_SG_64} (a) the spin excess is zero for the two configurations in the absence of frustrations and twofold degeneracy. The presence of frustrations in Figure \ref{fig:_multiplot_SI_SG_64} (b, c) leads to the degeneracy of the ground state. The ground state configurations have spin excesses different from zero.
+	In Figure \ref{fig:_multiplot_SI_SG_64}(a), the spin excess is zero for the two configurations in the absence of frustrations and twofold degeneracy. The presence of frustrations in Figure \ref{fig:_multiplot_SI_SG_64}(b, c) leads to the degeneracy of the ground state. The ground state configurations have spin excesses different from zero.
 	
 	%Under the influence of an external magnetic field, the spin glass system exhibits the highest number of steps in the spin excess dependency from external magnetic field (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
 	%General quantity of critical values of magnetic field is determined by the quantity of frustrations and by the shape of the density of states (DOS), which plays a more significant role.
@@ -638,7 +638,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	\noindent the sample as antiferromagnet.
 	
-	For each $P_+$ value, the set of 10 samples was considered. The probability of ferromagnetic state $P_{FM}$ is defined as relative number of ferromagnetic samples in set, Figure \ref{fig:P_AFM_FM_Mmax} (b). Similarly, relative number of antiferromagnetic samples in set is the probability $P_{AFM}$, Figure \ref{fig:P_AFM_FM_Mmax}(a).
+	For each $P_+$ value, the set of 10 samples was considered. The probability of ferromagnetic state $P_{FM}$ is defined as relative number of ferromagnetic samples in set, Figure \ref{fig:P_AFM_FM_Mmax}(b). Similarly, relative number of antiferromagnetic samples in set is the probability $P_{AFM}$, Figure \ref{fig:P_AFM_FM_Mmax}(a).
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.45\linewidth}
@@ -672,7 +672,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 		\label{fig:Mgs(P+)_H}
 	\end{figure}
 	
-	The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig:P+_afm_fm(H)}. Both Figure \ref{fig:Mgs(P+)_H} and Figure \ref{fig:P+_afm_fm(H)} were constructed based on the definitions of probability of ferromagnetism (equation \eqref{eq:ferr_deffinition}) and antiferromagnetism (equation \eqref{eq:aferr_deffinition}.)
+	The theoretical ground state phase diagram ($h-P_+$) is shown in Figure \ref{fig:P+_afm_fm(H)}. Both Figure \ref{fig:Mgs(P+)_H} and Figure \ref{fig:P+_afm_fm(H)} were constructed based on the definitions of probability of ferromagnetism (Equation \eqref{eq:ferr_deffinition}) and antiferromagnetism (Equation \eqref{eq:aferr_deffinition}.)
 	
 	\begin{figure}[H]
 		\centering
