@@ -144,17 +144,17 @@
 	
 	\section{Complete enumeration solution}
 	
-	To investigate the problem, an complete enumeration algorithm was developed. We use standard Hamiltonian of Ising model:
+	To investigate the problem, an complete enumeration algorithm was developed. \textcolor{red}{Energy of $t$-configuration:}
 	
 	\begin{equation}
-		E = -\sum^{N - 1}_{i=1}\sum^N_{j = i + 1} J_{ij} S_i S_j - h \sum^N_{i=1} S_i.
+		E_t = -\sum^{N - 1}_{i=1}\sum^N_{j = i + 1} J_{ij} S_i S_j - h \sum^N_{i=1} S_i.
 		\label{eq:ising_energy}
 	\end{equation}
 	
-	We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) interactions between nearest neighbor spins (Ising spin variables) $S_i = \pm1$, $h$ - external magnetic field in units of $|J|$. In the figure captions we will omit the modulus sign for $J$.
+	We have competing antiferromagnetic ($J_{ij} = -1$) and ferromagnetic ($J_{ij} = +1$) interactions between nearest neighbor spins (Ising spin variables) $S_i = \pm1$, $h$ - external magnetic field in units of $|J_{ij}|$. In the figure captions we will omit the modulus sign for $J_{ij}$.
 	
 	\begin{equation}
-		M = \sum^N_{i=1} S_i.
+		M_t = \sum^N_{i=1} S_i.
 		\label{eq:spin_excess} 
 	\end{equation}
 	$M$ is a spin excess of given configuration. Each configuration is recognized by two parameters, $E$ and $M$.
@@ -162,21 +162,21 @@
 	
 	Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
 	
-	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $|J|$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:
+	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $|J_{ij}|$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:
 	
 		\begin{equation}
-		Z = \sum_{i = 1}^{2 ^ N} e^{-\beta E_i},
+		Z = \sum_{t = 1}^{2 ^ N} e^{-\beta E_t},
 		\label{eq:stat_difinition}
 	\end{equation}
 	
 	\noindent is partition function. Magnetization is defined as: 
 	
 	\begin{equation}
-		\langle M \rangle = \frac{1}{Z} \sum_{i = 1}^{2^N} M_i e^{-\beta E_i}.
+		\langle M \rangle = \frac{1}{Z} \sum_{t = 1}^{2^N} M_t e^{-\beta E_t}.
 		\label{magnetization}
 	\end{equation}
 	
-	Let $Z_3$ be the partition function for a chain of 3 spins with open boundary conditions (all interactions is ferromagnetic $J = +1$):
+	Let $Z_3$ be the partition function for a chain of 3 spins with open boundary conditions (all interactions is ferromagnetic $J_{ij} = +1$):
 		\begin{equation}
 		Z_3 = e^{2\beta + 3h\beta} + 2e^{h\beta} + e^{- 2\beta + h\beta } + e^{- 2\beta -h\beta}  + 2e^{-h\beta} + e^{2\beta - 3h\beta}.
 		\label{eq:stat_3}
@@ -191,7 +191,7 @@
 		\end{alignedat}
 	\end{equation}
 
-	\noindent where $I(Z_{3i},Z_{3j})$ is the state contribution of the interaction energy between two chains in states $Z_{3i}$ and $Z_{3j}$. For example, if the state of the first chain is $e^{-2\beta+3h\beta}$ (all spins ``up'') and the second chain is $e^{-2\beta+3h\beta}$ (all spins ``down''), then $I(e^{-2\beta+3h\beta}, e^{-2\beta+3h\beta})=e^{3\beta}$. Thus the partition function of two connected chains:
+	\noindent \textcolor{red}{where $I(Z_{3i},Z_{3j})$ is the state contribution of the interaction energy between two chains in states $Z_{3i}$ and $Z_{3j}$. For example, if the state of the first chain is $e^{2\beta+3h\beta}$ (all spins ``up'') and the second chain is $e^{2\beta-3h\beta}$ (all spins ``down''), then $I(e^{2\beta+3h\beta}, e^{2\beta-3h\beta})=e^{-3\beta}$. Thus the partition function of two connected chains:}
 	
 		\begin{equation}
 			\label{eq:stat_6}
@@ -218,7 +218,7 @@ Then add one more chain in the same way and calculate the partition function for
 		Z_9 =  Z_{3}Z_{6}I(Z_{3i},Z_{6j}).
 	\end{alignedat}
 \end{equation}
-Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\ref{eq:stat_9_un}) show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.
+Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqref{eq:stat_9_un} show a scheme for calculating the statistical sum by connecting one-dimensional chains into a two-dimensional lattice. Algorithm \ref{alg:addititional_algorithm} \cite{trukhin2024glaurung} works on this principle, but operates on energies, spin excesses and degeneracy of states. Temperature is not used in this complete enumeration.
 	
 	Note that when connecting the chains to each other, it is necessary to devise a multiplication operator that will multiply the terms of the partition function by the interaction energies of spins located in different chains. This is difficult to accomplish even for open boundary conditions. Therefore, instead of searching for an exact analytical solution, the authors developed the complete enumeration algorithm.
 	
@@ -249,7 +249,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}. In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, and \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 	
-	If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to ``up'' and ``down'' spins in one of the ground state configurations. Frustrated pairs of spins are circled. By a frustrated spin pair we mean a pair for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.
+	If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to ``up'' and ``down'' spins in one of the ground state configurations. Frustrated pairs of spins are circled. By a frustrated spin pair \textcolor{red}{(frustated bond)} we mean a pair \textcolor{red}{(bond)} for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.
 	
 	
 	\begin{figure}[H]
@@ -335,6 +335,11 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 		\label{fig:4x4.1}
 		
 	\end{figure}
+	
+	Как видно из рисунка 5(a) фрустрированными являются две ферромагнитные связи.
+	Однако на рисунке 5(b,c) становятся уже другие связи - антиферромагнитная и ферромагнитная.
+	На рисунке 5(d) также наблюдаются две фрустрированные антиферромагнитные связи.
+	Таким образом, отсутствие локализации или геометрического расположения фрустрированных связей приводит к вырождению основного состояния.
 	
 	For the example in Figure \ref{fig:4x7}, $E_{gs}/N \approx -1.39$, $M_{gs}/N=0$, there are only two ground states $g_{gs}=2$. At the same time, there are three frustrated pairs. Thus, the presence of frustrations in configurations of the ground state does not always lead to macroscopic degeneracy. 
 	
@@ -480,7 +485,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	\section{Ground state in an external magnetic field}
 	
-	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{peretyatko2017interplay, otsuka2018husimi, andriushchenko2019large, shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
+	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. \textcolor{red}{Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.} In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.3\linewidth}
@@ -555,7 +560,7 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	As seen in Figures \ref{fig:_multiplot_SI_SG_64}(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure \ref{fig:_multiplot_SI_SG_64}(b)). Despite the maximum quantity of frustrations in the spin ice (Figure \ref{fig:_multiplot_SI_SG_64}(c)), the number of plateaus is lower than in Figure \ref{fig:_multiplot_SI_SG_64}(b). This is related to the shape of the density of states (DOS) distribution; see Figures \ref{fig:HDOS_ice_1}–\ref{fig:HDOS_ice}.
 	
 	Using complete enumeration method, the densities of states were calculated for the spin ice and spin glass cases shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
-	The system's energy under the influence of an external magnetic field was calculated using Equation (\ref{eq:ising_energy}).
+	The system's energy under the influence of an external magnetic field was calculated using Equation \eqref{eq:ising_energy}.
 	
 	\begin{figure}[H]
 		\centering
@@ -702,6 +707,8 @@ Equations (\ref{eq:stat_z3}), (\ref{eq:stat_6}), (\ref{eq:stat_6_res}) and  (\re
 	
 	The problem of determining the maximum possible quantity of frustrations as a function of the number of spins in a system, for a given lattice type in the Ising model with both antiferromagnetic and ferromagnetic exchange interactions, is of interest, as the presence of frustrations gives rise to new properties.
 	It has been shown that in the Edwards-Anderson model, systems with twofold ground state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
+	
+	\textcolor{red}{Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.}
 	
 	
 	\section{Acknowledgments}
