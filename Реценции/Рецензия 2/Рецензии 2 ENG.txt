@@ -1,0 +1,94 @@
+Ms. Ref. No.: PHYSA-243329R1
+Title: Low-temperature states of the Ising +/-J model on a square lattice
+Physica A: Statistical Mechanics and its Applications
+
+Dear Mr. Trukhin,
+
+Reviewers (4) have now commented on your manuscript and recommend a final revision. For your guidance, reviewers' comments are appended below.
+
+If you decide to revise the work, please submit a carefully revised manuscript, and a list of your responses, point by point to comments made by each of the referees, as well as a list of all the changes made to the manuscript.
+
+To submit a revision, please go to https://www.editorialmanager.com/physa/ and login as an Author.
+
+Your username is: ********
+If you need to retrieve password details, please go to:
+********    
+
+NOTE: Upon submitting your revised manuscript, please upload the source files for your article. We cannot accommodate PDF manuscript files for production purposes. We also ask that when submitting your revision, you follow the journal formatting guidelines. For additional details regarding acceptable file formats, please refer to the Guide for Authors at: http://www.elsevier.com/journals///guide-for-authors
+
+When submitting your revised paper, we ask that you include the following items:
+
+Manuscript and Figure Source Files (mandatory)
+
+We cannot accommodate PDF manuscript files for production purposes. We also ask that when submitting your revision you follow the journal formatting guidelines. Figures and tables may be embedded within the source file for the submission as long as they are of sufficient resolution for Production.For any figure that cannot be embedded within the source file (such as *.PSD Photoshop files), the original figure needs to be uploaded separately. Refer to the Guide for Authors for additional information.
+http://www.elsevier.com/journals/physica-a-statistical-mechanics-and-its-applications/0378-4371/guide-for-authors
+
+Highlights (mandatory)
+
+Highlights consist of a short collection of bullet points that convey the core findings of the article and should be submitted in a separate file in the online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point). See the following website for more information
+http://www.elsevier.com/highlights
+
+On your Main Menu page is a folder entitled "Submissions Needing Revision". You will find your submission record there.
+
+Please note that this journal offers a new, free service called AudioSlides: brief, webcast-style presentations that are shown next to published articles on ScienceDirect (see also http://www.elsevier.com/audioslides). If your paper is accepted for publication, you will automatically receive an invitation to create an AudioSlides presentation.
+
+Physica A: Statistical Mechanics and its Applications features the Interactive Plot Viewer, see: http://www.elsevier.com/interactiveplots. Interactive Plots provide easy access to the data behind plots. To include one with your article, please prepare a .csv file with your plot data and test it online at http://authortools.elsevier.com/interactiveplots/verification before submission as supplementary material.
+
+Include interactive data visualizations in your publication and let your readers interact and engage more closely with your research. Follow the instructions here: https://www.elsevier.com/authors/author-services/data-visualization to find out about available data visualization options and how to include them with your article.
+
+Research Elements (optional)
+This journal encourages you to share research objects - including your raw data, methods, protocols, software, hardware and more – which support your original research article in a Research Elements journal. Research Elements are open access, multidisciplinary, peer-reviewed journals which make the objects associated with your research more discoverable, trustworthy and promote replicability and reproducibility. As open access journals, there may be an Article Publishing Charge if your paper is accepted for publication. Find out more about the Research Elements journals at https://www.elsevier.com/authors/tools-and-resources/research-elements-journals?dgcid=ec_em_research_elements_email.
+
+
+Yours sincerely,
+
+Joseph O. Indekeu
+Editor in Chief
+Physica A: Statistical Mechanics and its Applications
+
+Reviewers' comments:
+
+
+
+
+
+Reviewer #1: The authors have satisfactory answered all comments and questions raised in my previous review. They have implemented important changes in the revised version of the manuscript. The presentation of results is substantially improved. Thus, I recommend this manuscript to the publication in the Physica A: Statistical Mechanics and its Applications.
+
+
+
+Reviewer #2: I can recommend the present form of the manuscript for publication.
+
+
+Reviewer #3: The authors have made an effort in answering questions and comments from all referees. However, I still have some important questions regarding the spin ice analysis. Specifically, I would like to know details about the chosen spin ice model: the chosen lattice and the interactions. The authors cite for example M. Kato et al., Physical Review B 106 (1) (2022), where the lattice is a checkerboard lattice, not a square lattice. Is this the case in this work? I do not quite understand in this context this new sentences "Spin ice differs from spin glass by the ordered distribution of exchange constants and Type-II plaquettes, respectively." I guess the authors are talking about a specific spin ice model: the lattice geometry and interactions/Hamiltonian should be clarified, because it is not clear the difference in the Hamiltonian that leads to spin glass and the one that leads to spin ice. Perhaps they both have +J -J bonds and the difference is that one case is in the square lattice (spin glass) and the other in the checkerboard lattice (spin ice)?
+By the way, there is no mention of the spin ice analysis in the conclusions.
+
+
+
+Smaller comments: a) I believe that my comment on the use of the term"frustrations" was not completely understood. My point is the following: the bonds are frustrated, but it is not correct to refer to "frustations" in sentences such as "the maximum number of frustrations" (there are many phrases like this), I guess the authors mean "the maximum number of frustrated bonds"?
+
+b) the highlights should be revised. The three first highlights are very general, and not specific to this work. As for the last highlight , what low-temperature states is it referring to? Perhaps the highlights should explain a bit more as to what models where studied, and how they were studied, and the last one could refer to the construction of low-temperature phase diagrams?
+
+
+Reviewer #4: The changes implemented by the authors in this new version promoted a substantial improvement in the text. In particular, the algorithm used in counting states is now clearer, as well as the more detailed description in the caption of the figures. However, there are still some details that need to be verified. Listed below are suggestions for fixes that need to be reviewed, while other optional suggestions are reserved for another list below this one.
+
+In line 116, all spins up and down correspond to the first and last term of Eq. (5), respectively, according to the definitions adopted. Therefore, they cannot have the same energy contribution;
+In line 117, the I-function couples two chains. So if the two chains are anti-aligned with ferromagnetic J, that raises the energy by a factor of 3, which you wrote. But in the definition, the two energies Z3i and Z3j have the same energy, so they are aligned, and the contribution would be -3, since this state is favored. Correct me, if I misunderstood the definition;
+In line 119, replace 'Magnetisation' by 'Magnetization';
+In line 382, replace 'equation' by 'Equation' or 'Eq';
+In line 149, add a comma between Figure 1,2' and 'and 3'.
+
+Optional:
+In Eq. (3), it would be interesting to explicitly define the term Ei as the eigenvalue of the Hamiltonian, since the index i is not the same as that of Eq. (1);
+In Eq. (4), I suggest replacing '<M>' by '\langle M \rangle', 'M_{i}' by 'S_{i}', and '1/kT' by '\beta', since you've already defined \beta and used it in later equations;
+At the end of the caption in Fig. 4, it could be changed from '[...] plaquettes ((a): P+ ≈ 0.14 [...]' to '[...] plaquettes with P+≈ 0.14 (a) and [...]';
+In line 116, it would be nice to add a comma after 'In Figure 14(a)';
+It would be good to standardize the spacing between the panel label and the figure number, for example in line 308, 'Figure 14 (b, c)' or 'Figure 14(b, c)'.
+
+
+For further assistance, please visit our customer support site at http://help.elsevier.com/app/answers/list/p/7923 Here you can search for solutions on a range of topics, find answers to frequently asked questions and learn more about EM via interactive tutorials. You will also find our 24/7 support contact details should you need any further assistance from one of our customer support representatives.
+
+At Elsevier, we want to help all our authors to stay safe when publishing. Please be aware of fraudulent messages requesting money in return for the publication of your paper. If you are publishing open access with Elsevier, bear in mind that we will never request payment before the paper has been accepted. We have prepared some guidelines (https://www.elsevier.com/connect/authors-update/seven-top-tips-on-stopping-apc-scams ) that you may find helpful, including a short video on Identifying fake acceptance letters (https://www.youtube.com/watch?v=o5l8thD9XtE ). Please remember that you can contact Elsevier s Researcher Support team (https://service.elsevier.com/app/home/supporthub/publishing/) at any time if you have questions about your manuscript, and you can log into Editorial Manager to check the status of your manuscript (https://service.elsevier.com/app/answers/detail/a_id/29155/c/10530/supporthub/publishing/kw/status/).
+
+#AU_PHYSA#
+
+To ensure this email reaches the intended recipient, please do not delete the above code
