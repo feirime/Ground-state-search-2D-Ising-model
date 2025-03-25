@@ -4,24 +4,22 @@
 
 1. Авторы, например, цитируют M. Kato et al., Physical Review B 106 (1) (2022), где используется шашечная решетка, а не квадратная. Это также относится к данному исследованию? 
 
-Мы цитировали M. Kato et al., Physical Review B 106 (1) (2022), а также других \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect}, where spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions.
+Мы цитировали M. Kato et al., Physical Review B 106 (1) (2022), а также других [P. Andriushchenko et al., Physical Review E 99 (2) (2019); A. Peretyatko et al., Physical Review B 95 (14) (2017); H. Otsuka et al., Physical Review E 97 (4) (2018);  Y. Shevchenko et al., Physics Letters A 381 (5) (2017)], where spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions.
 
 2. Я не до конца понимаю в этом контексте новую фразу:
 "Спиновый лед отличается от спинового стекла упорядоченным распределением обменных констант и Type-II плакеток соответственно."
 Я полагаю, что авторы имеют в виду конкретную модель спинового льда. Следует уточнить геометрию решетки и взаимодействия/гамильтониан, так как неясно, в чем разница между гамильтонианом, приводящим к спиновому стеклу, и тем, что приводит к спиновому льду. Возможно, в обоих случаях имеются связи +J и -J, а различие заключается в том, что в одном случае это квадратная решетка (спиновое стекло), а в другом — шашечная (спиновый лед)?
 
-
 Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian (1) differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.
 We did not use a checkerboard lattice.
 
-
 3. Кроме того, в разделе с выводами нет упоминания анализа спинового льда.
-
+Действительно хорошее замечание. 
 
 4. Мелкие замечания:
 a) Думаю, мой комментарий по поводу использования термина "frustrations" был не до конца понят. Моя мысль в следующем: связи могут быть фрустрированными, но некорректно употреблять "frustrations" в таких выражениях, как "максимальное число фрустраций" (в тексте встречается много подобных фраз). Я полагаю, что авторы имеют в виду "максимальное число фрустрированных связей"?
 
-Мы добавили описание в текст: "By a frustrated spin pair (frustated bond) we mean a pair (bond) for which the interaction energy is positive. Как видно из рисунка 5(a) фрустрированными являются две ферромагнитные связи. Однако на рисунке 5(b,c) становятся уже другие связи - антиферромагнитная и ферромагнитная. На рисунке 5(d) также наблюдаются две фрустрированные антиферромагнитные связи. Таким образом, отсутствие локализации или геометрического расположения фрустрированных связей приводит к вырождению основного состояния.".
+Мы добавили описание в текст: "By a frustrated spin pair (frustated bond) we mean a pair (bond) for which the interaction energy is positive. As seen in Figure 5(a), two ferromagnetic bonds are frustrated. However, in Figures 5(b) and 5(c), different bonds become frustrated - one antiferromagnetic and one ferromagnetic. In Figure 5(d), two frustrated antiferromagnetic bonds are also observed. 	Thus, the absence of localization or a fixed geometric arrangement of frustrated bonds leads to the ground state degeneracy.".
 
 
 b) Следует пересмотреть highlights. Первые три слишком общие и не специфичны для данной работы. Что касается последнего, о каких низкотемпературных состояниях идет речь? Возможно, highlights стоит немного подробнее объяснить, какие модели были изучены и каким способом, а в последнем пункте упомянуть построение низкотемпературных фазовых диаграмм?
