@@ -97,16 +97,16 @@
 		\end{graphicalabstract}
 		
 		
-		\begin{highlights}  
-			\item The presence of frustrations in configurations of the ground state does not necessarily lead to macroscopic degeneracy.
-			\item Macroscopic degeneracy of the ground state is due to combinatorics frustrated pairs on the lattice.
-			\item The ground state degeneracy of spin ice is larger than that of spin glass
-			\item The areas of existence of low-temperature states have been determined.
+		\begin{highlights}
+			\item \textcolor{red}{The properties of frustrated bonds in ground state configurations of the $\pm J$ Ising model on a square lattice have been determined.  
+			\item Jumps in entropy and magnetization in the field for the ground state have been established.  
+			\item The areas of existence of ground states have been determined.  
+			\item The phase diagram at zero temperature in an external magnetic field has been constructed.}
 		\end{highlights}  
 		
 		
 		\begin{keyword}
-			Ising model, Ground state, GPU and CPU high performance calculations, statistical thermodynamics.
+			Ising model, Ground state, GPU and CPU high performance calculations, statistical physics.
 		\end{keyword}
 		
 		
@@ -393,7 +393,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	First, each plaquette is assigned coordinates $x$ and $y$. Next, the partitioning of the Type-II plaquettes into pairs is combined. We consider the cases when frustrations occur between each pair of plaquettes and when the placement of excitations occurs between a plaquette and the edge of the lattice. The quantity of frustrations between $i,j$-th pair of plaquettes is defined as $R_{ij} = \left|x_i-x_j\right|+\left|y_i-y_j\right|$.
 	
-	The quantity of frustrations occurring from the Type-II plaquette to the nearest edge of the lattice is defined as $R_{ij}+1$. Here $i$ is the number of the Type-II plaquette, $j$ is the number of the nearest plaquette on the edge of the lattice. The combinations that have the minimum quantity of frustrations are considered after enumerating all pairs of Type-II plaquettes. Two of them are shown in Figure \ref{fig:12PS_cell64_J72_5}(b,c).
+	The quantity of frustrations occurring from the Type-II plaquette to the nearest edge of the lattice is defined as $R_{ij}+1$. Here $i$ is the number of the Type-II plaquette, $j$ is the number of the nearest plaquette on the edge of the lattice. The combinations that have the minimum quantity of frustrations are considered after enumerating all pairs of Type-II plaquettes. Two of them are shown in Figure \ref{fig:12PS_cell64_J72_5}(b, c).
 	
 	Based on the combinations obtained, the spin pairs between the plaquettes are marked as frustrated (Figure \ref{fig:12F_cell64_J72_5}).
 	
@@ -426,7 +426,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	Thus, the macroscopic degeneration of the ground state is due to several reasons:
 	
 	\begin{enumerate}
-		\item Different combinations of Type-II plaquettes can produce the same quantity of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5}(b,c).
+		\item Different combinations of Type-II plaquettes can produce the same quantity of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5}(b, c).
 		\item There may be several variants for placing frustrations between plaquettes if the coordinates of these plaquettes are different (Figure \ref{fig:5x5.22F}).
 		\item Free boundary conditions can affect degeneracy. For example, in the case of placing a frustrated plaquette next to two boundaries of lattice leads to an increase in the number of options for the placement of frustrations (Figure \ref{fig:4x4.1}).
 	\end{enumerate}
@@ -550,11 +550,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	In Figure \ref{fig:_multiplot_SI_SG_64}(a), the spin excess is zero for the two configurations in the absence of frustrations and twofold degeneracy. The presence of frustrations in Figure \ref{fig:_multiplot_SI_SG_64}(b, c) leads to the degeneracy of the ground state. The ground state configurations have spin excesses different from zero.
 	
-	%Under the influence of an external magnetic field, the spin glass system exhibits the highest number of steps in the spin excess dependency from external magnetic field (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
-	%General quantity of critical values of magnetic field is determined by the quantity of frustrations and by the shape of the density of states (DOS), which plays a more significant role.
-	%It is worth noting that the number of steps implicitly depends on the quantity of frustrations.
-	
-	As seen in Figures \ref{fig:_multiplot_SI_SG_64}(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure \ref{fig:_multiplot_SI_SG_64}(b)). Despite the maximum quantity of frustrations in the spin ice (Figure \ref{fig:_multiplot_SI_SG_64}(c)), the number of plateaus is lower than in Figure \ref{fig:_multiplot_SI_SG_64}(b). This is related to the shape of the density of states (DOS) distribution; see Figures \ref{fig:HDOS_ice_1}–\ref{fig:HDOS_ice}.
+	As seen in Figures \ref{fig:_multiplot_SI_SG_64}(a-c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure \ref{fig:_multiplot_SI_SG_64}(b)). Despite the maximum quantity of frustrations in the spin ice (Figure \ref{fig:_multiplot_SI_SG_64}(c)), the number of plateaus is lower than in Figure \ref{fig:_multiplot_SI_SG_64}(b). This is related to the shape of the density of states (DOS) distribution; see Figures \ref{fig:HDOS_ice_1}-\ref{fig:HDOS_ice}.
 	
 	Using complete enumeration method, the densities of states were calculated for the spin ice and spin glass cases shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
 	The system's energy under the influence of an external magnetic field was calculated using Equation \eqref{eq:ising_energy}.
@@ -589,7 +585,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.
 	The presence of Type-I, Type-II, and Type-III plaquettes in the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)) leads to a wide variety of critical field values. In the two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), there were only Type-I plaquettes, while in spin ice (Figure \ref{fig:cell_SI_SG_64}(c)), only Type-II plaquettes were present.
 	
-	An important conclusion is that Figures \ref{fig:HDOS_ice_1}–\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy jumps in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
+	An important conclusion is that Figures \ref{fig:HDOS_ice_1}-\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy jumps in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
 	The quantity of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.
 	
 	
@@ -705,8 +701,14 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	The problem of determining the maximum possible quantity of frustrations as a function of the number of spins in a system, for a given lattice type in the Ising model with both antiferromagnetic and ferromagnetic exchange interactions, is of interest, as the presence of frustrations gives rise to new properties.
 	It has been shown that in the Edwards-Anderson model, systems with twofold ground state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
 	
-	\textcolor{red}{Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.}
+	\textcolor{red}{In the spin glass there is no order in the arrangement of Type-II plaquettes.
+	Type-II plaquettes are a source of frustrations.
+	In contrast to spin glass, spin ice has a dense packing or ordering of Type-II plaquettes.  
+	The degeneracy depends on the number of Type-II plaquettes and their mutual arrangement.
+	Frustrated bonds can not only change their localization on the lattice in degenerate ground state configurations but also alter the relative number of ferromagnetic and antiferromagnetic bonds.  
+	Therefore, macroscopically degenerate ground state configurations of spin glass and spin ice may have different spin excess.}
 	
+	\textcolor{red}{It would be interesting to explore the problem of Type-II plaquettes in the spin ice model on a three-dimensional pyrochlore lattice.}
 	
 	\section{Acknowledgments}
 	
