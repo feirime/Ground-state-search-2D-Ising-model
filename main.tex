@@ -88,7 +88,7 @@
 		
 		\begin{abstract}
 			
-			Using the complete enumeration method, we accurately calculated all possible states of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins. The ground state energies of the studied finite-size samples were determined. The macroscopic degeneracy of the ground state in frustrated spin systems arises from the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground state configurations is based on identifying the arrangement of frustrations. The dependence of the ground state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field, at which large jumps in residual entropy occur, were calculated. The nature of these large entropy jumps is explained by the fact that, at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up at the critical magnetic field value. The areas of existence of low-temperature states have been determined.
+			Using the complete enumeration method, we accurately calculated all possible states of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins. The ground state energies of the studied finite-size samples were determined. The macroscopic degeneracy of the ground state in frustrated spin systems arises from the combinatorics of frustrated plaquettes, i.e., the number of ways to place frustrated spin pairs on the lattice. The algorithm for calculating energy, spin excess, and ground state configurations is based on identifying the arrangement of frustrations. The dependence of the ground state spin excess in the Edwards-Anderson model on an external magnetic field has a discrete (step-like, stair-like) character. Critical values of the external magnetic field, at which large peaks in residual entropy occur, were calculated. The nature of these large entropy peaks is explained by the fact that, at certain critical values of the external magnetic field, the sum of several spin configurations with different interaction energies and Zeeman energies, i.e., with different values of spin excess, will have the same total energy. The degeneracy multiplicities of states with the same total energy are summed up at the critical magnetic field value. The areas of existence of low-temperature states have been determined.
 			
 		\end{abstract}
 		
@@ -99,7 +99,7 @@
 		
 		\begin{highlights}
 			\item \textcolor{red}{The properties of frustrated bonds in ground state configurations of the $\pm J$ Ising model on a square lattice have been determined.  
-			\item Jumps in entropy and magnetization in the field for the ground state have been established.  
+			\item Peaks in entropy and magnetization in the field for the ground state have been established.  
 			\item The areas of existence of ground states have been determined.  
 			\item The phase diagram at zero temperature in an external magnetic field has been constructed.}
 		\end{highlights}  
@@ -132,7 +132,7 @@
 	
 	Entropy, or the degeneracy of the ground state, is crucial information not only for understanding the low-temperature behavior of spin glasses (or spin ice) but also for the nature of excitations. Even for the 2D Edwards-Anderson model, computing the ground state is a non-trivial problem. Entropy or the degeneracy multiplicity is an even more challenging task. Methods such as the transfer matrix method \cite{PhysRevB.22.288, cheung1983equilibrium, kolan1982ground}, ballistic search \cite{hartmann2000ground}, thermodynamic integration \cite{kirkpatrick1977frustration, binder1985monte, roma2004ground}, and multicanonical sampling \cite{berg1994ground, shevchenko2017multicanonical} have been developed to address this issue. However, for finite systems with a countable number of spins, approximate methods are unlikely to be applicable.  
 	
-	Spin system models on lattices provide an ideal platform for exploring complex magnetic ground states with excitations, and their investigation is important for the advancement of physics \cite{lacroix2011introduction}. This research includes calculation of the critical switching fields between ground states in an external magnetic field, entropy jumps during transitions between ground states, and correlation functions \cite{ramirez2004effect, rosas2004random, andriushchenko2019large}.  
+	Spin system models on lattices provide an ideal platform for exploring complex magnetic ground states with excitations, and their investigation is important for the advancement of physics \cite{lacroix2011introduction}. This research includes calculation of the critical switching fields between ground states in an external magnetic field, entropy peaks during transitions between ground states, and correlation functions \cite{ramirez2004effect, rosas2004random, andriushchenko2019large}.  
 	
 	Studying the energy landscape of low-energy states in spin glasses \cite{biswas2023energy} remains a unsolved problem, as does research on spin ice. An intriguing question is identifying the relative fraction (or concentration) of ferromagnetic (or antiferromagnetic) exchange interactions at $T=0$ that results in a transition between ferromagnetism and spin glass states (or between anti-ferromagnetism and spin glass states) \cite{gruzberg2001random, honecker2001universality, picco2006strong, tsomokos2011interplay, zimmer2022role}. The thermodynamic properties and phase diagram of the ground state for molecular clusters with a small number of spins were calculated in \cite{dias2023ground}.
 	
@@ -565,7 +565,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SG_64_J0.png}
-		\caption{Density of states in an external magnetic field $0\leq h/J \leq 5$ for the spin glass lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(b)), $P_+ = 0.5$. There are 7 values of critical fields at which entropy jumps are observed.}
+		\caption{Density of states in an external magnetic field $0\leq h/J \leq 5$ for the spin glass lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(b)), $P_+ = 0.5$. There are 7 values of critical fields at which entropy peaks are observed.}
 		\label{fig:HDOS_glass}
 	\end{figure}
 	
@@ -578,14 +578,14 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	\end{figure}
 	
 	In Figure \ref{fig:HDOS_ice_1}, at $h/J = 0$ for two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), a twofold degeneracy of the ground state can be observed. The external magnetic field value $h/J = 1$ is critical. At this field, the ground states with spin excess $M = 0$ and $M = 0.25$ have the same energy. This occurs due to the increasing contribution of the Zeeman energy, leading to the addition of the entropies of the ground states.  
-	Increasing the external magnetic field to the critical value $h/J = 2$ results in a situation where the ground states correspond to spin excess values $M = 0.25, 0.5, 0.75, 1$. The degeneracies of these four states add up, leading to a higher entropy jump than at $h/J = 1$.  
+	Increasing the external magnetic field to the critical value $h/J = 2$ results in a situation where the ground states correspond to spin excess values $M = 0.25, 0.5, 0.75, 1$. The degeneracies of these four states add up, leading to a higher entropy peak than at $h/J = 1$.  
 	The value $h/J = 3$ corresponds to the saturation field, at which only a single configuration remains.
 	
-	For the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy jumps at $T = 0$ in critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
+	For the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy peaks at $T = 0$ in critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
 	Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.
 	The presence of Type-I, Type-II, and Type-III plaquettes in the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)) leads to a wide variety of critical field values. In the two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), there were only Type-I plaquettes, while in spin ice (Figure \ref{fig:cell_SI_SG_64}(c)), only Type-II plaquettes were present.
 	
-	An important conclusion is that Figures \ref{fig:HDOS_ice_1}-\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy jumps in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
+	An important conclusion is that Figures \ref{fig:HDOS_ice_1}-\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy peaks in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
 	The quantity of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.
 	
 	
@@ -694,7 +694,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground state degeneration implies alternative arrangements of frustrations.
 	
-	The dependence of the ground state spin excess in the Edwards-Anderson model on the external magnetic field at $T \to 0$ exhibits a discrete (stepped, staircase-like) character. This behavior is caused by the discrete structure of the density of states. Critical values of the external magnetic field, where giant jumps in residual entropy are observed, have been calculated. The nature of these entropy jumps arises from the fact that at certain critical field values, multiple spin configurations with different interaction and Zeeman energies—but the same total energy—contribute equally to the ground state. Degeneracies of states with identical total energy are summed.
+	The dependence of the ground state spin excess in the Edwards-Anderson model on the external magnetic field at $T \to 0$ exhibits a discrete (stepped, staircase-like) character. This behavior is caused by the discrete structure of the density of states. Critical values of the external magnetic field, where giant peaks in residual entropy are observed, have been calculated. The nature of these entropy peaks arises from the fact that at certain critical field values, multiple spin configurations with different interaction and Zeeman energies—but the same total energy—contribute equally to the ground state. Degeneracies of states with identical total energy are summed.
 	
 	The phase diagram $h - P_+$ at $T = 0$ is obtained. The exact solution allowed us to establish the conditions for the existence of low-temperature states depending on the external magnetic field and the concentration of exchange bonds $P_+$. The maximum absolute value of spin excess of the ground state is a general criterion that allows us to establish the existence of low-temperature states: antiferromagnetic, spin-glass, and ferromagnetic. The application of an external magnetic field leads to a shift of phases. The stepwise behavior of the diagram is explained by the competition of exchange interaction energy and Zeiman energy
 	
