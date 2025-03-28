@@ -1,0 +1,29 @@
+The authors express their deep appreciation to the reviewers for their active assistance in improving and finalizing the article.
+
+
+Reviewer #3:  
+
+1) We cited M. Kato et al., Physical Review B 106 (1) (2022), and others [P. Andriushchenko et al., Physical Review E 99 (2) (2019); A. Peretyatko et al., Physical Review B 95 (14) (2017); H. Otsuka et al., Physical Review E 97 (4) (2018);  Y. Shevchenko et al., Physics Letters A 381 (5) (2017)], where spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions.
+
+2) Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian (1) differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.
+We did not use a checkerboard lattice.
+
+3) A mention of spin ice analysis has been added to the conclusions section.
+
+Smaller comments: 
+
+a) We've added a description to the text: "By a frustrated spin pair (frustated bond) we mean a pair (bond) for which the interaction energy is positive. As seen in Figure 5(a), two ferromagnetic bonds are frustrated. However, in Figures 5(b) and 5(c), different bonds become frustrated - one antiferromagnetic and one ferromagnetic. In Figure 5(d), two frustrated antiferromagnetic bonds are also observed. Thus, the absence of localization or a fixed geometric arrangement of frustrated bonds leads to the ground state degeneracy.".
+
+b) The highlights have been changed.
+
+Reviewer #4: 
+
+The authors are very grateful to the reviewer for his attentiveness. The typos have been corrected.
+
+Optional:
+
+The energy of the configuration Et is determined;
+
+The comment has been partially corrected. 'M_{t}' is correctly specified in the formula;
+
+All comments taken into account.
