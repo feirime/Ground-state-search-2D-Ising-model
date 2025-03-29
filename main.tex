@@ -5,7 +5,6 @@
 \usepackage{lineno,hyperref}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-\usepackage{xcolor}%удалить перед отправкой
 \modulolinenumbers[5]
 
 \journal{Physica A: Statistical Mechanics and its Applications}
@@ -51,7 +50,6 @@
 %% `Elsevier LaTeX' style
 %\bibliographystyle{elsarticle-num}
 %%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\todo}[1] {\textcolor{red}{#1}} %%for TODO comments
 \def\l{\left\langle}
 \def\r{\right\rangle}
 \usepackage{mathrsfs}
@@ -98,10 +96,10 @@
 		
 		
 		\begin{highlights}
-			\item \textcolor{red}{The properties of frustrated bonds in ground state configurations of the $\pm J$ Ising model on a square lattice have been determined.  
+			\item The properties of frustrated bonds in ground state configurations of the $\pm J$ Ising model on a square lattice have been determined.  
 			\item Peaks in entropy and magnetization in the field for the ground state have been established.  
 			\item The areas of existence of ground states have been determined.  
-			\item The phase diagram at zero temperature in an external magnetic field has been constructed.}
+			\item The phase diagram at zero temperature in an external magnetic field has been constructed.
 		\end{highlights}  
 		
 		
@@ -144,7 +142,7 @@
 	
 	\section{Complete enumeration solution}
 	
-	To investigate the problem, an complete enumeration algorithm was developed. \textcolor{red}{Energy of $t$-configuration:}
+	To investigate the problem, an complete enumeration algorithm was developed. Energy of $t$-configuration:
 	
 	\begin{equation}
 		E_t = -\sum^{N - 1}_{i=1}\sum^N_{j = i + 1} J_{ij} S_i S_j - h \sum^N_{i=1} S_i.
@@ -191,7 +189,7 @@
 		\end{alignedat}
 	\end{equation}
 
-	\noindent \textcolor{red}{where $I(Z_{3i},Z_{3j})$ is the state contribution of the interaction energy between two chains in states $Z_{3i}$ and $Z_{3j}$. For example, if the state of the first chain is $e^{2\beta+3h\beta}$ (all spins ``up'') and the second chain is $e^{2\beta-3h\beta}$ (all spins ``down''), then $I(e^{2\beta+3h\beta}, e^{2\beta-3h\beta})=e^{-3\beta}$. Thus the partition function of two connected chains:}
+	\noindent where $I(Z_{3i},Z_{3j})$ is the state contribution of the interaction energy between two chains in states $Z_{3i}$ and $Z_{3j}$. For example, if the state of the first chain is $e^{2\beta+3h\beta}$ (all spins ``up'') and the second chain is $e^{2\beta-3h\beta}$ (all spins ``down''), then $I(e^{2\beta+3h\beta}, e^{2\beta-3h\beta})=e^{-3\beta}$. Thus the partition function of two connected chains:
 	
 		\begin{equation}
 			\label{eq:stat_6}
@@ -249,7 +247,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	Let by a plaquette we mean a closed chain of spins of minimal length \cite{lebrecht2015j}. In the following examples on a square lattice, the plaquettes are elementary squares, see Figures \ref{fig:Type1}, \ref{fig:Type2}, and \ref{fig:Type3}. In the Edwards-Anderson spin glass model, the plaquettes can be classified into three possible types. 
 	
-	If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to ``up'' and ``down'' spins in one of the ground state configurations. Frustrated pairs of spins are circled. By a frustrated spin pair \textcolor{red}{(frustated bond)} we mean a pair \textcolor{red}{(bond)} for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.
+	If $P_+$ is the relative amount of ferromagnetic ($J_{ij}=+1$) exchange integrals, then Type-I, see Figure \ref{fig:Type1}, belongs to the plaquettes in which $P_+=0.5$. For Type-II, $P_+=0.75$ or $P_+=0.25$ (Figure \ref{fig:Type2}). For Type-III, $P_+=1.0$ or $P_+=0.0$ (Figure \ref{fig:Type3}). Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively. White and black circles in the figures correspond to ``up'' and ``down'' spins in one of the ground state configurations. Frustrated pairs of spins are circled. By a frustrated spin pair (frustated bond) we mean a pair (bond) for which the interaction energy is positive. Thus frustration is the excitation with a given localization, coordinates in ground state configuration.
 	
 	
 	\begin{figure}[H]
@@ -303,7 +301,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 			\includegraphics[width=1\textwidth]{pictures/Type2_3x2_2.eps}
 			\label{fig:Type2_3x2_2}
 		\end{minipage}
-		\caption{The ground state configurations of the systems consisting of two Type-II \textcolor{red}{plaquettes with $P_+\approx0.14$ (a) and $P_+\approx0.43$ (b).}}
+		\caption{The ground state configurations of the systems consisting of two Type-II plaquettes with $P_+\approx0.14$ (a) and $P_+\approx0.43$ (b).}
 		\label{fig:Type2_32}
 	\end{figure}
 	
@@ -336,7 +334,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 		
 	\end{figure}
 	
-	\textcolor{red}{As seen in Figure \ref{fig:4x4.1}(a), two ferromagnetic bonds are frustrated. However, in Figures \ref{fig:4x4.1}(b) and \ref{fig:4x4.1}(c), different bonds become frustrated -- one antiferromagnetic and one ferromagnetic. In Figure \ref{fig:4x4.1}(d), two frustrated antiferromagnetic bonds are also observed. Thus, the absence of localization or a fixed geometric arrangement of frustrated bonds leads to the ground state degeneracy.}
+	As seen in Figure \ref{fig:4x4.1}(a), two ferromagnetic bonds are frustrated. However, in Figures \ref{fig:4x4.1}(b) and \ref{fig:4x4.1}(c), different bonds become frustrated -- one antiferromagnetic and one ferromagnetic. In Figure \ref{fig:4x4.1}(d), two frustrated antiferromagnetic bonds are also observed. Thus, the absence of localization or a fixed geometric arrangement of frustrated bonds leads to the ground state degeneracy.
 	
 	For the example in Figure \ref{fig:4x7}, $E_{gs}/N \approx -1.39$, $M_{gs}/N=0$, there are only two ground states $g_{gs}=2$. At the same time, there are three frustrated pairs. Thus, the presence of frustrations in configurations of the ground state does not always lead to macroscopic degeneracy. 
 	
@@ -482,7 +480,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	\section{Ground state in an external magnetic field}
 	
-	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. \textcolor{red}{Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively.} In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
+	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}, but this is not enough for macroscopic degeneracy of the ground state. 
 	
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.3\linewidth}
@@ -701,14 +699,14 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	The problem of determining the maximum possible quantity of frustrations as a function of the number of spins in a system, for a given lattice type in the Ising model with both antiferromagnetic and ferromagnetic exchange interactions, is of interest, as the presence of frustrations gives rise to new properties.
 	It has been shown that in the Edwards-Anderson model, systems with twofold ground state degeneracy can exist, and configurations of minimum energy may include frustrations. Additionally, the placement of frustrations in ground state configurations (i.e., the degeneracy of states with nonzero spin excess) and the suppression of frustrations by an external magnetic field could be subjects of further research.
 	
-	\textcolor{red}{In the spin glass there is no order in the arrangement of Type-II plaquettes.
+	In the spin glass there is no order in the arrangement of Type-II plaquettes.
 	Type-II plaquettes are a source of frustrations.
 	In contrast to spin glass, spin ice has a dense packing or ordering of Type-II plaquettes.  
 	The degeneracy depends on the number of Type-II plaquettes and their mutual arrangement.
 	Frustrated bonds can not only change their localization on the lattice in degenerate ground state configurations but also alter the relative number of ferromagnetic and antiferromagnetic bonds.  
-	Therefore, macroscopically degenerate ground state configurations of spin glass and spin ice may have different spin excess.}
+	Therefore, macroscopically degenerate ground state configurations of spin glass and spin ice may have different spin excess.
 	
-	\textcolor{red}{It would be interesting to explore the problem of Type-II plaquettes in the spin ice model on a three-dimensional pyrochlore lattice.}
+	It would be interesting to explore the problem of Type-II plaquettes in the spin ice model on a three-dimensional pyrochlore lattice.
 	
 	\section{Acknowledgments}
 	
