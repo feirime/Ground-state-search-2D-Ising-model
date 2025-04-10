@@ -5,6 +5,7 @@
 \usepackage{lineno,hyperref}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{xcolor}%удалить перед отправкой
 \modulolinenumbers[5]
 
 \journal{Physica A: Statistical Mechanics and its Applications}
@@ -106,7 +107,6 @@
 		\begin{keyword}
 			Ising model, Ground state, GPU and CPU high performance calculations, statistical physics.
 		\end{keyword}
-		
 		
 	\end{frontmatter}
 	
@@ -478,12 +478,10 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	The increasing of a number of Type-II plaquettes, and, accordingly, the quantity of frustrations, generally leads to an increase in ground state degeneracy. However, for some samples, an increase in the quantity of frustrations does not result in a growth in ground state degeneracy (see points with the minimum value $g_{gs}=2$ in Figure \ref{fig:g(Q)}). 
 	
-	\section{Ground state in an external magnetic field}
+	\section{\textcolor{red}{Spin ice model}}
 	
-	Table \ref{tab:Egs} presents the ground state energy values of spin glass. Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}. 
-	Однако, условие периодичности +-J не всегда приводит к макроскопическому вырождению основного состояния, поскольку оно не всегда приводит к появлению плакетов второго типа, которые являются источником фрустрации.
-	Возможны следующие ситуации: периодичность в расположении обменных интегралов и отсутствие плакетов второго типа, рисунок 13а; хаос в расположении +-J на решетке и хаос в расположении плакетов второго типа - это спиновое стекло, рисунок 13б; отсутствие трансляционной симметрии в расположении +-J на решетке и периодичность в расположении плакетов второго типа - спиновое стекло; периодичность в расположении +-J и в расположении плакетов второго типа - это спиновый лед (рисунок 13с, за исключением четырех угловых ферромагнитных связей слева для соблюдения P+=0.5).
-	Обычно авторы, см., например, григера, на простой квадратной решетке моделируют спиновый лед за счет введения дополнительных взаимодействий. Дополнительные перекрестные взаимодействия необходимы для того, чтобы образовать плакеты с фрустрациями, расположенными в шахматном порядке. Без дополнительных перекрестных взаимодействий это был бы случай на рисунке 13а.
+	\textcolor{red}{Historically, spin ice has been associated with the pyrochlore lattice \cite{skjaervo2020advances, bramwell2020history, udagawa2021spin, ortiz2019colloquium, budrikis2021fifty, castelnovo2012spin}. Information on other spin ice models is often sketchy to clearly identify this phase. In this paragraph we would like to clarify the definition of the spin ice state in the +-J Ising model.}
+	Spin ice is usually defined as are system with macroscopic degeneracy, which leads to a finite non-zero entropy at T=0 for infinite systems. Spin ice on a square lattice with the interaction of the nearest neighbors with Hamiltonian \eqref{eq:ising_energy} differs from spin glass on the same lattice with the same Hamiltonian by the ordered distribution of exchange constants and Type-II plaquettes, respectively. In a two-sublattice antiferromagnet, there are no Type-II plaquettes. Figure \ref{fig:cell_SI_SG_64}(a-c) illustrates cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}.
 	
 	
 	\begin{figure}[H]
@@ -513,6 +511,17 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum quantity of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
 	
 	
+	The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at Figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three $P_+ = 0.5$ samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.
+	
+	The lattice energy in Figure \ref{fig:cell_SI_SG_64}(a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.
+	
+	For the same $P_+ = 0.5$ with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.
+	
+	Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest quantity of frustrations (25) leads to the highest ground state energy: $E = -112 + 2\times25 = -62$.
+	
+
+	\section{\textcolor{red}{Ground state in an external magnetic field}}
+
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.32\linewidth}
 			\centering
@@ -536,15 +545,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 		\label{fig:_multiplot_SI_SG_64}
 		
 	\end{figure}
-	
-	The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at Figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three $P_+ = 0.5$ samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.
-	
-	The lattice energy in Figure \ref{fig:cell_SI_SG_64}(a) is equal to the sum of the energies of all interacting pairs, since frustrations are absent, equal to $-112|J|$.
-	
-	For the same $P_+ = 0.5$ with the random distribution of ferromagnetic-antiferromagnetic interactions of Figure \ref{fig:cell_SI_SG_64}(b), we observe 15 frustrations. So the energy will be equal to $E = -112 + 15\times2 = -82$, which coincides with the results of the complete enumeration.
-	
-	Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and the resulting frustrations are simultaneously ordered. Figure \ref{fig:cell_SI_SG_64}(c) represents a special case where both interactions and emergent frustrations are simultaneously ordered. The largest quantity of frustrations (25) leads to the highest ground state energy: $E = -112 + 2\times25 = -62$.
-	
+
 	Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
 	In the absence of frustrations and an external magnetic field, the ground state of two-sublattice antiferromagnet is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
 	In spin glass, the frustrations increase the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
