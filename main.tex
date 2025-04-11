@@ -491,7 +491,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 		\item \textcolor{red}{Order in the arrangement of frustrated plaquettes.}
 	\end{enumerate}
 	
-	\textcolor{red}{Let us consider Figure \ref{fig:cell_SI_SG_64}, which shows special cases where the $\pm J$ interactions are arranged in a specific way.}
+	\textcolor{red}{Let us consider Figure~\ref{fig:cell_SI_SG_64}, which illustrates, for example, three specific cases where the $\pm J$ interactions are arranged in particular patterns.}
 
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.3\linewidth}
@@ -521,9 +521,15 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 
 	\textcolor{red}{In the model shown in Figure~\ref{fig:cell_SI_SG_64}(c), all criteria are satisfied. Regarding condition 3, one of the many ground state spin configurations exhibits global order: except for the four ferromagnetic bonds in the corners on the left (introduced to ensure $P_+ = 0.5$), two layers of up spins and two layers of down spins alternate.}
 
-	\textcolor{red}{In \cite{grigera2018entropy}, the authors study spin ice on a simple square lattice with additional interactions. Crossed ferromagnetic interactions within Type-I plaquettes are necessary to form frustrated triangular plaquettes. Without these additional crossing interactions, the system would resemble the configuration in Figure~\ref{fig:cell_SI_SG_64}(a).}
+	\textcolor{red}{In \cite{grigera2018entropy}, the authors study spin ice on a simple square lattice with additional interactions. Crossed ferromagnetic interactions within Type-I plaquettes (see Figure~\ref{fig:Type1}) are necessary to form four triangular plaquettes, allowing frustrated bonds. Каждый фрустрированный треугольник будет содержать две ферромагнитных и одну антиферромагнитную связь. Without these additional crossing interactions, the system would resemble the configuration in Figure~\ref{fig:cell_SI_SG_64}(a).}
 
-	Thus Figures \ref{fig:cell_SI_SG_64}(a)-\ref{fig:cell_SI_SG_64}(c) illustrate cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28. Spin ice generally has periodicity in the arrangement of ferromagnetic and antiferromagnetic exchange interactions \cite{andriushchenko2019large, peretyatko2017interplay, otsuka2018husimi,  shevchenko2017effect, kato2022flux}.
+	В работе \ref{kato2022flux} в случае a fraction of ferromagnetic plaquettes: $p_F = 0$, т.е. при checkerboard spin ice все взаимодействия в плакетах антиферромагнитные. Дополнительные диагональные антиферромагнитные взаимодействия приводят к возникновению четырех треугольных плакетов, допускающих фрустрации. Каждый фрустрированный треугольник будет содержать три антиферромагнитных связи. Если бы не было диагональных дополнительных взаимодействий, то это был бы случай решетки из квадратных антиферромагнитных плакетов №3, см. рисунок \ref{fig:Type3}, и фрустрации были бы невозможны. 
+	
+	В решетке пирохлора \cite{peretyatko2017interplay, otsuka2018husimi} каждый тетраэдр состоит из четырех антиферромагнитных треугольников допускающих фрустрации. Тетраэдр может выступать в качестве элемента из которого строится 3D решетка. Мы предполагаем, что метод фрустрированных плакетов может быть применен к решеткам искусственного спинового льда с дипольным взаимодействием \cite{andriushchenko2019large, shevchenko2017effect}, в том числе и для экзотических решеток \cite{makarova2021low, shevchenko2022order, makarov2019numerical}. Отсутствие метода минимизации обобщенного гамильтониана, который допускает существование фрустрированных связей меду спинами, обуславливает применение метода фрустрированных плакетов.
+	
+	Thus Figures \ref{fig:cell_SI_SG_64}(a)-\ref{fig:cell_SI_SG_64}(c) illustrate cases of two-sublattice antiferromagnet, spin glass and spin ice respectively. Необходимо отметить, что взаимодействия системы спинового льда не обязательно должны быть устроены так, как показаны на рисунке \ref{fig:cell_SI_SG_64}(c). Важным моментом здесь будет выполнение пунктов 1-4. Существует множество возможных размещений $\pm J$, не только для $P_+=0.5$, но и для других $0.1<P_+<0.9$, допускающих систему спинового льда.
+	
+	Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28.
 	
 	Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of two-sublattice antiferromagnet composed of Type-I plaquettes, completely free of frustrations.
 	Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the Type-I, 27 are of Type-II, and 6 are of the Type-III, with a total of 15 frustrations.
