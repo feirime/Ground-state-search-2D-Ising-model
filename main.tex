@@ -118,7 +118,7 @@
 	\newpage
 	\section{Introduction}
 	
-	Models of frustrated systems, such as spin glasses and spin ice, is one of the most important research areas in statistical mechanics. Ising spin glass in the Edwards-Anderson (EA) model is one of the simplest spin glass model with short-range interactions \cite{edwards1975theory}. Despite its seeming simplicity, the low-temperature properties of this model, even in 2D and especially in higher dimensions, remain poorly understood \cite{pal1996ground, hartmann2011ground, newman2022ground}. Spin lattice models with competing ferromagnetic and antiferromagnetic interactions have been studied for many years \cite{binder1986spin, mezard1987spin, lebrecht2004plaquette, valdes2012j, lebrecht2015j, fan2023searching}.
+	Models of frustrated systems are among the most important research topics in statistical mechanics. Ising spin glass in the Edwards-Anderson (EA) model is one of the simplest spin glass model with short-range interactions \cite{edwards1975theory}. Despite its seeming simplicity, the low-temperature properties of this model, even in 2D and especially in higher dimensions, remain poorly understood \cite{pal1996ground, hartmann2011ground, newman2022ground}. Spin lattice models with competing ferromagnetic and antiferromagnetic interactions have been studied for many years \cite{binder1986spin, mezard1987spin, lebrecht2004plaquette, valdes2012j, lebrecht2015j, fan2023searching}.
 	
 	Despite many years of intensive research, the nature of the low-temperature phase of the Ising model for frustrated spin systems with a restricted interaction range remains unsolved \cite{roma2010ground, newman2023proof}. Two of the most important questions concern the properties of the ground state of spin glasses (i.e., at zero temperature), particularly the degeneracy of the ground state and the nature of low-energy excitations \cite{newman2022ground}.
 	
@@ -128,11 +128,11 @@
 	
 	Energy of interactions can be computed using optimization methods \cite{hartmann2002optimization, hartmann2004new}, genetic algorithms \cite{holland1992adaptation}, annealing algorithms \cite{kirkpatrick1983optimization}, multicanonical sampling methods \cite{berg1994ground, shevchenko2017multicanonical}, multi-spin cluster methods \cite{makarova2023canonical}, or parallel tempering \cite{PhysRevB.50.16444, roma2009ground}.
 	
-	Entropy, or the degeneracy of the ground state, is crucial information not only for understanding the low-temperature behavior of spin glasses (or spin ice) but also for the nature of excitations. Even for the 2D Edwards-Anderson model, computing the ground state is a non-trivial problem. Entropy or the degeneracy multiplicity is an even more challenging task. Methods such as the transfer matrix method \cite{PhysRevB.22.288, cheung1983equilibrium, kolan1982ground}, ballistic search \cite{hartmann2000ground}, thermodynamic integration \cite{kirkpatrick1977frustration, binder1985monte, roma2004ground}, and multicanonical sampling \cite{berg1994ground, shevchenko2017multicanonical} have been developed to address this issue. However, for finite systems with a countable number of spins, approximate methods are unlikely to be applicable.  
+	Entropy, or the degeneracy of the ground state, is crucial information not only for understanding the low-temperature behavior of spin glasses (or highly frustrated spin systems) but also for the nature of excitations. Even for the 2D Edwards-Anderson model, computing the ground state is a non-trivial problem. Entropy or the degeneracy multiplicity is an even more challenging task. Methods such as the transfer matrix method \cite{PhysRevB.22.288, cheung1983equilibrium, kolan1982ground}, ballistic search \cite{hartmann2000ground}, thermodynamic integration \cite{kirkpatrick1977frustration, binder1985monte, roma2004ground}, and multicanonical sampling \cite{berg1994ground, shevchenko2017multicanonical} have been developed to address this issue. However, for finite systems with a countable number of spins, approximate methods are unlikely to be applicable.  
 	
 	Spin system models on lattices provide an ideal platform for exploring complex magnetic ground states with excitations, and their investigation is important for the advancement of physics \cite{lacroix2011introduction}. This research includes calculation of the critical switching fields between ground states in an external magnetic field, entropy peaks during transitions between ground states, and correlation functions \cite{ramirez2004effect, rosas2004random, andriushchenko2019large}.  
 	
-	Studying the energy landscape of low-energy states in spin glasses \cite{biswas2023energy} remains a unsolved problem, as does research on spin ice. An intriguing question is identifying the relative fraction (or concentration) of ferromagnetic (or antiferromagnetic) exchange interactions at $T=0$ that results in a transition between ferromagnetism and spin glass states (or between anti-ferromagnetism and spin glass states) \cite{gruzberg2001random, honecker2001universality, picco2006strong, tsomokos2011interplay, zimmer2022role}. The thermodynamic properties and phase diagram of the ground state for molecular clusters with a small number of spins were calculated in \cite{dias2023ground}.
+	Studying the energy landscape of low-energy states in spin glasses~\cite{biswas2023energy} remains an open problem, as does the investigation of highly frustrated spin systems. An intriguing question is identifying the relative fraction (or concentration) of ferromagnetic (or antiferromagnetic) exchange interactions at $T=0$ that results in a transition between ferromagnetism and spin glass states (or between anti-ferromagnetism and spin glass states) \cite{gruzberg2001random, honecker2001universality, picco2006strong, tsomokos2011interplay, zimmer2022role}. The thermodynamic properties and phase diagram of the ground state for molecular clusters with a small number of spins were calculated in \cite{dias2023ground}.
 	
 	Ground-state configurations, as well as excitations in the ground state and low-energy states of spin glasses, residual entropy at low temperatures, are actively studied in models with long-range dipolar interactions \cite{makarova2021low, singh2024micromagnetic}. The spin glass ground states is both essential for understanding the nature of disordered magnets and many other physical systems and also proves useful for solving a wide range of complex combinatorial optimization problems in various disciplines. Despite decades of effort, no algorithm with both high accuracy and efficiency has yet been developed \cite{fan2023searching}.  
 	
@@ -478,18 +478,10 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	The increasing of a number of Type-II plaquettes, and, accordingly, the quantity of frustrations, generally leads to an increase in ground state degeneracy. However, for some samples, an increase in the quantity of frustrations does not result in a growth in ground state degeneracy (see points with the minimum value $g_{gs}=2$ in Figure \ref{fig:g(Q)}). 
 	
-	\section{\textcolor{red}{Spin ice model}}
+	\section{\textcolor{red}{Spin models}}
 	
-	\textcolor{red}{Historically, spin ice has been associated with the pyrochlore lattice \cite{skjaervo2020advances, bramwell2020history, udagawa2021spin, ortiz2019colloquium, budrikis2021fifty, castelnovo2012spin}. Information about other spin ice models is often too fragmentary to clearly identify this phase. Nowadays, a large number of new artificial spin ice lattices are emerging, which requires an extension of the spin ice concept. In this paragraph, we aim to clarify the definition of the spin ice state in the $\pm J$ Ising model.}
-
-	\textcolor{red}{Spin ice can be defined as a system characterized by:}
-
-	\begin{enumerate}
-		\item \textcolor{red}{Macroscopic ground state degeneracy, leading to a finite non-zero entropy at $T = 0$.}
-		\item \textcolor{red}{Translational symmetry (a special kind of order) in the distribution of the signs of exchange interactions $J_{ij}$.}
-		\item \textcolor{red}{Order in the ground state spin configurations (ice rule).}
-		\item \textcolor{red}{Order in the arrangement of frustrated plaquettes.}
-	\end{enumerate}
+	\textcolor{red}{Historically, spin ice has been associated with the pyrochlore lattice \cite{skjaervo2020advances, bramwell2020history, udagawa2021spin, ortiz2019colloquium, budrikis2021fifty, castelnovo2012spin}.
+	Nowadays, a large number of new spin lattices are emerging. In this paragraph, we aim to clarify the definition of the highly frustrated spin system in the $\pm J$ Ising model.}
 	
 	\textcolor{red}{Let us consider Figure~\ref{fig:cell_SI_SG_64}, which illustrates, for example, three specific cases where the $\pm J$ interactions are arranged in particular patterns.}
 
@@ -509,17 +501,15 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 			\includegraphics[width=1\linewidth]{pictures/SI_64_J0}
 		\end{minipage}
 		\hfill
-		\caption{Exchange interactions, types of plaquettes, and ground state configurations of two-sublattice antiferromagnet (a), spin glass (b), and spin ice (c) lattices consisting of 64 spins, $P_+ = 0.5$.}
+		\caption{Exchange interactions, types of plaquettes, and ground state configurations of two-sublattice antiferromagnet (a), spin glass (b), and highly frustrated spin system (c) lattices consisting of 64 spins, $P_+ = 0.5$.}
 		\label{fig:cell_SI_SG_64}
 		
 	\end{figure}
 	
 
-	\textcolor{red}{The $\pm J$ periodicity condition does not always lead to macroscopic ground state degeneracy. In Figure~\ref{fig:cell_SI_SG_64}(a), conditions 2 and 3 are fulfilled, while conditions 1 and 4 are not. In a two-sublattice antiferromagnet, there are no Type-II plaquettes.}
-	
-	\textcolor{red}{Spin glass differs from spin ice in that condition 1 is fulfilled, whereas conditions 2, 3, and 4 are not, as illustrated in Figure~\ref{fig:cell_SI_SG_64}(b).}
-
-	\textcolor{red}{In the model shown in Figure~\ref{fig:cell_SI_SG_64}(c), all criteria are satisfied. Regarding condition 3, one of the many ground state spin configurations exhibits global order: except for the four ferromagnetic bonds in the corners on the left (introduced to ensure $P_+ = 0.5$), two layers of up spins and two layers of down spins alternate.}
+	\textcolor{red}{The $\pm J$ periodicity condition does not always lead to macroscopic ground state degeneracy. In a two-sublattice antiferromagnet, there are no Type-II plaquettes (Figure~\ref{fig:cell_SI_SG_64}(a)).}	
+	\textcolor{red}{Spin glass differs from othes spin systems in that the exchange interactions are random, as illustrated in Figure~\ref{fig:cell_SI_SG_64}(b).}
+	\textcolor{red}{Figure~\ref{fig:cell_SI_SG_64}(c) presents one of the many ground state spin configurations of a highly frustrated spin system. Despite the presence of frustrated plaquettes, this configuration cannot be classified as spin ice.}
 
 	\textcolor{red}{In \cite{grigera2018entropy}, the authors study spin ice on a simple square lattice with additional interactions. Crossed ferromagnetic interactions within Type-I plaquettes (see Figure~\ref{fig:Type1}) are necessary to form four triangular plaquettes, allowing frustrated bonds. Each frustrated triangle will contain two ferromagnetic bonds and one antiferromagnetic bond. Without these additional crossing interactions, the system would resemble the configuration in Figure~\ref{fig:cell_SI_SG_64}(a).}
 
@@ -527,17 +517,15 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	\textcolor{red}{In the pyrochlore lattice~\cite{peretyatko2017interplay, otsuka2018husimi}, each tetrahedron consists of four antiferromagnetic triangles that allow for frustration. A tetrahedron can serve as a building block for constructing a 3D lattice. We assume that the method of frustrated plaquettes can be applied to artificial spin ice lattices with dipolar interactions~\cite{andriushchenko2019large, shevchenko2017effect}, including exotic lattice geometries~\cite{makarova2021low, shevchenko2022order, makarov2019numerical}. The absence of a method for minimizing a generalized Hamiltonian that allows for the existence of frustrated bonds between spins motivates the use of the frustrated plaquette method.}
 	
-	\textcolor{red}{Thus, Figures~\ref{fig:cell_SI_SG_64}(a)--\ref{fig:cell_SI_SG_64}(c) illustrate the cases of a two-sublattice antiferromagnet, a spin glass, and a spin ice, respectively.  
-	It is important to note that the interactions in the spin ice system do not necessarily need to be arranged exactly as shown in Figure~\ref{fig:cell_SI_SG_64}(c).  
-	The key factor is the fulfillment of conditions 1--4.  
-	There are many possible arrangements of $\pm J$, not only for $P_+=0.5$, but also for other values within the range $0.1<P_+<0.9$, that still yield a spin ice system.}
+	\textcolor{red}{Thus, Figures~\ref{fig:cell_SI_SG_64}(a)--\ref{fig:cell_SI_SG_64}(c) illustrate the cases of a two-sublattice antiferromagnet, a spin glass, and a highly frustrated spin system, respectively.
+	There are many possible arrangements of $\pm J$, not only for $P_+=0.5$, but also for other values within the range $0.1<P_+<0.9$, that still yield a highly frustrated spin system.}
 	
 	
-	Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and spin ice models is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28.
+	Calculations show that the ground state energy per spin at $P_+ = 0.5$ and in the absence of an external magnetic field for two-sublattice antiferromagnet and highly frustrated spin system is -1.75 and -0.97, Figures \ref{fig:cell_SI_SG_64}(a) and \ref{fig:cell_SI_SG_64}(c), respectively. The specific ground state energy of spin glass in the Edwards-Anderson model is -1.28.
 	
 	Figure \ref{fig:cell_SI_SG_64}(a) shows a planar lattice of two-sublattice antiferromagnet composed of Type-I plaquettes, completely free of frustrations.
 	Figure \ref{fig:cell_SI_SG_64}(b) depicts a spin glass lattice containing 49 plaquettes, of which 16 are of the Type-I, 27 are of Type-II, and 6 are of the Type-III, with a total of 15 frustrations.
-	In the spin ice lattice shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum quantity of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
+	In the highly frustrated spin system shown in Figure \ref{fig:cell_SI_SG_64}(c), the maximum quantity of frustrations in this example is achieved by filling the system with Type-II plaquettes, resulting in 25 frustrations across 49 plaquettes.
 	
 	The ground state depends not just on the lattice size and probability $P_+$ but also on the distribution of (anti)ferromagnetic interactions. This show at Figures \ref{fig:cell_SI_SG_64} and \ref{fig:_multiplot_SI_SG_64}. Figure \ref{fig:cell_SI_SG_64} shows three $P_+ = 0.5$ samples in the ground state, but with different distributions of ferromagnetic and antiferromagnetic bonds.
 	
@@ -569,7 +557,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 			\includegraphics[width=1\linewidth]{pictures/_multiplot_SI64_J0}
 		\end{minipage}
 		
-		\caption{Spin excess (upper panels) and residual entropy (lower panels) of two-sublattice antiferromagnet (a), spin glass (b) and spin ice (c) (exchange constant distribution of $P_+ = 0.5$ shown in Figure \ref{fig:cell_SI_SG_64}).}
+		\caption{Spin excess (upper panels) and residual entropy (lower panels) of two-sublattice antiferromagnet (a), spin glass (b) and highly frustrated spin system (c) (exchange constant distribution of $P_+ = 0.5$ shown in Figure \ref{fig:cell_SI_SG_64}).}
 		\label{fig:_multiplot_SI_SG_64}
 		
 	\end{figure}
@@ -577,13 +565,13 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	Figure \ref{fig:_multiplot_SI_SG_64} shows the dependencies of spin excess and ground state degeneracy on the external magnetic field strength.
 	In the absence of frustrations and an external magnetic field, the ground state of two-sublattice antiferromagnet is doubly degenerate (Figure \ref{fig:_multiplot_SI_SG_64}(a)).
 	In spin glass, the frustrations increase the ground state degeneracy to 64 (Figure \ref{fig:_multiplot_SI_SG_64}(b)).
-	Maximal filling of the spin ice system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations $> 3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
+	Maximal filling of the highly frustrated spin system with frustrated Type-II plaquettes leads to macroscopic ground state degeneracy, with the number of degenerate configurations $> 3\times10^{6}$ (Figure \ref{fig:_multiplot_SI_SG_64}(c)).
 	
 	In Figure \ref{fig:_multiplot_SI_SG_64}(a), the spin excess is zero for the two configurations in the absence of frustrations and twofold degeneracy. The presence of frustrations in Figures \ref{fig:_multiplot_SI_SG_64}(b) and \ref{fig:_multiplot_SI_SG_64}(c) leads to the degeneracy of the ground state. The ground state configurations have spin excesses different from zero.
 	
-	As seen in Figures \ref{fig:_multiplot_SI_SG_64}(a)--\ref{fig:_multiplot_SI_SG_64}(c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure \ref{fig:_multiplot_SI_SG_64}(b)). Despite the maximum quantity of frustrations in the spin ice (Figure \ref{fig:_multiplot_SI_SG_64}(c)), the number of plateaus is lower than in Figure \ref{fig:_multiplot_SI_SG_64}(b). This is related to the shape of the density of states (DOS) distribution; see Figures \ref{fig:HDOS_ice_1}--\ref{fig:HDOS_ice}.
+	As seen in Figures \ref{fig:_multiplot_SI_SG_64}(a)--\ref{fig:_multiplot_SI_SG_64}(c), the application of an external magnetic field leads to the emergence of steps (plateaus) in the behavior of the spin excess. The largest number of steps is observed for the spin glass (Figure \ref{fig:_multiplot_SI_SG_64}(b)). Despite the maximum quantity of frustrations in the highly frustrated spin system (Figure \ref{fig:_multiplot_SI_SG_64}(c)), the number of plateaus is lower than in Figure \ref{fig:_multiplot_SI_SG_64}(b). This is related to the shape of the density of states (DOS) distribution; see Figures \ref{fig:HDOS_ice_1}--\ref{fig:HDOS_ice}.
 	
-	Using complete enumeration method, the densities of states were calculated for the spin ice and spin glass cases shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
+	Using complete enumeration method, the densities of states were calculated for the highly frustrated spin system and spin glass cases shown in Figure \ref{fig:cell_SI_SG_64}, as functions of external magnetic field strength (Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice}).
 	The system's energy under the influence of an external magnetic field was calculated using Equation \eqref{eq:ising_energy}.
 	
 	\begin{figure}[H]
@@ -604,7 +592,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{pictures/HDOS_SI_64_J0.png}
-		\caption{Density of states in an external magnetic field $0\leq h/J \leq 4$ for the spin ice lattice (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(c)), $P_+ = 0.5$. The value $M=1$ is achieved at the critical field $h/J=3$. This value is lower for spin ice than for spin glass.}
+		\caption{Density of states in an external magnetic field $0\leq h/J \leq 4$ for the highly frustrated spin system (exchange constant distribution shown in Figure \ref{fig:cell_SI_SG_64}(c)), $P_+ = 0.5$. The value $M=1$ is achieved at the critical field $h/J=3$. This value is lower for highly frustrated spin system than for spin glass.}
 		\label{fig:HDOS_ice}
 	\end{figure}
 	
@@ -613,8 +601,8 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	The value $h/J = 3$ corresponds to the saturation field, at which only a single configuration remains.
 	
 	For the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)), entropy peaks at $T = 0$ in critical fields are determined by the boundaries of the density of states (see Figure \ref{fig:HDOS_glass}).
-	Spin ice (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.
-	The presence of Type-I, Type-II, and Type-III plaquettes in the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)) leads to a wide variety of critical field values. In the two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), there were only Type-I plaquettes, while in spin ice (Figure \ref{fig:cell_SI_SG_64}(c)), only Type-II plaquettes were present.
+	Highly frustrated spin system (Figure \ref{fig:cell_SI_SG_64}(c)) exhibits a lower diversity of critical fields compared to the spin glass (see Figure \ref{fig:HDOS_ice}). However, the degeneracy of the ground states is higher than in the spin glass.
+	The presence of Type-I, Type-II, and Type-III plaquettes in the spin glass (Figure \ref{fig:cell_SI_SG_64}(b)) leads to a wide variety of critical field values. In the two-sublattice antiferromagnet (Figure \ref{fig:cell_SI_SG_64}(a)), there were only Type-I plaquettes, while in highly frustrated spin system (Figure \ref{fig:cell_SI_SG_64}(c)), only Type-II plaquettes were present.
 	
 	An important conclusion is that Figures \ref{fig:HDOS_ice_1}--\ref{fig:HDOS_ice} clearly illustrate the emergence of entropy peaks in Figure \ref{fig:_multiplot_SI_SG_64} and the formation of plateaus in the dependence of spin excess on the external magnetic field.  
 	The quantity of critical fields (including $h/J=0$) in Figures \ref{fig:HDOS_ice_1}, \ref{fig:HDOS_glass}, and \ref{fig:HDOS_ice} matches the number of plateaus in Figures \ref{fig:_multiplot_SI_SG_64}(a), \ref{fig:_multiplot_SI_SG_64}(b), and \ref{fig:_multiplot_SI_SG_64}(c), respectively.
@@ -734,12 +722,12 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	In the spin glass there is no order in the arrangement of Type-II plaquettes.
 	Type-II plaquettes are a source of frustrations.
-	In contrast to spin glass, spin ice has a dense packing or ordering of Type-II plaquettes.  
+	In contrast to spin glass, highly frustrated spin system has a dense packing or ordering of Type-II plaquettes.  
 	The degeneracy depends on the number of Type-II plaquettes and their mutual arrangement.
 	Frustrated bonds can not only change their localization on the lattice in degenerate ground state configurations but also alter the relative number of ferromagnetic and antiferromagnetic bonds.  
-	Therefore, macroscopically degenerate ground state configurations of spin glass and spin ice may have different spin excess.
+	Therefore, macroscopically degenerate ground state configurations of spin glass and highly frustrated spin system may have different spin excess.
 	
-	It would be interesting to explore the problem of Type-II plaquettes in the spin ice model on a three-dimensional pyrochlore lattice.
+	It would be interesting to explore the problem of Type-II plaquettes in the highly frustrated spin system model on a three-dimensional pyrochlore lattice.
 	
 	\section{Acknowledgments}
 	
