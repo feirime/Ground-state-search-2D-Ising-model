@@ -21,3 +21,11 @@ In short, I do not see how the reader can distinguish between the model that giv
 
 Разбиение по пунктам свойств спинового льда должно сделать восприятие более понятным для читателя
 
+
+
+
+Мы согласны с мнением рецензента и заменили термин спинового льда на термин highly frustrated spin system.
+
+
+
+
