@@ -1,31 +1,16 @@
-Reviewer #3: 
-1. I believe there is an issue here on the model that was considered for spin ice. A simple square lattice with only nearest neighbor interactions does not give a spin ice system, which usually can be rewritten as the sum of plaquettes, and thus in a square lattice this would imply second nearest neighbors. I guess the +J -J interactions are arranged in a specific way, but this is never stated in the work, and the authors have not answered this clearly when I asked for this in the previous round. In this answer, they have cited some papers, but following these citations:
+Reviewer #3: I believe there is an issue here on the model that was considered for spin ice. A simple square lattice with only nearest neighbor interactions does not give a spin ice system, which usually can be rewritten as the sum of plaquettes, and thus in a square lattice this would imply second nearest neighbors. I guess the +J -J interactions are arranged in a specific way, but this is never stated in the work, and the authors have not answered this clearly when I asked for this in the previous round. In this answer, they have cited some papers, but following these citations:
 
 -M. Kato et al. PRB 2022: they study a checkerboard lattice, not a square lattice
 -P. Andriuschenko et al. 2019, A. Peretyatko et al. 2017 and Otorka et al. 2018 work in the pyrochlore lattice or in the planes that arise perpendicular to the [111] direction (triangular and kagome lattices)
 -In the Shevchenko paper (Phys. Letters A 2016) they do study a square lattice, but is is in the context of artificial spin ice, and how long range interactions imply the 2in 2out rule in the vertexes.
 
-Мы выделили в отдельный параграф анализ рисунка 13, где собрали критерии для определения spin ice. Провели анализ представленных решеток с различным распределением +J-J по этим пунктам. Это должно сделать понимание более ясным 
+As a comment, there is for example the article by S. Grigera et al, Journal of Physics Communications 2018, where there are +J -J interactions in a square lattice, but placed in a specific way, and it includes second nearest neighbor interactions.
 
-2. As a comment, there is for example the article by S. Grigera et al, Journal of Physics Communications 2018, where there are +J -J interactions in a square lattice, but placed in a specific way, and it includes second nearest neighbor interactions.
-
-Добавлен разбор исследуемой в статье S. Grigera et al, Journal of Physics Communications 2018 решетки по представленным параметрам:
-
-The paper \cite{grigera2018entropy} presents the results of the study of spin ice on a simple square lattice with introduced additional interactions. Additional crossed ferromagnetic interactions in type I plaquettes are necessary to form triangular plaquettes with frustrations. Without the additional crossing interactions, this would be the case in Figure 13a.
-
-3. I do not wish to delay this process, but unfortunately I still need a clear picture of how are the interactions for the spin ice system, since it does not seem to be any of the above. Perhaps the authors could show me a picture of a square lattice with the explicit interactions in each bond so I could understand how is this a spin ice model.
+I do not wish to delay this process, but unfortunately I still need a clear picture of how are the interactions for the spin ice system, since it does not seem to be any of the above. Perhaps the authors could show me a picture of a square lattice with the explicit interactions in each bond so I could understand how is this a spin ice model.
 
 In short, I do not see how the reader can distinguish between the model that gives rise to a spin glass or to a spin ice system. They may both have +J -J interactions, but how the spins interact should be different and clearly presented.
 
-Связи на рисунках определены в статье в строке 155: Straight and jagged lines in the figures correspond to ferromagnetic and antiferromagnetic bonds, respectively
-
-Разбиение по пунктам свойств спинового льда должно сделать восприятие более понятным для читателя
 
 
 
-
-Мы согласны с мнением рецензента и заменили термин спинового льда на термин highly frustrated spin system.
-
-
-
-
+We agree with the reviewer and have replaced the term spin ice with the term highly frustrated spin system.
