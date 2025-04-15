@@ -138,11 +138,11 @@
 	
 	Estimation of the ground state energy and understanding the nature of its macroscopic degeneracy have remained open problems for many years. At low temperatures, the spin glass in its ground state is realized solely through configurations with minimal interaction energy, while the ensemble of other configurations in the Gibbs distribution plays no role. Ground-state energies calculated by various methods in studies \cite{thouless1977solution, sherrington1975solvable, tanaka1980analytic, klein1976comparison, kirkpatrick1978infinite, karandashev2019global, palmer1999ground, campbell2004energy, roma2009ground} show significant variability. It will be shown below that this variability may be related to the distribution of frozen disorder in the bonds, i.e., competing ferromagnetic and antiferromagnetic interactions. For a finite number of spins, the ground state energy strongly depends on the specific realization of the distribution $\left\lbrace J_{ij} \right\rbrace$.  
 	
-	In this work, we utilized an complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground state energy for a finite number of spins, to calculate the degeneracy of this state, and to determine the distribution of spin excess.
+	In this work, we utilized a complete enumeration algorithm \cite{dias2023ground, padalko2021parallel} to solve the problem of ground state energy for a finite number of spins, to calculate the degeneracy of this state, and to determine the distribution of spin excess.
 	
 	\section{Complete enumeration solution}
 	
-	To investigate the problem, an complete enumeration algorithm was developed. Energy of $t$-configuration:
+	To investigate the problem, a complete enumeration algorithm was developed. Energy of a $t$-configuration:
 	
 	\begin{equation}
 		E_t = -\sum^{N - 1}_{i=1}\sum^N_{j = i + 1} J_{ij} S_i S_j - h \sum^N_{i=1} S_i.
@@ -160,7 +160,7 @@
 	
 	Alternating nature of exchange integrals $J_{ij}$ may be attributed to distortions in the arrangement of atoms on the lattice or oscillations in electron density.
 	
-	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$, where $k = 1$ -- Boltzmann constant, T -- temperature in units of $|J_{ij}|$. The ground state presented by the configurations at $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:
+	Let consider a chain of three spins ($L = 3$) interacting ferromagnetically. Hence, all $J_{ij} = +1$. Let $\beta = (kT)^{-1}$, where $k = 1$ is Boltzmann constant, T is temperature in units of $|J_{ij}|$. The ground state is represented by the configurations at  $T \rightarrow 0$. Despite the fact that the ground state is of most interest in this work, we have to search through all $2^N$ states to calculate it accurately. By definition:
 	
 		\begin{equation}
 		Z = \sum_{t = 1}^{2 ^ N} e^{-\beta E_t},
@@ -362,7 +362,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 		\label{fig:5x5.22F}
 	\end{figure}
 	
-	Thus Type-II plaquettes are the only cause of frustrations in configurations of the ground state. In configuration of the ground state, frustrations are located between Type-II plaquettes or between a plaquette and the edge of the grid, depending on the distances. Macroscopic degeneration of the ground state is due to alternative frustration locations.
+	Thus Type-II plaquettes are the only cause of frustrations in configurations of the ground state. In configuration of the ground state, frustrations are located between Type-II plaquettes or between a plaquette and the edge of the grid, depending on the distances. Macroscopic degeneracy of the ground state is due to alternative frustration locations.
 	
 	\section{Nature of the ground state degeneracy}
 	
@@ -421,7 +421,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	In total, $g_{gs}=124$ configurations of ground state with energy $E_{gs}/N \approx -1.34$ and spin excess $M_{gs}/N$ from $\approx \pm 0.28$ to $\approx \pm 0.66$ were obtained for this lattice. 
 	
-	Thus, the macroscopic degeneration of the ground state is due to several reasons:
+	Thus, the macroscopic degeneracy of the ground state is due to several factors:
 	
 	\begin{enumerate}
 		\item Different combinations of Type-II plaquettes can produce the same quantity of frustrations, as shown in the previous example in Figures \ref{fig:12PS_cell64_J72_5}(b) and \ref{fig:12PS_cell64_J72_5}(c).
@@ -431,7 +431,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	\section{Ground state energy}
 	
-	Calculated the ground state energies of spin glass in the Edwards-Anderson model are presented in Table \ref{tab:Egs}. The table shows that the ground state energy values exhibit significant dispersion.
+	The ground-state energies of spin glass in the Edwards-Anderson model were calculated and are presented in Table \ref{tab:Egs}. The table shows that the ground state energy values exhibit significant dispersion.
 	
 	\begin{table}[h]
 		\begin{tabular}{|l|c|c|l|}
@@ -508,7 +508,7 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 
 	\textcolor{red}{The $\pm J$ periodicity condition does not always lead to macroscopic ground state degeneracy. In a two-sublattice antiferromagnet, there are no Type-II plaquettes (Figure~\ref{fig:cell_SI_SG_64}(a)).}	
-	\textcolor{red}{Spin glass differs from othes spin systems in that the exchange interactions are random, as illustrated in Figure~\ref{fig:cell_SI_SG_64}(b).}
+	\textcolor{red}{Spin glass differs from othe spin systems in that the exchange interactions are random, as illustrated in Figure~\ref{fig:cell_SI_SG_64}(b).}
 	\textcolor{red}{Figure~\ref{fig:cell_SI_SG_64}(c) presents one of the many ground state spin configurations of a highly frustrated spin system. Despite the presence of frustrated plaquettes, this configuration cannot be classified as spin ice.}
 
 	\textcolor{red}{In \cite{grigera2018entropy}, the authors study spin ice on a simple square lattice with additional interactions. Crossed ferromagnetic interactions within Type-I plaquettes (see Figure~\ref{fig:Type1}) are necessary to form four triangular plaquettes, allowing frustrated bonds. Each frustrated triangle will contain two ferromagnetic bonds and one antiferromagnetic bond. Without these additional crossing interactions, the system would resemble the configuration in Figure~\ref{fig:cell_SI_SG_64}(a).}
@@ -707,11 +707,11 @@ Equations \eqref{eq:stat_z3}, \eqref{eq:stat_6}, \eqref{eq:stat_6_res} and  \eqr
 	
 	\section{Conclusion}
 	
-	An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using an complete enumeration method. The developed algorithm enables the calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
+	An exact solution for the ground state of the Edwards-Anderson model on a simple square lattice of $8 \times 8$ spins has been obtained and analyzed using a complete enumeration method. The developed algorithm enables the calculation of degeneracy, energy, and spin excess for each of the $2^N$ possible states, facilitating studies at zero temperature and in the presence of a nonzero external magnetic field $h/J$.
 	
 	It has been demonstrated that the macroscopic degeneracy of the ground state in finite-sized frustrated spin systems within the Edwards-Anderson model is governed by the combinatorics of frustration in  Type-II plaquettes, i.e., by the number of ways to arrange frustrated spin pairs on the lattice. An algorithm has been proposed for calculating energy, spin excess, and ground state configurations based on the determination of frustration locations.
 	
-	It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground state degeneration implies alternative arrangements of frustrations.
+	It was established that Type-II plaquettes are the sole source of frustration in the ground state in the absence of an external magnetic field. In energy-minimizing configurations, frustrations may also appear between Type-II plaquettes or between a frustrated plaquette and the lattice boundary, depending on the distances and boundary conditions. Macroscopic ground state degeneracy implies alternative arrangements of frustrations.
 	
 	The dependence of the ground state spin excess in the Edwards-Anderson model on the external magnetic field at $T \to 0$ exhibits a discrete (stepped, staircase-like) character. This behavior is caused by the discrete structure of the density of states. Critical values of the external magnetic field, where giant peaks in residual entropy are observed, have been calculated. The nature of these entropy peaks arises from the fact that at certain critical field values, multiple spin configurations with different interaction and Zeeman energies—but the same total energy—contribute equally to the ground state. Degeneracies of states with identical total energy are summed.
 	
